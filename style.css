@@ -1,0 +1,98 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Burbank Big Regular", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  /* Using Flexbox throughout rather than CSS grid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Burbank Big Regular",sans-serif;
+  text-transform: uppercase;
+}
+
+/* nav */
+
+nav {
+  width: 100%;
+  background-color: #2a2a2a;
+  height: 3.7rem;
+  max-height: 3.7rem;
+  align-items: center;
+}
+
+nav, #nav-left, #nav-logos, #nav-sites, #nav-right, #nav-ul, #user button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 3rem;
+}
+
+  #eg-logo {
+    margin-left: 0.4375rem; /* 7px */
+  }
+
+  #fn-logo {
+    margin: 0 0.625rem 0 0.3125rem; /* 10px and 5px */
+  }
+
+#nav-left {
+  align-items: center;
+}
+
+.nav-text {
+  text-transform: uppercase;
+  color: #CCCCCC;
+  font-size: 0.65625rem; /* 10.5px */
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+ul li {
+  padding: 0px 0.65625rem; /* 10.5px */
+}
+
+button {
+  height: 3.7rem;
+  background-color: #2a2a2a;
+  border: none;
+}
+
+#user, #language, #search {
+  padding: 0 0.875rem; /* 14px */
+}
+
+#download, #download button, #download button p {
+  padding: 0 0.4375rem; /* 7px */
+  background-color: #ffff00;
+  color: #000000;
+}
+
+.fas {
+  color: #CCCCCC;
+}
+
+.sign-text {
+  padding: 0 0.625rem; /* 10px */
+}
