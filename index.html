@@ -5,19 +5,80 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortnite clone</title>
+
+  <!-- Our CSS: -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fortnite's Burbank font: -->
   <link href="//db.onlinewebfonts.com/c/8dd35a5ee9eab8c7c069365ac14fed9a?family=Burbank+Big+Regular" rel="stylesheet" type="text/css"/>
+
+  <!-- Open Sans font: -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Animate.CSS ("just-add-water CSS animations") CDN: -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  <!-- FontAwesome CDN: -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
 </head>
 <body>
 
+<nav>
+  <div id="nav-left">
+    <div id="nav-logos">
+      <div id="eg-logo" role="button" tabindex="0">
+        <a href="https://www.epicgames.com" id="eg-logo" role="button" tabindex="0"><img src="images/eg-logo.png" alt="epic games logo"></a>
+      </div>
+      <div id="fn-logo" role="button" tabindex="0">
+        <a href="https://www.epicgames.com/fortnite/home"><img src="images/fn-logo.png" alt="fortnite logo"></a>
+      </div>
+    </div>
+    <div id="nav-sites">
+      <ul id="nav-ul">
+        <li role="menuitem" class="nav-text">Battle Pass</li>
+        <li role="menuitem" class="nav-text">Creative</li>
+        <li role="menuitem" class="nav-text">Save the World</li>
+        <li role="menuitem" class="nav-text">Competitive</li>
+        <li role="menuitem" class="nav-text">News</li>
+        <li role="menuitem" class="nav-text">Help</li>
+        <li role="menuitem" class="nav-text">Merch</li>
+      </ul>
+    </div>
+  </div>
+  <div id="nav-right">
+    <div id="search">
+        <button><i class="fas fa-search fa-2x"></i></button>
+    </div>
+    <div id="language">
+        <button><i class="fas fa-globe-africa fa-2x"></i></button> 
+        <!-- add fa-spin class as part of hover/focus effect? -->
+    </div>
+    <div id="user">
+      <button>
+        <i class="fas fa-user"></i>
+        <p class="nav-text"><span class="sign-text">Sign In</span></p>
+      </button>
+    </div>
+    <div id="download">
+      <button>
+        <p class="nav-text">Download</p>
+      </button>
+    </div>
+  </div>
 
-<h1>FORTNITE</h1>
-  <p>the comments were ok .leave them</p>
-  <script src="js/javascript.js"></script>
-  
+</nav>
+
+<main>
+  <section id="slider-section-1"></section>
+  <section id="news-section-2"></section>
+  <section id="battlepass-section-3"></section>
+</main>
+<footer></footer>
+
+<!-- Our JS: -->
+<script src="js/javascript.js"></script>
 </body>
 
 </html>
