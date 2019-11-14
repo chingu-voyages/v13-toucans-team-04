@@ -22,21 +22,27 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
-</head>
 <body>
 
 <nav>
   <div id="nav-left">
-    <div id="nav-logos">
-      <div id="eg-logo" role="button" tabindex="0">
-        <a href="https://www.epicgames.com" id="eg-logo" role="button" tabindex="0"><img src="images/eg-logo.png" alt="epic games logo"></a>
+    <div id="mobile-nav">
+      <div id="nav-logos">
+        <div id="eg-logo">
+          <a href="https://www.epicgames.com"><img src="images/eg-logo.png" alt="epic games logo"></a>
+        </div>
+        <div id="fn-logo">
+          <a href="https://www.epicgames.com/fortnite/home"><img src="images/fn-logo.png" alt="fortnite logo"></a>
+        </div>
       </div>
-      <div id="fn-logo" role="button" tabindex="0">
-        <a href="https://www.epicgames.com/fortnite/home"><img src="images/fn-logo.png" alt="fortnite logo"></a>
+      <div id="veggie-burger">
+        <div class="veggie-patty"></div>
+        <div class="veggie-patty"></div>
+        <div class="veggie-patty"></div>
       </div>
     </div>
-    <div id="nav-sites">
-      <ul id="nav-ul">
+    <div id="nav-sites" class="no-med-screens">
+      <ul id="nav-ul" role="menu">
         <li role="menuitem" class="nav-text">Battle Pass</li>
         <li role="menuitem" class="nav-text">Creative</li>
         <li role="menuitem" class="nav-text">Save the World</li>
@@ -47,7 +53,7 @@
       </ul>
     </div>
   </div>
-  <div id="nav-right">
+  <div id="nav-right" class="no-small-screens">
     <div id="search">
         <button><i class="fas fa-search fa-2x"></i></button>
     </div>
@@ -58,12 +64,12 @@
     <div id="user">
       <button>
         <i class="fas fa-user"></i>
-        <p class="nav-text"><span class="sign-text">Sign In</span></p>
+        <span class="sign-text nav-text">Sign In</span>
       </button>
     </div>
     <div id="download">
-      <button>
-        <p class="nav-text">Download</p>
+      <button class="nav-text">
+        Download
       </button>
     </div>
   </div>
