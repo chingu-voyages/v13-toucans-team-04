@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* nav */
 
+/* media queries have to go at the end or else they get overwritten like anything else: */
+/* For mobile phones: */ 
+/* (this is the default) */
+
 nav {
   width: 100%;
   background-color: #2a2a2a;
@@ -39,60 +43,164 @@ nav {
   align-items: center;
 }
 
-nav, #nav-left, #nav-logos, #nav-sites, #nav-right, #nav-ul, #user button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-nav img {
-  height: 3rem;
+#eg-logo img {
+  height: 2em;
+  display: block;
+  margin-left: 0.5em;
 }
 
   #eg-logo {
-    margin-left: 0.4375rem; /* 7px */
+    margin-left: 7px; 
   }
 
-  #fn-logo {
-    margin: 0 0.625rem 0 0.3125rem; /* 10px and 5px */
-  }
+#fn-logo img {
+  height: 3.5rem;
+  display: block;
+  margin: 0 0.75em;
+}
 
-#nav-left {
+#fn-logo {
+  margin: 0 10px 0 5px; 
+}
+
+#mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
-.nav-text {
-  text-transform: uppercase;
-  color: #CCCCCC;
-  font-size: 0.65625rem; /* 10.5px */
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 1px;
+#nav-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
 }
 
-ul li {
-  padding: 0px 0.65625rem; /* 10.5px */
-}
-
-button {
-  height: 3.7rem;
-  background-color: #2a2a2a;
-  border: none;
-}
-
-#user, #language, #search {
-  padding: 0 0.875rem; /* 14px */
-}
-
-#download, #download button, #download button p {
-  padding: 0 0.4375rem; /* 7px */
+#veggie-burger {
   background-color: #ffff00;
-  color: #000000;
+  height: 3.7rem;
+  width: 3.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.fas {
-  color: #CCCCCC;
+.veggie-patty {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
 }
 
-.sign-text {
-  padding: 0 0.625rem; /* 10px */
+.no-small-screens, .no-med-screens {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets (screens bigger than 600px but smaller than 768px): */
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-right, #user-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .no-small-screens {
+    display: block;
+  }
+
+  #mobile-nav {
+    justify-content: left;
+  }
+
+  #veggie-burger {
+    background-color: #2a2a2a;
+  }
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: #cccccc;
+    margin: 4px 0;
+  }  
+
+  button {
+    height: 3.7rem;
+    background-color: #2a2a2a;
+    border: none;
+  }
+
+  #user, #language, #search {
+    padding: 0 14px; 
+  }
+
+  #download, #download button {
+    padding: 0 7px; 
+    background-color: #ffff00;
+    color: #000000;
+  }
+
+  #download button {
+    margin: 0 0.5rem;
+  }
+
+  .fas {
+    color: #CCCCCC;
+  }
+
+  .sign-text {
+    padding: 0 10px; 
+  }
+
+  .nav-text {
+    text-transform: uppercase;
+    color: #CCCCCC;
+    font-size: 10.5px; 
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
+  /* For desktop (screens bigger than 1100px): */
+  /* made breakpoint a bit larger than usual so that the nav isn't crowded */
+
+  #veggie-burger {
+    display: none;
+  }
+
+  .no-med-screens {
+    display: block;
+  }
+
+  a {
+    display: block;
+  }
+  
+  #nav-sites, #nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  ul li {
+    padding: 0px 10.5px; 
+  }
+
+  #nav-left {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+  }
+
 }
