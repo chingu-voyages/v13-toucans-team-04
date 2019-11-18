@@ -10,15 +10,10 @@ a {
   text-decoration: none;
 }
 
-ul li { 
-  padding: 0px 10.5px; 
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  /* Using Flexbox throughout rather than CSS grid */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,51 +30,55 @@ h1, h2, h3, h4, h5, h6 {
 
 /* nav */
 
-/* media queries have to go at the end or else they get overwritten like anything else: */
 /* For mobile phones: */ 
-/* (this is the default) */
 
 nav {
   width: 100%;
   background-color: #2a2a2a;
-  height: 3.7rem;
-  max-height: 3.7rem;
-  align-items: center;
 }
 
-#eg-logo img {
-  height: 2em;
-  display: block;
-  margin-left: 0.5em;
+#eg-logo {
+  margin-left: 1rem; 
 }
 
-  #eg-logo {
-    margin-left: 7px; 
+  #eg-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: 5px;
   }
 
-#fn-logo img {
-  height: 3.5rem;
-  display: block;
-  margin: 0 0.75em;
-}
+  #eg-logo img {
+    height: 2em;
+    display: block;
+  }
 
 #fn-logo {
-  margin: 0 10px 0 5px; 
+  margin: 0 0.5rem; 
 }
 
-#mobile-nav {
+  #fn-logo img {
+    height: 3.5rem;
+    display: block;
+    margin: 0 1rem;
+  }
+
+  #fn-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+#mobile-nav, #nav-logos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
-#nav-logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-}
+  #mobile-nav {
+    justify-content: space-between;
+  }
+
+  #nav-logos {
+    justify-content: right;
+  }
 
 #veggie-burger {
   background-color: #ffff00;
@@ -91,277 +90,42 @@ nav {
   align-items: center;
 }
 
-.veggie-patty {
-  width: 35px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0;
-}
+  #veggie-burger:hover {
+    background-color: #1EB8F4;
+    transition: 0.3s;
+  }
+
+  #veggie-burger:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+  }
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
 
 .no-small-screens, .no-med-screens {
   display: none;
 }
 
-/*Footer start*/
-
-/*global footer*/
-.footer {
-  width: 100%;
-  height: 100%;
-}
-
-#footer {
-  background-color: #2a2a2a;
-  z-index: 10;
-  color: #e7e7e7;
-  width: 100%;
-  height: 100%;
-  padding: 1.25em 4.5em 2.5em;
-}
-
-#footer a:active,
-#footer a:focus,
-#footer a:hover,
-#footer a:visited,
-#footer i:focus,
-#footer i:visited {
-  outline-color: transparent;
-  outline: none;
-  border: none;
-  text-decoration: none;
-}
-
-#footer .accent-color-hover:hover {
-  color: #ff0 !important;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
-}
-
-#footer .text-color,
-#footer a {
-  color: #e7e7e7;
-}
-
-#footer .footerLinks li {
-  list-style: none;
-}
-
-/*row*/
-.row {
-  display: flex;
-}
-
-/*footer global end*/
-
-/*socials section*/
-
-#social {
-  display: flex;
-  flex-direction: row;
-  padding-left: 10px;
-}
-
-#social ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
-#social ul li {
-  padding: 0px;
-  display: inline-block;
-}
-
-.upbutton {
-  margin-left: auto;
-  padding-right: 10px;
-}
-
-#footer #upbutton span {
-  font-size: 1.5em;
-}
-
-/*socials section end*/
-
-/*links section*/
-
-#Links {
-  display: flex;
-}
-
-#Links li a {
-  font-size: .70em;
-  cursor: pointer;
-  font-weight: 400;
-}
-
-#age {
-  margin-left: auto;
-  padding-left: 10px;
-}
-
-/*links section end*/
-
-/*icons, hover effects*/
-#footer .social i {
-  font-size: 1.6em;
-  opacity: .92;
-}
-
-#footer .logos i {
-  font-size: 1.4em;
-  opacity: .92;
-  vertical-align: middle;
-}
-
-#footer .logos i:hover {
-  color: #fff;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
-}
-
-#footer .social i:hover {
-  color: #ffff00;
-  cursor: pointer;
-  -webkit-transition: color .6s ease-in-out;
-  -o-transition: color .6s ease-in-out;
-  transition: color .6s ease-in-out;
-}
-
-.text-color-nonactive {
-  color: #ccc;
-}
-
-#footer .tags .tag-title {
-  font-size: .5em;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-
-#footer .accent-color {
-  color: #ff0;
-}
-
-/*icons end*/
-
-/*Copyright section */
-.copyright-paragraph {
-  text-align: left;
-  font-size: .68em;
-  font-weight: 400;
-  line-height: 2em;
-}
-
-/*Copyright section end */
-
-/*border footer*/
-#footer hr {
-  margin: 1em 0;
-}
-
-#footer hr {
-  border-top: 1px solid #b3b3b3;
-  border-style: solid none none;
-}
-
-#footer .border {
-  border-color: #333 !important;
-}
-
-/*border end*/
-
-/*bottom footer*/
-#bottomFooter {
-  display: flex;
-  flex-direction: row;
-}
-
-#logos {
-  margin-left: auto;
-}
-
-#bottomFooter ul {
-  display: flex;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
-#bottomFooter ul li {
-  display: flex;
-  padding: 5px;
-}
-
-#bottomFooter li a {
-  font-size: .75em;
-}
-
-/*bottom footer end*/
-
-/*media queries footer*/
-
-/*adjustment for small screen tablets etc*/
-@media only screen and (max-width: 991px) {
-  #footer {
-    padding: 1em 1.5em;
-  }
-}
-
-/*iphone 5,6,7 X, Samsung Galaxy etc*/
-@media (max-width: 580px) {
-  #bottomFooter, #Links {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #logos, #age {
-    margin: 0 auto;
-  }
-
-  #bottomFooter ul {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  #footer .social i {
-    font-size: 1.2em;
-  }
-
-  .upbutton {
-    padding-right: 0px;
-  }
-
-  .row {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/*media queries footer end*/
-
-/*media queries navbar start*/
-/*Footer end*/
-
 @media only screen and (min-width: 600px) {
   /* For tablets (screens bigger than 600px but smaller than 768px): */
 
-  nav {
+  nav, #nav-right {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
 
-  #nav-right, #user-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-  }
+    nav {
+      justify-content: space-between;
+    }
+
+    #nav-right {
+      justify-content: right;
+    }
 
   .no-small-screens {
     display: block;
@@ -375,14 +139,29 @@ nav {
     background-color: #2a2a2a;
   }
 
-  .veggie-patty {
-    width: 35px;
-    height: 3px;
-    background-color: #cccccc;
-    margin: 4px 0;
-  }  
+    .veggie-patty {
+      width: 35px;
+      height: 3px;
+      background-color: #cccccc;
+      margin: 4px 0;
+    }  
 
-  button {
+    #veggie-burger:hover {
+      background-color: #ffff00;
+      transition: 0.3s;
+    }
+
+    #veggie-burger:hover .veggie-patty {
+      background-color: #000000;
+      transition: 0.3s;
+    }
+    
+    #veggie-burger:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+    }
+
+  #search, #language, #user, #download {
     height: 3.7rem;
     background-color: #2a2a2a;
     border: none;
@@ -392,18 +171,21 @@ nav {
     padding: 0 14px; 
   }
 
-  #download, #download button {
-    padding: 0 7px; 
+  #user {
+    width: 125px; 
+    /* set so that it isn't squished on med screens */
+  }
+
+  #download {
+    padding: 0 1.75rem; 
     background-color: #ffff00;
-    color: #000000;
+    color: #2a2a2a;
   }
 
-  #download button {
-    margin: 0 0.5rem;
-  }
-
-  .fas {
+  #search .fas, #user .fas, #language .fas {
     color: #CCCCCC;
+    line-height: 1.6;
+    display: inline;
   }
 
   .sign-text {
@@ -416,6 +198,39 @@ nav {
     font-size: 10.5px; 
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
+  }
+
+  #nav-right button:hover {
+    border-bottom: 5px solid #ffff00;
+    transition: 0.3s;
+  }
+
+    #nav-right button:hover .fas,
+    #nav-right button:hover span {
+      color: #ffffff;
+    }
+
+  #nav-right button:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+    #nav-right button:focus .fas,
+    #nav-right button:focus span {
+      color: #ffffff;
+    }
+
+  #nav-right #download:hover {
+    background-color: #1EB8F4;
+    color: #000000;
+    border: none;
+    transition: 0.3s;
+  }
+
+  #nav-right #download:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+    color: #000000;
   }
 
 }
@@ -432,21 +247,63 @@ nav {
     display: block;
   }
 
-  a {
-    display: block;
-  }
-  
-  #nav-sites, #nav-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
   #nav-left {
     display: flex;
     flex-direction: row;
     align-content: space-between;
     align-items: center;
   }
+  
+  #nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+    #nav-ul li {
+      padding: 10px 10.5px; 
+    }
+
+    #nav-ul a {
+      color: #cccccc;
+    }
+
+    /* just the main nav links (not the competitive dropdown or its links): */
+    /* WORKS */
+    #nav-ul .nav-text .main-nav-links:hover {
+      border-bottom: 5px solid #ffff00;
+      color: #ffffff;
+      transition: 0.3s;
+    }
+    
+      #nav-ul li:hover a {
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+    #nav-ul li:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+      color: #ffffff;
+    }
+
+    #nav-ul li a:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: 5px;
+      color: #ffffff;
+    }
+
+    /* dropdown menu: hover works but styling is messed up */
+
+    #competitive-dropdown {
+      display: none;
+    }
+
+    #nav-ul #competitive:hover #competitive-dropdown {
+      display: block;
+      width: 200px;
+    }
+
+    
 
 }
