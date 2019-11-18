@@ -81,25 +81,25 @@ h6 {
 
 .cardImgOne>.img {
     height: 450px;
-    background: url("/images/bigImgOne.jpg");
+    background: url("../images/bigImgOne.jpg");
     background-size: 100% 100%;
 }
 
 .cardImgTwo>.img {
     height: 450px;
-    background: url("/images/bigImgTwo.jpg");
+    background: url("../images/bigImgTwo.jpg");
     background-size: 100% 100%;
 }
 
 .cardImgThree>.img {
     height: 450px;
-    background: url("/images/bigImgThree.jpg");
+    background: url("../images/bigImgThree.jpg");
     background-size: 100% 100%;
 }
 
 .cardImgFour>.img {
     height: 450px;
-    background: url("/images/bigImgFour.jpg");
+    background: url("../images/bigImgFour.jpg");
     background-size: 100% 100%;
 }
 
@@ -159,43 +159,43 @@ h6 {
 
 /* Four Small Images */
 .sub>.cardOne>.img {
-    background-image: url("/images/1.jpg");
+    background-image: url("../images/1.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardTwo>.img {
-    background-image: url("/images/2.jpg");
+    background-image: url("../images/2.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardThree>.img {
-    background-image: url("/images/3.jpg");
+    background-image: url("../images/3.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardFour>.img {
-    background-image: url("/images/4.jpg");
+    background-image: url("../images/4.jpg");
     background-size: 100% 100%;
 }
 
 /*  Four Small Hidden Images  */
 .sub>.cardFive>.img {
-    background-image: url("/images/5.jpg");
+    background-image: url("../images/5.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardSix>.img {
-    background-image: url("/images/6.jpg");
+    background-image: url("../images/6.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardSeven>.img {
-    background-image: url("/images/7.jpg");
+    background-image: url("../images/7.jpg");
     background-size: 100% 100%;
 }
 
 .sub>.cardEight>.img {
-    background-image: url("/images/8.jpg");
+    background-image: url("../images/8.jpg");
     background-size: 100% 100%;
 }
 
