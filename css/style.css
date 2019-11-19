@@ -10,12 +10,24 @@ a {
   text-decoration: none;
 }
 
-ul li { 
-  padding: 0px 10.5px; 
+ul li {
+  padding: 0px 10.5px;
+}
+
+@font-face {
+font-family: 'BurbankBigRegular-Black';
+src: url('BurbankBigRegular-Black.eot');
+src: url('BurbankBigRegular-Black.eot?#iefix') format('embedded-opentype'),
+     url('BurbankBigRegular-Black.svg#BurbankBigRegular-Black') format('svg'),
+     url('BurbankBigRegular-Black.ttf') format('truetype'),
+     url('BurbankBigRegular-Black.woff') format('woff'),
+     url('BurbankBigRegular-Black.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'BurbankBigRegular-Black','sans-serif';
   font-size: 18px;
   line-height: 1.6;
   /* Using Flexbox throughout rather than CSS grid */
@@ -29,14 +41,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'BurbankBigRegular-Black','sans-serif';
   text-transform: uppercase;
 }
 
 /* nav */
 
 /* media queries have to go at the end or else they get overwritten like anything else: */
-/* For mobile phones: */ 
+/* For mobile phones: */
 /* (this is the default) */
 
 nav {
@@ -54,7 +66,7 @@ nav {
 }
 
   #eg-logo {
-    margin-left: 7px; 
+    margin-left: 7px;
   }
 
 #fn-logo img {
@@ -64,7 +76,7 @@ nav {
 }
 
 #fn-logo {
-  margin: 0 10px 0 5px; 
+  margin: 0 10px 0 5px;
 }
 
 #mobile-nav {
@@ -117,6 +129,7 @@ nav {
   width: 100%;
   height: 100%;
   padding: 1.25em 4.5em 2.5em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #footer a:active,
@@ -300,6 +313,78 @@ nav {
   font-size: .75em;
 }
 
+/*battlepass section start*/
+
+#battlepass{
+  padding: 4em 2em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  background: url(../images/battlepass.png) no-repeat center/cover;
+}
+
+.battlepass-content{
+  max-width: 1200px;
+  padding: 3em 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.battlepass-bigheading{
+  color: #2be5fe;
+  font-size: 8vw;
+}
+
+#extra{
+  line-height: 95px;
+}
+
+/*changing the default height of the break element*/
+.break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -20px; /* change this to whatever height you want it */
+}
+
+.battlepass-heading{
+  color: #2be5fe;
+  font-size: 40px;
+}
+
+.extra{
+  font-size: 12vw;
+  color: #2be5fe;
+}
+
+.battlepass-smallheading{
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.battlepass-button{
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #ff0;
+  border: none;
+  padding: 0 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/*battlepass section end*/
+
 /*bottom footer end*/
 
 /*media queries footer*/
@@ -380,7 +465,7 @@ nav {
     height: 3px;
     background-color: #cccccc;
     margin: 4px 0;
-  }  
+  }
 
   button {
     height: 3.7rem;
@@ -389,11 +474,11 @@ nav {
   }
 
   #user, #language, #search {
-    padding: 0 14px; 
+    padding: 0 14px;
   }
 
   #download, #download button {
-    padding: 0 7px; 
+    padding: 0 7px;
     background-color: #ffff00;
     color: #000000;
   }
@@ -407,13 +492,13 @@ nav {
   }
 
   .sign-text {
-    padding: 0 10px; 
+    padding: 0 10px;
   }
 
   .nav-text {
     text-transform: uppercase;
     color: #CCCCCC;
-    font-size: 10.5px; 
+    font-size: 10.5px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
   }
@@ -435,13 +520,13 @@ nav {
   a {
     display: block;
   }
-  
+
   #nav-sites, #nav-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   #nav-left {
     display: flex;
     flex-direction: row;
