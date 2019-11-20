@@ -102,6 +102,107 @@ nav {
   display: none;
 }
 
+/*main section 1 start*/
+
+#main-image {
+  height: 1000px;
+  object-fit: cover;
+ 
+}
+
+#dropdiv {
+  height: 100%;
+  max-width: 28%;
+  font-size: 2vw;
+  position: absolute;
+  margin-left: -20%;
+  top: 200px;
+  
+  overflow-y: hidden;
+}
+
+.drop {
+  color: white;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-size: 5vw;
+  overflow-y: hidden;
+}
+/**/
+#dropdiv #logo {
+  width: 20%;
+}
+
+/* Skew Forward */
+#learn-more {
+  margin-top: 10%;
+  background-color: yellow;
+  padding: 3% 7%;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+#learn-more:hover, #learn-more:focus, #learn-more:active {
+  background-color: rgb(202, 202, 11);
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+}
+
+#learn {
+  color: black;
+}
+
+#learn:hover {
+}
+
+/* Forward */
+#learn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+#learn:hover, #learn:focus, #learn:active {
+  -webkit-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+
+#trailer {
+    position: absolute;
+    color: white;
+    right: 5%;
+    top: 650px;
+}
+
+#watch {
+    
+    position: relative;
+    display: inline;
+    bottom: 10px;
+}
+
+#play-button {
+    position: relative;
+    width: 60px;
+}
+
+
+
+
 /*Footer start*/
 
 /*global footer*/
@@ -449,4 +550,113 @@ nav {
     align-items: center;
   }
 
+}
+
+/*media queries main section 1*/
+
+@media screen and (min-width: 1480px) {
+  #main-image {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  #main-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .drop {
+    font-size: 48px;
+    width: 337px;
+  }
+
+  #dropdiv {
+    top: 65px;
+    margin-left: 1%;
+    
+    max-width: 400px;
+  }
+
+  #dropdiv #logo {
+    width: 15%;
+    margin-left: 42%;
+    
+  }
+
+  #learn-more {
+    margin-left: 28%;
+    font-size: 16px;
+    padding: 2% 5%;
+  }
+
+  #learn-more:hover {
+    padding-left: 6%;
+    
+  }
+
+  #play-button {
+    position: relative;
+    width: 40px;
+}
+
+#trailer {
+  top: 50vw;
+}
+
+#watch {
+  
+  position: relative;
+  display: inline;
+  bottom: 11px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+
+  #main-image {
+    height: 180vw;
+  }
+
+  #dropdiv {
+    
+    width: 95%;
+    top: 65px;
+    width: auto;
+  }
+
+  #trailer { 
+    
+    margin-top: 60%;
+    height: 150px;
+    width: 300px;
+    left: 50%;
+    margin-left: -110px;;
+
+  }
+
+  #watch {
+    top: 3px;
+    font-size: 25px;
+    
+  }
+
+  #play-button {
+    position: absolute;
+    width: 50px;
+    top: 40px;
+    left: 50%;
+    margin-left: -65px;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  .drop {
+    text-align: center;
+    font-size: 40px;;
+  }
 }
