@@ -36,6 +36,7 @@ h6 {
 /* Main section 2 */
 .container {
     box-sizing: border-box;
+    width: 95%;
 }
 
 .wrapper {
@@ -76,32 +77,45 @@ h6 {
     align-items: center;
     flex-flow: row nowrap;
     flex-direction: column;
-    
+    }
+
+.bigImages .flex:hover .contentBottomLeft {
+    bottom: 20px;
 }
 
 .cardImgOne>.img {
-    height: 450px;
+    height: 650px;
     background: url("../images/bigImgOne.jpg");
-    background-size: 100% 100%;
+    background-size: auto 650px;
+    background-position: center;
 }
 
 .cardImgTwo>.img {
-    height: 450px;
+    height: 650px;
     background: url("../images/bigImgTwo.jpg");
-    background-size: 100% 100%;
+    background-size: auto 650px;
 }
 
 .cardImgThree>.img {
     height: 450px;
     background: url("../images/bigImgThree.jpg");
     background-size: 100% 100%;
+    
 }
 
 .cardImgFour>.img {
     height: 450px;
     background: url("../images/bigImgFour.jpg");
     background-size: 100% 100%;
+    
 }
+#hideShow {
+    display: none;
+    }
+
+#hideShow.show {
+    display: block;
+}    
 
 .cardImgOne,
 .cardImgTwo,
@@ -126,6 +140,10 @@ h6 {
 
 .contentBottomLeft p {
     text-align: left;
+}
+
+.imageRight {
+    width: 75%;
 }
 
 /* Four Small Fixed Images */
@@ -242,8 +260,9 @@ h6 {
     transform: skew(-10deg);
 }
 
+
 /* Load More Button */
-.button {
+/* .button {
     margin-top: 50px;
     text-align: center;
 }
@@ -270,12 +289,44 @@ h6 {
     background-color: black;
     color: white;
     transition: all .3s ease-in-out;
-}
+} */
 
 /* Media Queries */
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 360px) {
+    .button {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    .button .load {
+        display: inline-block;
+        padding: 0 .5em;
+        width: 15%; 
+        height: 2%; 
+        font-size: 1em;
+        border: 4px solid black;
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        border-radius: 0;
+        line-height: 2;
+        z-index: 1;
+        letter-spacing: 0;
+        font-family: "Burbank Big Regular", sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .button .load:hover {
+        background-color: black;
+        color: white;
+        transition: all .3s ease-in-out;
+    }
+
+}
+@media only screen and (min-width: 720px) {
     .bigImages {
         flex-direction: row;
+
     }
 
     .spacer {
