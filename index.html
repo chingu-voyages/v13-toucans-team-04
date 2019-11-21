@@ -17,6 +17,18 @@
 
   <!-- FontAwesome CDN: -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!--JQUERY  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+  </script>
+  <script>
+      $(document).ready(function () {
+          $("#loadButton").click(function () {
+              $("#hideShow").toggleClass("show");
+          });
+      });
+  </script>
+
   </head>
 <body>
 
@@ -73,8 +85,151 @@
 </nav>
 
 <main>
-  <section id="slider-section-1"></section>
-  <section id="news-section-2"></section>
+  <section id="slider-section-1">
+  </section>
+
+  <!-- MAIN SECTION 2 -->
+  <div class="container">
+      <div class="wrapper">
+          <!-- Two Big Fixed Images -->
+          <div class="bigImages">
+              <div class="cardImgOne imageLeft flex">
+                  <div class="img hvr-grow"></div>
+                  <div class="dividerOne"></div>
+                  <div class="contentBottomLeft">
+                      <p>NOV 14, 2019</p>
+                      <h3>FORTNIGHT CHAPTER 2</h3>
+                  </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="cardImgTwo imageRight flex">
+                  <div class="img hvr-grow"></div>
+                  <div class="dividerOne"></div>
+                  <div class="contentBottomLeft">
+                      <p>NOV 14, 2019</p>
+                      <h3>COMMUNITY SPOTLIGHT - AXEL CAPEK</h3>
+                  </div>
+              </div>
+          </div>
+          <!-- Four Small Fixed Images -->
+          <div class="dividerTwo"></div>
+          <div class="flex direction">
+              <div class="sub">
+                  <div class="card cardOne flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="content">
+                          <p>NOV 14, 2019</p>
+                          <h4>SAVE THE WORLD | HOME </h4>
+                      </div>
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="card cardTwo flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="content">
+                          <p>NOV 15, 2019</p>
+                          <h4>CREATIVE AMA RECAP</h4>
+                      </div>
+                  </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="sub">
+                  <div class="card cardThree flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="content">
+                          <p>NOV 16, 2019</p>
+                          <h4>CREATIVE DEVELOPER </h4>
+                      </div>
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="card cardFour flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="content">
+                          <p>NOV 17, 2019</p>
+                          <h4>IMPERIAL ARMY ARRIVED</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Load More Button -->
+          <div class="button">
+              <button id="loadButton" class="load hvr-skew-forward">LOAD MORE </button>
+          </div>
+          <!-- Show Following images when above button is clicked -->
+          <!-- Two Big Hidden Fixed Images -->
+          <div id="hideShow">
+              <div class="bigImages">
+                  <div class="cardImgThree imageLeft flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="contentBottomLeft">
+                          <p>NOV 14, 2019</p>
+                          <h3>FORTNIGHT CHAPTER 2</h3>
+                      </div>
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="cardImgFour imageRight flex">
+                      <div class="img hvr-grow"></div>
+                      <div class="dividerOne"></div>
+                      <div class="contentBottomLeft">
+                          <p>NOV 14, 2019</p>
+                          <h3>COMMUNITY SPOTLIGHT - AXEL CAPEK</h3>
+                      </div>
+                  </div>
+              </div>
+              <!--  Four Small Hidden Fixed Images -->
+              <div class="dividerTwo"></div>
+              <div class="flex direction">
+                  <div class="sub">
+                      <div class="card cardFive flex">
+                          <div class="img hvr-grow"></div>
+                          <div class="dividerOne"></div>
+                          <div class="content">
+                              <p>NOV 14, 2019</p>
+                              <h4>SAVE THE WORLD | HOME </h4>
+                          </div>
+                      </div>
+                      <div class="spacer"></div>
+                      <div class="card cardSix flex">
+                          <div class="img hvr-grow"></div>
+                          <div class="dividerOne"></div>
+                          <div class="content">
+                              <p>NOV 15, 2019</p>
+                              <h4>CREATIVE AMA RECAP</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="sub">
+                      <div class="card cardSeven flex">
+                          <div class="img hvr-grow"></div>
+                          <div class="dividerOne"></div>
+                          <div class="content">
+                              <p>NOV 16, 2019</p>
+                              <h4>CREATIVE DEVELOPER </h4>
+                          </div>
+                      </div>
+                      <div class="spacer"></div>
+                      <div class="card cardEight flex">
+                          <div class="img hvr-grow"></div>
+                          <div class="dividerOne"></div>
+                          <div class="content">
+                              <p>NOV 17, 2019</p>
+                              <h4>IMPERIAL ARMY ARRIVED</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- All News Button -->
+              <div class="button">
+                  <button class="load hvr-skew-forward">ALL NEWS </button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
    <!-- Footer Start -->
