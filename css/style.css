@@ -381,6 +381,13 @@ nav {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
+  clip-path: circle(100%);
+  transition: all 0.7s;
+}
+
+.battlepass-button:hover{
+  clip-path: circle(50%);
+  opacity: 0.7;
 }
 
 /*battlepass section end*/
@@ -430,8 +437,8 @@ nav {
 
 /*media queries footer end*/
 
-/*media queries navbar start*/
 /*Footer end*/
+/*media queries navbar start*/
 
 @media only screen and (min-width: 600px) {
   /* For tablets (screens bigger than 600px but smaller than 768px): */
@@ -533,5 +540,60 @@ nav {
     align-content: space-between;
     align-items: center;
   }
-
 }
+
+/*media queries battlepass start*/
+@media only screen and (min-width: 1100px) {
+  #extra{
+    line-height: 125px;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+@media only screen and (max-width: 991px) {
+  /* adjusting font-size on small screens */
+  #extra{
+    line-height: 65px;
+  }
+  .extra{
+    font-size: 90px;
+  }
+  .battlepass-bigheading{
+    font-size: 70px;
+  }
+  .battlepass-smallheading{
+    font-size: 15px;
+  }
+  .battlepass-heading{
+    font-size: 21px;
+  }
+  .battlepass-button{
+    margin-top: 1em;
+    font-size: 1.3em;
+  }
+  .battlepass-content img{
+    width: 80px;
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* mobile background */
+  #battlepass{
+    padding: 2em 1em;
+    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #battlepass{
+    padding: 2em 2em;
+    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+  }
+}
+/*media queries battlepass end*/
+
