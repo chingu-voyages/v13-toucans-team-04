@@ -41,15 +41,15 @@
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/battle-pass">Battle Pass</a></li>
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/creative">Creative</a></li>
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/save-the-world">Save the World</a></li>
-      <li id="competitive" role="menuitem" class="nav-text" tabindex="0">Competitive
-        <ul id="competitive-dropdown" role="menu"> <!-- dropdown-->
-          <li class="dropdown-" role="menuitem"><a href="https://www.epicgames.com/fortnite/competitive/events#event-guidelines">Third Party Event Guidelines</a></li>
-          <li class="dropdown-" role="menuitem"><a href="https://www.epicgames.com/fortnite/competitive/events/championseries-ch2s1">Fortnite Champion Series</a></li>
-          <li class="dropdown-" role="menuitem"><a href="https://www.epicgames.com/fortnite/competitive/news">News</a></li>
-          <li class="dropdown-" role="menuitem"><a href="https://www.epicgames.com/fortnite/competitive/events">Events</a></li>
-          <li class="dropdown-" role="menuitem"><a href="https://www.epicgames.com/fortnite/competitive/events/world-cup">Fortnite World Cup</a></li>
-        </ul>
-      </li> 
+      <li role="menuitem" class="nav-text dropdown" tabindex="0">
+        <span class="dropbtn">Competitive</span>
+        <div role="menu" class="dropdown-content">
+          <a role="menuitem" href="https://www.epicgames.com/fortnite/competitive/events#event-guidelines">Third Party Event Guidelines</a>
+          <a role="menuitem" href="https://www.epicgames.com/fortnite/competitive/events/championseries-ch2s1">Fortnite Champion Series</a>
+          <a role="menuitem" href="https://www.epicgames.com/fortnite/competitive/news">News</a>
+          <a role="menuitem" href="https://www.epicgames.com/fortnite/competitive/events">Events</a>
+          <a role="menuitem" href="https://www.epicgames.com/fortnite/competitive/events/world-cup">Fortnite World Cup</a>
+        </div> 
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/news">News</a></li>
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/help-center">Help</a></li>
       <li role="menuitem" class="nav-text"><a class="main-nav-links" href="https://www.epicgames.com/fortnite/retailrow">Merch</a></li>
@@ -57,9 +57,25 @@
   </div>
   <div id="nav-right" class="no-small-screens">
     <button id="search"><i class="fas fa-search fa-2x"></i></button>
-    <button id="language"><i class="fas fa-globe-africa fa-2x"></i></button> 
-    <!-- add fa-spin class as part of hover/focus effect? -->
-    <!-- dropdown: may have to change this to a list? -->
+    <button id="language" class="dropdown">
+        <span class="dropbtn"><i class="fas fa-globe-africa fa-2x"></i></span>
+        <!-- add fa-spin class as part of hover/focus effect? -->
+        <div class="dropdown-content">
+          <a class="nav-text" data-lang="ar" href="https://www.epicgames.com/fortnite/en-US/home?lang=ar"><span> 🇪🇬العربية</span></a>
+          <a class="nav-text" data-lang="de" href="https://www.epicgames.com/fortnite/en-US/home?lang=de"><span>Deutsch 🇩🇪</span></a>
+          <a class="nav-text" data-lang="es-ES" href="https://www.epicgames.com/fortnite/en-US/home?lang=es-ES"><span>Español (Spain) 🇪🇸</span></a>
+          <a class="nav-text" data-lang="es-MX" href="https://www.epicgames.com/fortnite/en-US/home?lang=es-MX"><span>Español (LA) 🇲🇽</span></a>
+          <a class="nav-text" data-lang="fr" href="https://www.epicgames.com/fortnite/en-US/home?lang=fr"><span>Français 🇫🇷</span></a>
+          <a class="nav-text" data-lang="it" href="https://www.epicgames.com/fortnite/en-US/home?lang=it"><span>Italiano 🇮🇹</span></a>
+          <a class="nav-text" data-lang="ja" href="https://www.epicgames.com/fortnite/en-US/home?lang=ja"><span>日本語 🇯🇵</span></a>
+          <a class="nav-text" data-lang="ko" href="https://www.epicgames.com/fortnite/en-US/home?lang=ko"><span>한국어 🇰🇷</span></a>
+          <a class="nav-text" data-lang="pl" href="https://www.epicgames.com/fortnite/en-US/home?lang=pl"><span>Polski 🇵🇱</span></a>
+          <a class="nav-text" data-lang="pt-BR" href="https://www.epicgames.com/fortnite/en-US/home?lang=pt-BR"><span>Português (Brasil) 🇧🇷</span></a>
+          <a class="nav-text" data-lang="ru" href="https://www.epicgames.com/fortnite/en-US/home?lang=ru"><span>Русский 🇷🇺</span></a>
+          <a class="nav-text" data-lang="tr" href="https://www.epicgames.com/fortnite/en-US/home?lang=tr"><span>Türkçe 🇹🇷</span></a>
+        </div>
+    </button> 
+
     <button id="user">
         <i class="fas fa-user"></i>
         <span class="sign-text nav-text">Sign In</span>
@@ -68,10 +84,6 @@
   </div>
 
 </nav>
-
-<!-- help with hover animations: 
-- make lis stay aligned center but have bottom border appear on actual bottom of navbar
- -->
 
 <main>
   <section id="slider-section-1"></section>

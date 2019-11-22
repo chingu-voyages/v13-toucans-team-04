@@ -28,15 +28,18 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* nav */
+/* navbar */
 
+/* ********** */
 /* For mobile phones: */ 
+/* ********** */
 
 nav {
   width: 100%;
   background-color: #2a2a2a;
 }
 
+/* left logos: */
 #eg-logo {
   margin-left: 1rem; 
 }
@@ -80,6 +83,7 @@ nav {
     justify-content: right;
   }
 
+/* vegburger menu: */
 #veggie-burger {
   background-color: #ffff00;
   height: 3.7rem;
@@ -90,16 +94,6 @@ nav {
   align-items: center;
 }
 
-  #veggie-burger:hover {
-    background-color: #1EB8F4;
-    transition: 0.3s;
-  }
-
-  #veggie-burger:focus {
-    outline: 3px solid #1EB8F4;
-    outline-offset: -5px;
-  }
-
   .veggie-patty {
     width: 35px;
     height: 3px;
@@ -107,18 +101,40 @@ nav {
     margin: 4px 0;
   }
 
+  /* hover effects for vegburger menu: */
+  #veggie-burger:hover {
+    background-color: #1EB8F4;
+    transition: 0.3s;
+  }
+
+  /* focus effect for vegburger menu: */
+
+  #veggie-burger:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+  }
+
+/* hiding things on small and medium screens: */
 .no-small-screens, .no-med-screens {
   display: none;
 }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets (screens bigger than 600px but smaller than 768px): */
 
+/* ********** */
+/* For tablets (screens bigger than 600px but smaller than 768px): */
+/* ********** */
+@media only screen and (min-width: 600px) {
+
+  /* show some things that were hidden on mobile, but not everything: */
+  .no-small-screens {
+    display: block;
+  }
+
+  /* organisation: */
   nav, #nav-right {
     display: flex;
     flex-direction: row;
   }
-
     nav {
       justify-content: space-between;
     }
@@ -127,25 +143,23 @@ nav {
       justify-content: right;
     }
 
-  .no-small-screens {
-    display: block;
-  }
-
   #mobile-nav {
     justify-content: left;
   }
 
+  /* vegburger menu styling change */
   #veggie-burger {
     background-color: #2a2a2a;
   }
 
-    .veggie-patty {
-      width: 35px;
-      height: 3px;
-      background-color: #cccccc;
-      margin: 4px 0;
-    }  
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: #cccccc;
+    margin: 4px 0;
+  }  
 
+  /* HOVER effects for vegburger menu on med: */
     #veggie-burger:hover {
       background-color: #ffff00;
       transition: 0.3s;
@@ -155,43 +169,44 @@ nav {
       background-color: #000000;
       transition: 0.3s;
     }
-    
+  
+  /* FOCUS effects for vegburger menu on med: */
     #veggie-burger:focus {
       outline: 3px solid #ffff00;
       outline-offset: -5px;
     }
 
+  /* righthand buttons */
   #search, #language, #user, #download {
     height: 3.7rem;
     background-color: #2a2a2a;
     border: none;
+    padding: 0 1.75rem
   }
 
-  #user, #language, #search {
-    padding: 0 14px; 
-  }
-
-  #user {
-    width: 125px; 
-    /* set so that it isn't squished on med screens */
+  #user, #download {
+    font-size: 10px;
   }
 
   #download {
-    padding: 0 1.75rem; 
     background-color: #ffff00;
     color: #2a2a2a;
   }
 
+  /* text in "sign up" button */
+  /* line still breaking as window gets smaller */
+  .sign-text {
+    padding: 0 10px; 
+  }
+
+  /* fontawesome icons */
   #search .fas, #user .fas, #language .fas {
     color: #CCCCCC;
     line-height: 1.6;
     display: inline;
   }
 
-  .sign-text {
-    padding: 0 10px; 
-  }
-
+  /* all nav text incl buttons: */
   .nav-text {
     text-transform: uppercase;
     color: #CCCCCC;
@@ -200,26 +215,36 @@ nav {
     letter-spacing: 1px;
   }
 
+  /* make the bottom border already exist so that it doesn't bump up the text */
+  #nav-right button { border-bottom: 5px solid #2a2a2a;}
+  #nav-right #download { border-bottom: none; }
+
+  /* HOVER effect for righthand buttons: yellow line */
+  /* add exception for language button */
   #nav-right button:hover {
     border-bottom: 5px solid #ffff00;
     transition: 0.3s;
   }
 
-    #nav-right button:hover .fas,
-    #nav-right button:hover span {
-      color: #ffffff;
-    }
+  /* HOVER effect for righthand buttons: white font */
+  #nav-right button:hover .fas,
+  #nav-right button:hover span {
+    color: #ffffff;
+  }
 
+  /* FOCUS effect for righthand buttons: yellow outline */
   #nav-right button:focus {
     outline: 3px solid #ffff00;
     outline-offset: -5px;
   }
 
+  /* FOCUS effect for righthand buttons: white font */
     #nav-right button:focus .fas,
     #nav-right button:focus span {
       color: #ffffff;
     }
 
+  /* HOVER effect for download button: make it blue */
   #nav-right #download:hover {
     background-color: #1EB8F4;
     color: #000000;
@@ -227,26 +252,62 @@ nav {
     transition: 0.3s;
   }
 
+  /* FOCUS effect for download button: blue outline */
   #nav-right #download:focus {
     outline: 3px solid #1EB8F4;
     outline-offset: -5px;
     color: #000000;
   }
 
+  /* nav dropdown (competitive and language) */
+  .main-nav-links, .dropbtn {
+    display: inline-block;
+  }
+  
+  /* make it invisible til hover but set the styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    min-width: 160px;
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* for the sites; need to make a different one for languages */
+  .dropdown-content a {
+    padding: .5em .8em; /* from original */
+    display: block;
+    text-align: left;
+  }
+  
+  /* make the dropdown appear on hover */
+  .dropdown:hover .dropdown-content { display: block;}
+  
+  /* Hover effects for dropdown items */
+  .dropdown-content a:hover { background-color: #1EB8F4; }
+
 }
 
-@media only screen and (min-width: 1100px) {
-  /* For desktop (screens bigger than 1100px): */
-  /* made breakpoint a bit larger than usual so that the nav isn't crowded */
 
-  #veggie-burger {
-    display: none;
-  }
+/* ********** */
+/* For desktop (screens bigger than 1200px): */
+/* ********** */
 
+@media only screen and (min-width: 1200px) {
+
+  /* make everything visible: */
   .no-med-screens {
     display: block;
   }
 
+  /* except the vegburger menu, get rid of that: */
+  #veggie-burger {
+    display: none;
+  }
+
+  /* organisation: */
   #nav-left {
     display: flex;
     flex-direction: row;
@@ -258,52 +319,49 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden; /* added from dropdown example, possible unnecessary */
   }
   
+  /* styling for site list and links */
     #nav-ul li {
-      padding: 10px 10.5px; 
+      padding: 17px 10.5px; /* makes bottom border line up correctly */
+      display: inline-block;
     }
 
     #nav-ul a {
       color: #cccccc;
     }
+    
+    /* make it already have a bottom border: */
+    #nav-ul li { border-bottom: 5px solid #2a2a2a}
 
-    /* just the main nav links (not the competitive dropdown or its links): */
-    /* WORKS */
-    #nav-ul .nav-text .main-nav-links:hover {
-      border-bottom: 5px solid #ffff00;
+    /* HOVER effect for nav site items including non-links (competitive): yellow line and white text */
+    #nav-ul li:hover {
+      border-bottom: solid 5px #ffff00;
+      transition: 0.3s;
+    }
+
+    /* HOVER effect for nav site links: white text */
+    #nav-ul li:hover a {
       color: #ffffff;
       transition: 0.3s;
     }
-    
-      #nav-ul li:hover a {
-        color: #ffffff;
-        transition: 0.3s;
-      }
 
+    /* FOCUS effect for nav site non-links: yellow outline and white text */
+    /* for some reason this has changed size, need to fix */
     #nav-ul li:focus {
       outline: 3px solid #ffff00;
       outline-offset: -5px;
       color: #ffffff;
     }
 
+    /* FOCUS effect for nav site links: yellow outline and white text */
     #nav-ul li a:focus {
       outline: 3px solid #ffff00;
       outline-offset: 5px;
       color: #ffffff;
     }
 
-    /* dropdown menu: hover works but styling is messed up */
 
-    #competitive-dropdown {
-      display: none;
-    }
-
-    #nav-ul #competitive:hover #competitive-dropdown {
-      display: block;
-      width: 200px;
-    }
-
-    
 
 }
