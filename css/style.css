@@ -121,9 +121,9 @@ nav {
 
 
 /* ********** */
-/* For tablets (screens bigger than 600px but smaller than 768px): */
+/* For tablets (screens bigger than 690px but smaller than 768px): */
 /* ********** */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 690px) {
 
   /* show some things that were hidden on mobile, but not everything: */
   .no-small-screens {
@@ -176,12 +176,17 @@ nav {
       outline-offset: -5px;
     }
 
-  /* righthand buttons */
+  /* righthand icons */
   #search, #language, #user, #download {
     height: 3.7rem;
     background-color: #2a2a2a;
     border: none;
     padding: 0 1.75rem
+  }
+
+  /* find a better way to do this */
+  #language {
+    padding-top: 8px;
   }
 
   #user, #download {
@@ -194,8 +199,7 @@ nav {
   }
 
   /* text in "sign up" button */
-  /* line still breaking as window gets smaller */
-  .sign-text {
+  #user .sign-text {
     padding: 0 10px; 
   }
 
@@ -220,7 +224,6 @@ nav {
   #nav-right #download { border-bottom: none; }
 
   /* HOVER effect for righthand buttons: yellow line */
-  /* add exception for language button */
   #nav-right button:hover {
     border-bottom: 5px solid #ffff00;
     transition: 0.3s;
@@ -335,8 +338,8 @@ nav {
     /* make it already have a bottom border: */
     #nav-ul li { border-bottom: 5px solid #2a2a2a}
 
-    /* HOVER effect for nav site items including non-links (competitive): yellow line and white text */
-    #nav-ul li:hover {
+    /* HOVER effect for nav links (NOT competetive dropdown): yellow line */
+    #nav-ul .main-nav-links:hover {
       border-bottom: solid 5px #ffff00;
       transition: 0.3s;
     }
@@ -361,7 +364,5 @@ nav {
       outline-offset: 5px;
       color: #ffffff;
     }
-
-
 
 }
