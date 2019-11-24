@@ -322,8 +322,8 @@ nav {
   align-content: center;
   flex-direction: column;
   width: 100vw;
-  height: auto;
-  background: url(../images/battlepass.png) no-repeat center/cover;
+  height: 100%;
+  background: url(../images/battlepass.png) no-repeat top/cover;
 }
 
 .battlepass-content{
@@ -338,7 +338,7 @@ nav {
 
 .battlepass-bigheading{
   color: #2be5fe;
-  font-size: 8vw;
+  font-size: 4em;
 }
 
 #extra{
@@ -349,7 +349,7 @@ nav {
 .break {
     display: block; /* makes it have a width */
     content: ""; /* clears default height */
-    margin-top: -20px; /* change this to whatever height you want it */
+    margin-top: -10px; /* change this to whatever height you want it */
 }
 
 .battlepass-heading{
@@ -358,7 +358,7 @@ nav {
 }
 
 .extra{
-  font-size: 12vw;
+  font-size: 6em;
   color: #2be5fe;
 }
 
@@ -543,7 +543,7 @@ nav {
 }
 
 /*media queries battlepass start*/
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1500px) {
   #extra{
     line-height: 125px;
   }
@@ -551,6 +551,32 @@ nav {
     display: block; /* makes it have a width */
     content: ""; /* clears default height */
     margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+@media (min-width: 991px) and (max-width: 1500px) {
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 200px;
+  }
+  .battlepass-bigheading{
+    font-size: 150px;
+  }
+  .battlepass-smallheading{
+    font-size: 26px;
+  }
+  .battlepass-heading{
+    font-size: 42px;
+  }
+  .battlepass-button{
+    font-size: 1.3em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
 }
 }
 
@@ -566,14 +592,13 @@ nav {
     font-size: 70px;
   }
   .battlepass-smallheading{
-    font-size: 15px;
+    font-size: 13px;
   }
   .battlepass-heading{
     font-size: 21px;
   }
   .battlepass-button{
-    margin-top: 1em;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   .battlepass-content img{
     width: 80px;
@@ -581,18 +606,39 @@ nav {
   }
 }
 
+/*tablets*/
 @media only screen and (max-width: 768px) {
   /* mobile background */
   #battlepass{
-    padding: 2em 1em;
-    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+    height: 100%;
+    background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 20em;
   }
 }
 
-@media only screen and (max-width: 320px) {
+/*i-phone-6,7,8,X*/
+@media (max-width: 414px) and (max-height: 812px)  {
   #battlepass{
-    padding: 2em 2em;
-    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+    padding: 0em 0em;
+    height: 120vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+
+/*i-phone-5*/
+@media(max-width: 320px) and (max-height: 568px){
+  #battlepass{
+    padding: 0em 0em;
+    height: 140vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
   }
 }
 /*media queries battlepass end*/
