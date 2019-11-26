@@ -554,6 +554,7 @@ nav {
 }
 }
 
+ /* adjusting font-size on big screens screens */
 @media (min-width: 991px) and (max-width: 1500px) {
   #extra{
     line-height: 105px;
@@ -607,7 +608,7 @@ nav {
 }
 
 /*tablets*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   /* mobile background */
   #battlepass{
     height: 100%;
@@ -616,6 +617,68 @@ nav {
   .battlepass-content{
     padding-top: 20em;
   }
+}
+
+/*big laptop adjustment*/
+@media (min-width: 1100px) and (max-width: 1440px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat top/contain;
+    background-size: 100% 100%
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*small laptop adjustment*/
+@media (min-width: 900px) and (max-width: 1100px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat top/cover;
+    background-size: 100% 100%
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
 }
 
 /*i-phone-6,7,8,X*/
