@@ -101,6 +101,19 @@ nav {
     margin: 4px 0;
   }
 
+  #veggie-burger:hover #vp-1 {
+    transform: rotate(135deg);
+}
+
+/* turn lines into X */
+#veggie-burger:hover #vp-3 {
+    transform: rotate(200deg);
+}
+
+#veggie-burger:hover #vp-2 {
+  display: none;
+}
+
   /* hover effects for vegburger menu: */
   #veggie-burger:hover {
     background-color: #1EB8F4;
@@ -220,8 +233,14 @@ nav {
   }
 
   /* make the bottom border already exist so that it doesn't bump up the text */
-  #nav-right button { border-bottom: 5px solid #2a2a2a;}
-  #nav-right #download { border-bottom: none; }
+  #nav-right button { 
+    border-bottom: 5px solid #2a2a2a;
+    border-top: 5px solid #2a2a2a;
+  }
+  #nav-right #download { 
+    border-bottom: none;
+    border-top: none;
+  }
 
   /* HOVER effect for righthand buttons: yellow line */
   #nav-right button:hover {
@@ -276,20 +295,26 @@ nav {
     max-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    right: 210px;
+    padding: 0.7em 0;
+
   }
   
   /* for the sites; need to make a different one for languages */
   .dropdown-content a {
     padding: .5em .8em; /* from original */
     display: block;
-    text-align: left;
+    text-align: center;
   }
   
   /* make the dropdown appear on hover */
   .dropdown:hover .dropdown-content { display: block;}
   
   /* Hover effects for dropdown items */
-  .dropdown-content a:hover { background-color: #1EB8F4; }
+  .dropdown-content a:hover { 
+    background-color: #1EB8F4;
+    color: black; 
+  }
 
 }
 
@@ -327,7 +352,7 @@ nav {
   
   /* styling for site list and links */
     #nav-ul li {
-      padding: 17px 10.5px; /* makes bottom border line up correctly */
+      padding: 16px 10.5px; /* makes bottom border line up correctly */
       display: inline-block;
     }
 
@@ -336,7 +361,10 @@ nav {
     }
     
     /* make it already have a bottom border: */
-    #nav-ul li { border-bottom: 5px solid #2a2a2a}
+    #nav-ul li { 
+      border-bottom: 5px solid #2a2a2a;
+      border-top: 5px solid #2a2a2a;
+    }
 
     /* HOVER effect for nav links (NOT competetive dropdown): yellow line */
     #nav-ul .main-nav-links:hover {
