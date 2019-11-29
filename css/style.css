@@ -77,10 +77,20 @@ h6 {
     align-items: center;
     flex-flow: row nowrap;
     flex-direction: column;
-    }
+}
 
 .bigImages .flex:hover .contentBottomLeft {
     bottom: 20px;
+}
+
+.cardImgOne,
+.cardImgTwo,
+.cardImgThree,
+.cardImgFour {
+    display: flex;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .cardImgOne>.img {
@@ -96,35 +106,18 @@ h6 {
     background-size: auto 650px;
 }
 
+/* Two Big Hidden Images */
+
 .cardImgThree>.img {
     height: 450px;
     background: url("../images/bigImgThree.jpg");
     background-size: 100% 100%;
-    
 }
 
 .cardImgFour>.img {
     height: 450px;
     background: url("../images/bigImgFour.jpg");
     background-size: 100% 100%;
-    
-}
-#hideShow {
-    display: none;
-    }
-
-#hideShow.show {
-    display: block;
-}    
-
-.cardImgOne,
-.cardImgTwo,
-.cardImgThree,
-.cardImgFour {
-    display: flex;
-    position: relative;
-    text-align: center;
-    color: white;
 }
 
 .contentBottomLeft {
@@ -136,10 +129,12 @@ h6 {
 .contentBottomLeft h3 {
     font-size: 30px;
     text-align: left;
+    text-transform: uppercase;
 }
 
 .contentBottomLeft p {
     text-align: left;
+    text-transform: uppercase;
 }
 
 .imageRight {
@@ -158,12 +153,11 @@ h6 {
     flex-direction: column;
 }
 
-.spacer {
+/* .spacer {
     height: 24px;
     width: 24px;
-}
-
-.card > .content {
+} */
+.card>.content {
     padding: 22px 16px;
 }
 
@@ -175,7 +169,6 @@ h6 {
     font-family: "Burbank Big Regular", sans-serif;
 }
 
-/* Four Small Images */
 .sub>.cardOne>.img {
     background-image: url("../images/1.jpg");
     background-size: 100% 100%;
@@ -194,6 +187,15 @@ h6 {
 .sub>.cardFour>.img {
     background-image: url("../images/4.jpg");
     background-size: 100% 100%;
+}
+
+/* Load More Button */
+#hideShow {
+    display: none;
+}
+
+#hideShow.show {
+    display: block;
 }
 
 /*  Four Small Hidden Images  */
@@ -260,17 +262,16 @@ h6 {
     transform: skew(-10deg);
 }
 
-
 /* Load More Button */
-/* .button {
+.button {
     margin-top: 50px;
     text-align: center;
 }
 
 .button .load {
     display: inline-block;
-    padding: 0 .5em;
-    width: 20%;
+    padding: 0 20px;
+    /* width: 20%; */
     height: 10%;
     font-size: 1.5em;
     border: 4px solid black;
@@ -289,20 +290,89 @@ h6 {
     background-color: black;
     color: white;
     transition: all .3s ease-in-out;
-} */
+}
 
-/* Media Queries */
+/* Slick slider styles */
+.slider {
+    width: 100%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: 1;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+/* Mobile Media Queries */
 @media only screen and (min-width: 360px) {
+    .container {
+        width: 100%;
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .cardImgOne>.img,
+    .cardImgTwo>.img {
+        height: 300px;
+        background-size: 100% 100%;
+    }
+
+    .contentBottomLeft {
+        position: relative;
+        bottom: 0;
+        padding: 15px 15px 15px 5px;
+    }
+
+    .bigImages .flex:hover .contentBottomLeft {
+        bottom: 0px;
+    }
+
+    .contentBottomLeft p {
+        font-size: 14px;
+        color: rgb(43, 43, 161);
+    }
+
+    .contentBottomLeft h3 {
+        color: black;
+        font-size: 20px;
+    }
+
+    .imageRight {
+        width: 100%;
+    }
+
     .button {
         margin-top: 50px;
         text-align: center;
     }
-    
+
     .button .load {
         display: inline-block;
-        padding: 0 .5em;
-        width: 15%; 
-        height: 2%; 
+        /* width: 25%; */
+        height: 2%;
         font-size: 1em;
         border: 4px solid black;
         color: black;
@@ -315,18 +385,41 @@ h6 {
         font-family: "Burbank Big Regular", sans-serif;
         margin-bottom: 30px;
     }
-    
+
     .button .load:hover {
         background-color: black;
         color: white;
         transition: all .3s ease-in-out;
     }
+	
+	.flex.direction {
+    flex-direction: column;
+    }
+    
+    .hideMobile {
+        display: none;
+    }
 
+    .buttonMobile {
+        display: block;
+        text-align: center;
+    }
+
+    .buttonDesktop {
+        display: none;
+        text-align: center;
+    }
 }
+
+/* Ipad Version */
 @media only screen and (min-width: 720px) {
+    .container {
+        width: 90%;
+    }
+
+	
     .bigImages {
         flex-direction: row;
-
     }
 
     .spacer {
@@ -334,29 +427,70 @@ h6 {
         width: 48px;
     }
 
-    .card > .img {
+    .card>.img {
         height: 320px;
     }
 
     .sub {
         width: 100%;
     }
+	.slider.slick-slider{display:none;}
+	.flex.direction {
+    flex-direction: row;
+    }
+    
+    .buttonMobile {
+        display: none;
+    }
+    
+    .buttonDesktop {
+        display: block;
+    }
 
-    .sub > .card >.img {
-        height: 200px;
+    .hideMobile {
+        display: flex;
+    }
+
+    .imageRight {
+        width: 75%;
+    }
+
+    .cardImgOne>.img, .cardImgTwo>.img {
+        height: 450px;
+    }
+
+
+    .contentBottomLeft {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+    }
+
+    .contentBottomLeft h3 {
+        font-size: 30px;
+        text-align: left;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .contentBottomLeft p {
+        text-align: left;
+        text-transform: uppercase;
+        color: white;
     }
 }
 
-@media only screen and (min-width: 640px) {
-    .card > .img {
-        height: 520px;
+/*  Desktop */
+ @media only screen and (min-width: 1200px) {
+    .cardImgOne>.img, .cardImgTwo>.img {
+        height: 650px;
     }
 
-    .direction {
-        flex-direction: row;
+    .contentBottomLeft h3 {
+        color: white;
     }
 
-    .sub > .card >.img {
-        height: 300px;
+    .contentBottomLeft p {
+        color: white;
     }
-}
+} 
