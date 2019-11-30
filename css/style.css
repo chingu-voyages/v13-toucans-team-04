@@ -45,54 +45,62 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* nav */
+/* navbar */
 
-/* media queries have to go at the end or else they get overwritten like anything else: */
-/* For mobile phones: */
-/* (this is the default) */
+/* ********** */
+/* For mobile phones: */ 
+/* ********** */
 
 nav {
   width: 100%;
   background-color: #2a2a2a;
-  height: 3.7rem;
-  max-height: 3.7rem;
-  align-items: center;
 }
 
-#eg-logo img {
-  height: 2em;
-  display: block;
-  margin-left: 0.5em;
+/* left logos: */
+#eg-logo {
+  margin-left: 1rem; 
 }
 
-  #eg-logo {
-    margin-left: 7px;
+  #eg-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: 5px;
   }
 
-#fn-logo img {
-  height: 3.5rem;
-  display: block;
-  margin: 0 0.75em;
-}
+  #eg-logo img {
+    height: 2em;
+    display: block;
+  }
 
 #fn-logo {
-  margin: 0 10px 0 5px;
+  margin: 0 0.5rem; 
 }
 
-#mobile-nav {
+  #fn-logo img {
+    height: 3.5rem;
+    display: block;
+    margin: 0 1rem;
+  }
+
+  #fn-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+#mobile-nav, #nav-logos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
-#nav-logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-}
+  #mobile-nav {
+    justify-content: space-between;
+  }
 
+  #nav-logos {
+    justify-content: right;
+  }
+
+/* vegburger menu: */
 #veggie-burger {
   background-color: #ffff00;
   height: 3.7rem;
@@ -103,16 +111,438 @@ nav {
   align-items: center;
 }
 
-.veggie-patty {
-  width: 35px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0;
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+
+  #veggie-burger:hover #vp-1 {
+    transform: rotate(135deg);
 }
 
+/* turn lines into X */
+#veggie-burger:hover #vp-3 {
+    transform: rotate(200deg);
+}
+
+#veggie-burger:hover #vp-2 {
+  display: none;
+}
+
+  /* hover effects for vegburger menu: */
+  #veggie-burger:hover {
+    background-color: #1EB8F4;
+    transition: 0.3s;
+  }
+
+  /* focus effect for vegburger menu: */
+
+  #veggie-burger:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+  }
+
+/* hiding things on small and medium screens: */
 .no-small-screens, .no-med-screens {
   display: none;
 }
+
+/* MS 1 start*/
+#sec1image {
+  height: 800px;
+  background-size: 105%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: url(../images/fortnite_home.jpg)no-repeat center/cover;
+  background-position: center top;
+  overflow: hidden;
+
+}
+
+#dropdiv {
+  flex-direction: column;
+  height: 45%;
+  width: 40%;
+  margin: 15% 0 0 7%;
+  font-size: 4vw;
+  color: white;
+  overflow: hidden;
+}
+
+#drop {
+  margin: 0 auto;
+}
+
+#logo {
+  width: 40%;
+}
+
+#learn {
+  color: black;
+}
+
+/* Skew Forward */
+#learn-more {
+  font-size: 14px;
+  background-color: yellow;
+  padding: 0 7%;
+  color: black;
+  display: inline;
+  vertical-align: center;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+#learn-more:hover,
+#learn-more:focus,
+#learn-more:active {
+  background-color: rgb(202, 202, 11);
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+}
+
+#learn {
+  color: black;
+
+}
+
+/* Forward */
+#learn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+#learn:hover,
+#learn:focus,
+#learn:active {
+  -webkit-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+#trailer {
+  width: 340px;
+  color: white;
+  text-align: center;
+}
+
+#watch {
+  font-size: 4.5vw;
+  margin: auto 9px;
+}
+
+#play-button {
+  height: 50px;
+}
+/* MS 1 end
+
+/* Main section 2 start */
+.container {
+  box-sizing: border-box;
+  width: 95%;
+}
+
+.wrapper {
+  padding: 16px 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.dividerOne {
+  height: 2px;
+  width: 100%;
+}
+
+.dividerTwo {
+  height: 24px;
+  width: 100%;
+}
+
+.card,
+.cardImgOne,
+.cardImgTwo,
+.cardImgThree,
+.cardImgFour {
+  box-shadow: 1px 1px 7px 0px #efe6e6;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Two Big Fixed Images */
+.bigImages {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  flex-direction: column;
+}
+
+.bigImages .flex:hover .contentBottomLeft {
+  bottom: 20px;
+}
+
+.cardImgOne,
+.cardImgTwo,
+.cardImgThree,
+.cardImgFour {
+  display: flex;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.cardImgOne>.img {
+  height: 650px;
+  background: url("../images/bigImgOne.jpg");
+  background-size: auto 650px;
+  background-position: center;
+}
+
+.cardImgTwo>.img {
+  height: 650px;
+  background: url("../images/bigImgTwo.jpg");
+  background-size: auto 650px;
+}
+
+/* Two Big Hidden Images */
+
+.cardImgThree>.img {
+  height: 450px;
+  background: url("../images/bigImgThree.jpg");
+  background-size: 100% 100%;
+}
+
+.cardImgFour>.img {
+  height: 450px;
+  background: url("../images/bigImgFour.jpg");
+  background-size: 100% 100%;
+}
+
+.contentBottomLeft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.contentBottomLeft h3 {
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.contentBottomLeft p {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.imageRight {
+  width: 75%;
+}
+
+/* Four Small Fixed Images */
+.sub {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  flex-direction: row;
+}
+
+.direction {
+  flex-direction: column;
+}
+
+/* .spacer {
+  height: 24px;
+  width: 24px;
+} */
+.card>.content {
+  padding: 22px 16px;
+}
+
+.content p {
+  color: rgb(43, 43, 161);
+}
+
+.content h4 {
+  font-family: "Burbank Big Regular", sans-serif;
+}
+
+.sub>.cardOne>.img {
+  background-image: url("../images/1.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardTwo>.img {
+  background-image: url("../images/2.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardThree>.img {
+  background-image: url("../images/3.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardFour>.img {
+  background-image: url("../images/4.jpg");
+  background-size: 100% 100%;
+}
+
+/* Load More Button */
+#hideShow {
+  display: none;
+}
+
+#hideShow.show {
+  display: block;
+}
+
+/*  Four Small Hidden Images  */
+.sub>.cardFive>.img {
+  background-image: url("../images/5.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardSix>.img {
+  background-image: url("../images/6.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardSeven>.img {
+  background-image: url("../images/7.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardEight>.img {
+  background-image: url("../images/8.jpg");
+  background-size: 100% 100%;
+}
+
+/* Hover effects */
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Skew Forward */
+.hvr-skew-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.hvr-skew-forward:hover,
+.hvr-skew-forward:focus,
+.hvr-skew-forward:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+
+/* Load More Button */
+.button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.button .load {
+  display: inline-block;
+  padding: 0 20px;
+  /* width: 20%; */
+  height: 10%;
+  font-size: 1.5em;
+  border: 4px solid black;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 0;
+  line-height: 2;
+  z-index: 1;
+  letter-spacing: 0;
+  font-family: "Burbank Big Regular", sans-serif;
+  margin-bottom: 30px;
+}
+
+.button .load:hover {
+  background-color: black;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+/* Slick slider styles */
+.slider {
+  width: 100%;
+  margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: 1;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+/*MS2 end*/
 
 /*Footer start*/
 
@@ -322,8 +752,8 @@ nav {
   align-content: center;
   flex-direction: column;
   width: 100vw;
-  height: auto;
-  background: url(../images/battlepass.png) no-repeat center/cover;
+  height: 100%;
+  background: url(../images/battlepass.png) no-repeat top/cover;
 }
 
 .battlepass-content{
@@ -338,7 +768,7 @@ nav {
 
 .battlepass-bigheading{
   color: #2be5fe;
-  font-size: 8vw;
+  font-size: 4em;
 }
 
 #extra{
@@ -349,7 +779,7 @@ nav {
 .break {
     display: block; /* makes it have a width */
     content: ""; /* clears default height */
-    margin-top: -20px; /* change this to whatever height you want it */
+    margin-top: -10px; /* change this to whatever height you want it */
 }
 
 .battlepass-heading{
@@ -358,7 +788,7 @@ nav {
 }
 
 .extra{
-  font-size: 12vw;
+  font-size: 6em;
   color: #2be5fe;
 }
 
@@ -438,112 +868,9 @@ nav {
 /*media queries footer end*/
 
 /*Footer end*/
-/*media queries navbar start*/
-
-@media only screen and (min-width: 600px) {
-  /* For tablets (screens bigger than 600px but smaller than 768px): */
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #nav-right, #user-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-  }
-
-  .no-small-screens {
-    display: block;
-  }
-
-  #mobile-nav {
-    justify-content: left;
-  }
-
-  #veggie-burger {
-    background-color: #2a2a2a;
-  }
-
-  .veggie-patty {
-    width: 35px;
-    height: 3px;
-    background-color: #cccccc;
-    margin: 4px 0;
-  }
-
-  button {
-    height: 3.7rem;
-    background-color: #2a2a2a;
-    border: none;
-  }
-
-  #user, #language, #search {
-    padding: 0 14px;
-  }
-
-  #download, #download button {
-    padding: 0 7px;
-    background-color: #ffff00;
-    color: #000000;
-  }
-
-  #download button {
-    margin: 0 0.5rem;
-  }
-
-  .fas {
-    color: #CCCCCC;
-  }
-
-  .sign-text {
-    padding: 0 10px;
-  }
-
-  .nav-text {
-    text-transform: uppercase;
-    color: #CCCCCC;
-    font-size: 10.5px;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1px;
-  }
-
-}
-
-@media only screen and (min-width: 1100px) {
-  /* For desktop (screens bigger than 1100px): */
-  /* made breakpoint a bit larger than usual so that the nav isn't crowded */
-
-  #veggie-burger {
-    display: none;
-  }
-
-  .no-med-screens {
-    display: block;
-  }
-
-  a {
-    display: block;
-  }
-
-  #nav-sites, #nav-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #nav-left {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center;
-  }
-}
 
 /*media queries battlepass start*/
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1500px) {
   #extra{
     line-height: 125px;
   }
@@ -551,6 +878,33 @@ nav {
     display: block; /* makes it have a width */
     content: ""; /* clears default height */
     margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+ /* adjusting font-size on big screens screens */
+@media (min-width: 991px) and (max-width: 1500px) {
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 200px;
+  }
+  .battlepass-bigheading{
+    font-size: 150px;
+  }
+  .battlepass-smallheading{
+    font-size: 26px;
+  }
+  .battlepass-heading{
+    font-size: 42px;
+  }
+  .battlepass-button{
+    font-size: 1.3em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
 }
 }
 
@@ -566,14 +920,13 @@ nav {
     font-size: 70px;
   }
   .battlepass-smallheading{
-    font-size: 15px;
+    font-size: 13px;
   }
   .battlepass-heading{
     font-size: 21px;
   }
   .battlepass-button{
-    margin-top: 1em;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   .battlepass-content img{
     width: 80px;
@@ -581,19 +934,731 @@ nav {
   }
 }
 
-@media only screen and (max-width: 768px) {
+/*tablets*/
+@media only screen and (max-width: 900px) {
   /* mobile background */
   #battlepass{
-    padding: 2em 1em;
-    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+    height: 100%;
+    background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 20em;
   }
 }
 
-@media only screen and (max-width: 320px) {
+/*big laptop adjustment*/
+@media (min-width: 1100px) and (max-width: 1440px)  {
   #battlepass{
-    padding: 2em 2em;
-    background: url(../images/battlepass-mobile.jpg) no-repeat top/cover;
+    background: url(../images/battlepass.png) no-repeat top/contain;
+    background-size: 100% 100%
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*small laptop adjustment*/
+@media (min-width: 900px) and (max-width: 1100px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat top/cover;
+    background-size: 100% 100%
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*i-phone-6,7,8,X*/
+@media (max-width: 414px) and (max-height: 812px)  {
+  #battlepass{
+    padding: 0em 0em;
+    height: 120vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+
+/*i-phone-5*/
+@media(max-width: 320px) and (max-height: 568px){
+  #battlepass{
+    padding: 0em 0em;
+    width: 100%;
+    height: 140vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
   }
 }
 /*media queries battlepass end*/
 
+/* Navbar queries start*/
+/* For tablets (screens bigger than 690px but smaller than 768px): */
+/* ********** */
+@media only screen and (min-width: 690px) {
+
+  /* show some things that were hidden on mobile, but not everything: */
+  .no-small-screens {
+    display: block;
+  }
+
+  /* organisation: */
+  nav, #nav-right {
+    display: flex;
+    flex-direction: row;
+  }
+    nav {
+      justify-content: space-between;
+    }
+
+    #nav-right {
+      justify-content: right;
+    }
+
+  #mobile-nav {
+    justify-content: left;
+  }
+
+  /* vegburger menu styling change */
+  #veggie-burger {
+    background-color: #2a2a2a;
+  }
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: #cccccc;
+    margin: 4px 0;
+  }  
+
+  /* HOVER effects for vegburger menu on med: */
+    #veggie-burger:hover {
+      background-color: #ffff00;
+      transition: 0.3s;
+    }
+
+    #veggie-burger:hover .veggie-patty {
+      background-color: #000000;
+      transition: 0.3s;
+    }
+  
+  /* FOCUS effects for vegburger menu on med: */
+    #veggie-burger:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+    }
+
+  /* righthand icons */
+  #search, #language, #user, #download {
+    height: 3.7rem;
+    background-color: #2a2a2a;
+    border: none;
+    padding: 0 1.75rem
+  }
+
+  /* find a better way to do this */
+  #language {
+    padding-top: 8px;
+  }
+
+  #user, #download {
+    font-size: 10px;
+  }
+
+  #download {
+    background-color: #ffff00;
+    color: #2a2a2a;
+  }
+
+  /* text in "sign up" button */
+  #user .sign-text {
+    padding: 0 8px; 
+  }
+
+  /* fontawesome icons */
+  #search .fas, #user .fas, #language .fas {
+    color: #CCCCCC;
+    line-height: 1.6;
+    display: inline;
+  }
+
+  /* all nav text incl buttons: */
+  .nav-text {
+    text-transform: uppercase;
+    color: #CCCCCC;
+    font-size: 10.5px; 
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  /* make the bottom border already exist so that it doesn't bump up the text */
+  #nav-right button { 
+    border-bottom: 5px solid #2a2a2a;
+    border-top: 5px solid #2a2a2a;
+  }
+  #nav-right #download { 
+    border-bottom: none;
+    border-top: none;
+  }
+
+  /* HOVER effect for righthand buttons: yellow line */
+  #nav-right button:hover {
+    border-bottom: 5px solid #ffff00;
+    transition: 0.3s;
+  }
+
+  /* HOVER effect for righthand buttons: white font */
+  #nav-right button:hover .fas,
+  #nav-right button:hover span {
+    color: #ffffff;
+  }
+
+  /* FOCUS effect for righthand buttons: yellow outline */
+  #nav-right button:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+  /* FOCUS effect for righthand buttons: white font */
+    #nav-right button:focus .fas,
+    #nav-right button:focus span {
+      color: #ffffff;
+    }
+
+  /* HOVER effect for download button: make it blue */
+  #nav-right #download:hover {
+    background-color: #1EB8F4;
+    color: #000000;
+    border: none;
+    transition: 0.3s;
+  }
+
+  /* FOCUS effect for download button: blue outline */
+  #nav-right #download:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+    color: #000000;
+  }
+
+  /* nav dropdown (competitive and language) */
+  .main-nav-links, .dropbtn {
+    display: inline-block;
+  }
+  
+  /* make it invisible til hover but set the styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    min-width: 160px;
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 210px;
+    padding: 0.7em 0;
+
+  }
+  
+  /* for the sites; need to make a different one for languages */
+  .dropdown-content a {
+    padding: .5em .8em; /* from original */
+    display: block;
+    text-align: center;
+  }
+  
+  /* make the dropdown appear on hover */
+  .dropdown:hover .dropdown-content { display: block;}
+  
+  /* Hover effects for dropdown items */
+  .dropdown-content a:hover { 
+    background-color: #1EB8F4;
+    color: black; 
+  }
+
+}
+
+
+/* ********** */
+/* For desktop (screens bigger than 1200px): */
+/* ********** */
+
+@media only screen and (min-width: 1250px) {
+
+  /* make everything visible: */
+  .no-med-screens {
+    display: block;
+  }
+
+  /* except the vegburger menu, get rid of that: */
+  #veggie-burger {
+    display: none;
+  }
+
+  /* organisation: */
+  #nav-left {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+  }
+  
+  #nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden; /* added from dropdown example, possible unnecessary */
+  }
+  
+  /* styling for site list and links */
+    #nav-ul li {
+      padding: 16px 10.5px; /* makes bottom border line up correctly */
+      display: inline-block;
+    }
+
+    #nav-ul a {
+      color: #cccccc;
+    }
+    
+    /* make it already have a bottom border: */
+    #nav-ul li { 
+      border-bottom: 5px solid #2a2a2a;
+      border-top: 5px solid #2a2a2a;
+    }
+
+    /* HOVER effect for nav links (NOT competetive dropdown): yellow line */
+    #nav-ul .main-nav-links:hover {
+      border-bottom: solid 5px #ffff00;
+      transition: 0.3s;
+    }
+
+    /* HOVER effect for nav site links: white text */
+    #nav-ul li:hover a {
+      color: #ffffff;
+      transition: 0.3s;
+    }
+
+    /* FOCUS effect for nav site non-links: yellow outline and white text */
+    /* for some reason this has changed size, need to fix */
+    #nav-ul li:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+      color: #ffffff;
+    }
+
+    /* FOCUS effect for nav site links: yellow outline and white text */
+    #nav-ul li a:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: 5px;
+      color: #ffffff;
+    }
+}
+
+/* MS 1 media queries start*/
+@media screen and (min-width: 350px) {
+  #dropdiv {
+    font-size: 6vw;
+    text-align: center;
+    margin: 5% auto;
+    width: 85%;
+  }
+
+  #logo {
+    width: 20%;
+  }
+
+  #trailer {
+    margin: 35% auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 365px) {
+
+  #dropdiv {
+    font-size: 30px;
+    line-height: 2em;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 350px;
+  }
+
+  #logo {
+    width: 20%;
+  }
+
+  #trailer {
+    margin: 45% auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 450px) {
+
+  #sec1image {
+    background-size: 250% auto;
+    flex-direction: column;
+  }
+
+  #dropdiv {
+    font-size: 30px;
+    line-height: 2em;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 350px;
+  }
+
+  #logo {
+    width: 15%;
+  }
+
+  #learn-more {
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #trailer {
+    display: block;
+    margin: -0px auto 0 auto;
+    width: 35vw;
+    font-size: 100%;
+  }
+
+  #watch {
+    font-size: 4vw;
+  }
+  
+  #play-button {
+    width: 25%;
+    height: auto;
+}
+/*
+
+  #play-button {
+    height: auto;
+    width: 30%;
+  }
+*/
+}
+
+@media screen and (min-width: 769px) {
+  #sec1image {
+    height: 1000px;
+    background-size: auto 1000px;
+    display: flex;
+    
+  }
+  
+  #dropdiv{
+    margin-top: 2%;
+  }
+
+  #trailer {
+    align-self: flex-end;
+    margin: 330px 30px 0 0;
+    width: 200px;
+  }
+
+  #learn-more {
+    font-size: 18px;
+  }
+
+  #watch {
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  #play-button {
+    width: 40px;
+    height: auto;
+}
+}
+
+@media screen and ( min-width: 992px) {
+  #sec1image {
+    height: 900px;
+    background-size: auto 1000px;
+  }
+
+  #dropdiv {
+    margin: 100px 0 120px 130px;
+    width: 34%;
+    height: auto;
+    text-align: left;
+    font-size: 4vw;
+  }
+
+  #learn-more {
+   align-items: center;
+    font-size: 28px;
+  }
+
+  #logo {
+    width: 25%;
+  }
+
+  #trailer {
+    align-self: flex-end;
+    justify-content: center;
+    margin: -120px 30px 0 0;
+    width: 300px;
+  }
+
+  #watch {
+    font-size: 24px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #play-button {
+    width: 70px;
+  }
+}
+
+@media screen and ( min-width: 1199px) {
+
+  #dropdiv {
+    margin: 60px 0 120px 130px;
+  }
+
+  #trailer {
+    margin: -150px 30px 0 0;
+  }
+}
+
+@media screen and ( min-width: 1416px) {
+
+  #sec1image {
+    height: 70vw;
+    background-size: 105%;
+  }
+}
+
+@media screen and ( min-width: 1492px) {
+
+  #sec1image {
+    background-size: 105%;
+  }
+
+  #dropdiv {
+    font-size: 4vw;
+  }
+
+  #trailer {
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+/* MS 1 media queries end
+
+/* MS2 Media queries start */
+@media only screen and (min-width: 360px) {
+  .container {
+      width: 100%;
+  }
+
+  .wrapper {
+      padding: 0;
+  }
+
+  .cardImgOne>.img,
+  .cardImgTwo>.img {
+      height: 300px;
+      background-size: 100% 100%;
+  }
+
+  .contentBottomLeft {
+      position: relative;
+      bottom: 0;
+      padding: 15px 15px 15px 5px;
+  }
+
+  .bigImages .flex:hover .contentBottomLeft {
+      bottom: 0px;
+  }
+
+  .contentBottomLeft p {
+      font-size: 14px;
+      color: rgb(43, 43, 161);
+  }
+
+  .contentBottomLeft h3 {
+      color: black;
+      font-size: 20px;
+  }
+
+  .imageRight {
+      width: 100%;
+  }
+
+  .button {
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .button .load {
+      display: inline-block;
+      /* width: 25%; */
+      height: 2%;
+      font-size: 1em;
+      border: 4px solid black;
+      color: black;
+      background-color: white;
+      text-decoration: none;
+      border-radius: 0;
+      line-height: 2;
+      z-index: 1;
+      letter-spacing: 0;
+      font-family: "Burbank Big Regular", sans-serif;
+      margin-bottom: 30px;
+  }
+
+  .button .load:hover {
+      background-color: black;
+      color: white;
+      transition: all .3s ease-in-out;
+  }
+
+.flex.direction {
+  flex-direction: column;
+  }
+  
+  .hideMobile {
+      display: none;
+  }
+
+  .buttonMobile {
+      display: block;
+      text-align: center;
+  }
+
+  .buttonDesktop {
+      display: none;
+      text-align: center;
+  }
+}
+
+/* Ipad Version */
+@media only screen and (min-width: 720px) {
+  .container {
+      width: 90%;
+  }
+
+
+  .bigImages {
+      flex-direction: row;
+  }
+
+  .spacer {
+      height: 2px;
+      width: 48px;
+  }
+
+  .card>.img {
+      height: 320px;
+  }
+
+  .sub {
+      width: 100%;
+  }
+.slider.slick-slider{display:none;}
+.flex.direction {
+  flex-direction: row;
+  }
+  
+  .buttonMobile {
+      display: none;
+  }
+  
+  .buttonDesktop {
+      display: block;
+  }
+
+  .hideMobile {
+      display: flex;
+  }
+
+  .imageRight {
+      width: 75%;
+  }
+
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 450px;
+  }
+
+
+  .contentBottomLeft {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+  }
+
+  .contentBottomLeft h3 {
+      font-size: 30px;
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+}
+
+/*  Desktop */
+@media only screen and (min-width: 1200px) {
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 650px;
+  }
+
+  .contentBottomLeft h3 {
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      color: white;
+  }
+} 
+/* MS2 Media queries end */
