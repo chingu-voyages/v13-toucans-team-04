@@ -135,53 +135,61 @@ nav {
   color: white;
   overflow: hidden;
   margin: 10% 0 0 0;
-  border: 1px solid black;
+  
 }
 
 #drop {
   font-size: 9vw;
   margin: 0 auto;
+  text-shadow: 2px 2px 4px #414141;
 }
 
 #logo {
   width: 40%;
 }
 
+/* Skew Forward */
 #learn-more {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+ 
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  
   background-color: yellow;
   width: 100px;
-  height: 30px;
+  height: 40px;
   margin: auto;
   display: flex;
   justify-content: center;
+
+}
+
+
+
+
+#learn-more:hover, #learn-more:focus, #learn-more:active {
+  -webkit-transform: skew(-6deg);
+  transform: skew(-6deg);
+}
+
+#learn-more:hover {
+  background-color: rgb(190, 190, 42);
 }
 
 #learn {
   color: black;
   align-self: center;
+  text-align: center;
+  overflow: hidden;
 }
-
-
-
-/* Skew Forward */
-.hvr-skew-forward {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-}
-.hvr-skew-forward:hover, .hvr-skew-forward:focus, .hvr-skew-forward:active {
-  -webkit-transform: skew(-10deg);
-  transform: skew(-10deg);
-}
-
 
 
 #trailer {
@@ -189,12 +197,12 @@ nav {
   width: 340px;
   color: white;
   text-align: center;
-  background-color: crimson;
+  text-shadow: 2px 2px 4px #414141;
   margin: 10% 0 0 0;
 }
 
 #watch {
-
+  text-shadow: 2px 2px 4px #414141;
   font-size: 4.5vw;
   margin: auto 9px;
 }
@@ -203,7 +211,6 @@ nav {
   height: 50px;
   
 }
-
 
 /* MS 1 enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
 
@@ -749,7 +756,7 @@ nav {
 
   #drop {
     font-size: 9vw;
-    background-color: crimson;
+    
   }
 
   #logo {
@@ -831,7 +838,7 @@ nav {
   }
 
   #learn {
-    font-size: 10px;
+    font-size: 14px;
   }
 
 
@@ -881,7 +888,7 @@ nav {
 
   #learn-more {
     width: 130px;
-    height: 40px;
+    height: 50px;
     margin: 10px;
   }
 
@@ -927,27 +934,45 @@ nav {
     background-size: auto 1000px;
     
   }
+  
+  
 
   #dropdiv {
-    
+    align-self: flex-start;
     margin: 100px 0 120px 130px;
-    width: 37%;
+    width: 34%;
     height: auto;
     text-align: left;
-    font-size: 4vw;
-    
+    font-size: 8vw;
+    line-height: 1.2;
+  }
+/**/
+  #drop {
+    margin: 0;
+    font-size: inherit;
+    width: 100%;
+    overflow: hidden;
   }
 
   #learn-more {
-    padding: 2% 5%;
+    align-self: flex-start;
+    width: 200px;
+    height: 60px;
     align-items: center;
-    font-size: 18px;
-    margin: 0;
+    font-size: 28px;
+    margin: 20px 0 0 0;
   }
 
   #logo {
     width: 25%;
   }
+
+  
+
+  #learn {
+    font-size: 24px;
+  }
+
 
   #trailer {
     
@@ -976,7 +1001,7 @@ nav {
   }
 
   #trailer {
-    margin: -150px 30px 0 0;
+    margin: -190px 30px 0 0;
 
   }
 }
@@ -994,15 +1019,7 @@ nav {
     background-size: 105%;
     
   }
-  #dropdiv {
-    font-size: 4vw;
-  }
-
-
-  #trailer {
-    display: inline-block;
-    overflow: hidden;
-  }
+  
 }
 
 
