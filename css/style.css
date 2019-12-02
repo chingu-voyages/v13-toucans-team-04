@@ -149,7 +149,8 @@ nav {
   display: none;
 }
 
-/* MS 1 start*/
+/* MS 1 startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
+/*big background image*/
 #sec1image {
   height: 800px;
   background-size: 105%;
@@ -159,98 +160,95 @@ nav {
   background: url(../images/fortnite_home.jpg)no-repeat center/cover;
   background-position: center top;
   overflow: hidden;
-
+  text-align: center;
 }
-
+/*the drop into the new world heading with the logo and the button*/
 #dropdiv {
   flex-direction: column;
   height: 45%;
-  width: 40%;
-  margin: 15% 0 0 7%;
-  font-size: 4vw;
+  width: 70%;
+  align-self: center;
   color: white;
   overflow: hidden;
+  margin: 10% 0 0 0;
+  
 }
 
 #drop {
+  font-size: 9vw;
   margin: 0 auto;
+  text-shadow: 2px 2px 4px #414141;
 }
 
 #logo {
   width: 40%;
 }
 
-#learn {
-  color: black;
-}
-
 /* Skew Forward */
 #learn-more {
-  font-size: 14px;
-  background-color: yellow;
-  padding: 0 7%;
-  color: black;
-  display: inline;
-  vertical-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+ 
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
   -webkit-transition-property: transform;
   transition-property: transform;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
+  
+  background-color: yellow;
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
 }
 
-#learn-more:hover,
-#learn-more:focus,
-#learn-more:active {
-  background-color: rgb(202, 202, 11);
-  -webkit-transform: skew(-5deg);
-  transform: skew(-5deg);
+
+
+
+#learn-more:hover, #learn-more:focus, #learn-more:active {
+  -webkit-transform: skew(-6deg);
+  transform: skew(-6deg);
+}
+
+#learn-more:hover {
+  background-color: rgb(190, 190, 42);
 }
 
 #learn {
   color: black;
-
+  align-self: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Forward */
-#learn {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-
-#learn:hover,
-#learn:focus,
-#learn:active {
-  -webkit-transform: translateX(2px);
-  transform: translateX(2px);
-}
 
 #trailer {
+ 
   width: 340px;
   color: white;
   text-align: center;
+  text-shadow: 2px 2px 4px #414141;
+  margin: 10% 0 0 0;
 }
 
 #watch {
+  text-shadow: 2px 2px 4px #414141;
   font-size: 4.5vw;
   margin: auto 9px;
 }
 
 #play-button {
   height: 50px;
+  
 }
-/* MS 1 end
+
+/* MS 1 enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
 
 /* Main section 2 start */
 .container {
@@ -1326,71 +1324,110 @@ nav {
     }
 }
 
-/* MS 1 media queries start*/
+/* MS 1 media queries startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
 @media screen and (min-width: 350px) {
   #dropdiv {
-    font-size: 6vw;
-    text-align: center;
     margin: 5% auto;
-    width: 85%;
+    width: 65%;
+
+  }
+
+  #drop {
+    font-size: 9vw;
+    
   }
 
   #logo {
     width: 20%;
   }
 
+  
+
   #trailer {
-    margin: 35% auto 0 auto;
+    margin: 25% auto 0 auto;
   }
 }
 
-@media screen and (min-width: 365px) {
 
+
+@media screen and (min-width: 365px) {
   #dropdiv {
     font-size: 30px;
     line-height: 2em;
     text-align: center;
-    margin: 40px auto 0 auto;
+    margin: 10px auto 0 auto;
     width: 350px;
+    
+  }
+
+  #drop {
+    width: 250px;
   }
 
   #logo {
     width: 20%;
   }
 
+  #learn-more {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #learn {
+    font-size: 4vw;
+  }
+
   #trailer {
-    margin: 45% auto 0 auto;
+    margin: 25% auto 0 auto;
   }
 }
 
 @media screen and (min-width: 450px) {
 
   #sec1image {
+    
     background-size: 250% auto;
     flex-direction: column;
+    
   }
 
   #dropdiv {
-    font-size: 30px;
+    
     line-height: 2em;
     text-align: center;
     margin: 40px auto 0 auto;
     width: 350px;
   }
 
+  #drop {
+    font-size: 60px;
+    width: 350px;
+  }
+
+  
+
   #logo {
     width: 15%;
   }
 
-  #learn-more {
-    align-items: center;
-    text-align: center;
+  #learn-more{    
     overflow: hidden;
+    
   }
 
+  #learn {
+    font-size: 14px;
+  }
+
+
+
   #trailer {
+    
+    
     display: block;
+    
     margin: -0px auto 0 auto;
+    
     width: 35vw;
     font-size: 100%;
   }
@@ -1414,62 +1451,109 @@ nav {
 
 @media screen and (min-width: 769px) {
   #sec1image {
-    height: 1000px;
-    background-size: auto 1000px;
+    background-size: auto 600px;
     display: flex;
     
   }
   
   #dropdiv{
     margin-top: 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  #learn-more {
+    width: 130px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  #learn {
+    font-size: 20px;
+    
   }
 
   #trailer {
     align-self: flex-end;
-    margin: 330px 30px 0 0;
+    margin: 100px 30px 0 0;
+    
     width: 200px;
-  }
-
-  #learn-more {
-    font-size: 18px;
+    
   }
 
   #watch {
+    
     display: inline-block;
     font-size: 18px;
   }
+
+  
 
   #play-button {
     width: 40px;
     height: auto;
 }
+  
+  
+}
+
+@media screen and ( min-width: 860px) {
+  #sec1image {
+    background-size: 105%;
 }
 
 @media screen and ( min-width: 992px) {
+
   #sec1image {
+    
     height: 900px;
     background-size: auto 1000px;
+    
   }
+  
+  
 
   #dropdiv {
+    align-self: flex-start;
     margin: 100px 0 120px 130px;
-    width: 34%;
+    width: 32%;
     height: auto;
     text-align: left;
-    font-size: 4vw;
+    font-size: 7vw;
+    line-height: 1;
+  }
+/**/
+  #drop {
+    margin: 0;
+    font-size: inherit;
+    width: 100%;
+    overflow: hidden;
   }
 
   #learn-more {
-   align-items: center;
+    align-self: flex-start;
+    width: 200px;
+    height: 60px;
+    align-items: center;
     font-size: 28px;
+    margin: 20px 0 0 0;
   }
 
   #logo {
     width: 25%;
   }
 
+  
+
+  #learn {
+    font-size: 24px;
+  }
+
+
   #trailer {
-    align-self: flex-end;
+    
     justify-content: center;
     margin: -120px 30px 0 0;
     width: 300px;
@@ -1484,21 +1568,24 @@ nav {
   #play-button {
     width: 70px;
   }
+
+
 }
 
 @media screen and ( min-width: 1199px) {
-
   #dropdiv {
     margin: 60px 0 120px 130px;
+
   }
 
   #trailer {
-    margin: -150px 30px 0 0;
+    margin: -190px 30px 0 0;
+
   }
 }
 
-@media screen and ( min-width: 1416px) {
 
+@media screen and ( min-width: 1416px) {
   #sec1image {
     height: 70vw;
     background-size: 105%;
@@ -1506,21 +1593,15 @@ nav {
 }
 
 @media screen and ( min-width: 1492px) {
-
   #sec1image {
     background-size: 105%;
+    
   }
-
-  #dropdiv {
-    font-size: 4vw;
-  }
-
-  #trailer {
-    display: inline-block;
-    overflow: hidden;
-  }
+  
 }
-/* MS 1 media queries end
+
+
+/* MS 1 media queries endddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
 
 /* MS2 Media queries start */
 @media only screen and (min-width: 360px) {
