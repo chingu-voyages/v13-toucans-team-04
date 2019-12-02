@@ -124,22 +124,22 @@ nav {
   background: url(../images/fortnite_home.jpg)no-repeat center/cover;
   background-position: center top;
   overflow: hidden;
-  
+  text-align: center;
 }
 
 #dropdiv {
   flex-direction: column;
   height: 45%;
-  width: 40%;
-  margin: 15% 0 0 7%;
-  font-size: 4vw;
+  width: 70%;
+  align-self: center;
   color: white;
   overflow: hidden;
-  
+  margin: 10% 0 0 0;
+  background-color: blue;
 }
 
 #drop {
-  
+  font-size: 9vw;
   margin: 0 auto;
 }
 
@@ -147,19 +147,26 @@ nav {
   width: 40%;
 }
 
+#learn-more {
+  background-color: yellow;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
 
 #learn {
   color: black;
+  align-self: center;
 }
 
+
+
 /* Skew Forward */
-#learn-more {
-  font-size: 14px;
-  background-color: yellow;
-  padding: 0 7%;
-  color: black;
-  display: inline;
-  vertical-align: center;
+.hvr-skew-forward {
+  display: inline-block;
+  vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -170,41 +177,10 @@ nav {
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
-#learn-more:hover, #learn-more:focus, #learn-more:active {
-  background-color: rgb(202, 202, 11);
-  -webkit-transform: skew(-5deg);
-  transform: skew(-5deg);
+.hvr-skew-forward:hover, .hvr-skew-forward:focus, .hvr-skew-forward:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
 }
-
-#learn {
-  color: black;
-  
-}
-
-#learn-more {}
-
-
-#learn:hover {
-}
-
-/* Forward */
-#learn {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-#learn:hover, #learn:focus, #learn:active {
-  -webkit-transform: translateX(2px);
-  transform: translateX(2px);
-}
-
-
 
 
 
@@ -213,8 +189,8 @@ nav {
   width: 340px;
   color: white;
   text-align: center;
-  
-  
+  background-color: crimson;
+  margin: 10% 0 0 0;
 }
 
 #watch {
@@ -766,21 +742,27 @@ nav {
 /* MS 1 media queries startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
 @media screen and (min-width: 350px) {
   #dropdiv {
-    font-size: 6vw;
-    text-align: center;
     margin: 5% auto;
-    width: 85%;
+    width: 65%;
 
+  }
+
+  #drop {
+    font-size: 9vw;
   }
 
   #logo {
     width: 20%;
   }
 
+  
+
   #trailer {
-    margin: 35% auto 0 auto;
+    margin: 25% auto 0 auto;
   }
 }
+
+
 
 @media screen and (min-width: 365px) {
   #dropdiv {
@@ -793,6 +775,15 @@ nav {
 
   #logo {
     width: 20%;
+  }
+
+  #learn-more {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #learn {
+    font-size: 4vw;
   }
 
   #trailer {
@@ -810,11 +801,15 @@ nav {
   }
 
   #dropdiv {
-    font-size: 30px;
+    
     line-height: 2em;
     text-align: center;
     margin: 40px auto 0 auto;
     width: 350px;
+  }
+
+  #drop {
+    font-size: 60px;
   }
 
   
@@ -823,13 +818,16 @@ nav {
     width: 15%;
   }
 
-  #learn-more {
-   
-    align-items: center;
-    
-    text-align: center;
+  #learn-more{    
     overflow: hidden;
+    
   }
+
+  #learn {
+    font-size: 10px;
+  }
+
+
 
   #trailer {
     
@@ -861,27 +859,26 @@ nav {
 
 @media screen and (min-width: 769px) {
   #sec1image {
-    height: 1000px;
-
-    background-size: auto 1000px;
+    background-size: auto 800px;
     display: flex;
     
   }
   
   #dropdiv{
     margin-top: 2%;
+    display: flex;
   }
 
   #trailer {
     align-self: flex-end;
-    margin: 330px 30px 0 0;
+    margin: 230px 30px 0 0;
     
     width: 200px;
     
   }
 
   #learn-more {
-   
+   align-self: flex-start;
     font-size: 18px;
   }
 
@@ -914,12 +911,14 @@ nav {
     height: auto;
     text-align: left;
     font-size: 4vw;
-    
+    display: flex;
   }
 
   #learn-more {
-   align-items: center;
-    font-size: 28px;
+    padding: 2% 5%;
+    align-items: center;
+    font-size: 18px;
+    margin: 0;
   }
 
   #logo {
@@ -927,7 +926,6 @@ nav {
   }
 
   #trailer {
-    align-self: flex-end;
     
     justify-content: center;
     margin: -120px 30px 0 0;
