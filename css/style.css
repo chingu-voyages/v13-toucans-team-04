@@ -947,10 +947,41 @@ nav {
 }
 
 /*big laptop adjustment*/
-@media (min-width: 1100px) and (max-width: 1440px)  {
+@media (min-width: 1340px) and (max-width: 1440px)  {
   #battlepass{
-    background: url(../images/battlepass.png) no-repeat top/contain;
-    background-size: 100% 100%
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -95px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*big laptop adjustment, background image adjustment*/
+@media (min-width: 1100px) and (max-width: 1340px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -145px bottom;
   }
   #extra{
     line-height: 105px;
@@ -980,8 +1011,8 @@ nav {
 /*small laptop adjustment*/
 @media (min-width: 900px) and (max-width: 1100px)  {
   #battlepass{
-    background: url(../images/battlepass.png) no-repeat top/cover;
-    background-size: 100% 100%
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -175px bottom;
   }
   #extra{
     line-height: 105px;
