@@ -16,6 +16,7 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    text-align: center;
 }
 
 .slick-list
@@ -117,3 +118,4 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+

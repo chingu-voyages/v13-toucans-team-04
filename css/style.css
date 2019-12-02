@@ -324,6 +324,36 @@ h6 {
     opacity: 1;
 }
 
+button.slick-arrow {
+   text-indent: -2000px;
+   background-color: white;
+   border-radius: 50%;
+   width: 34px;
+   height: 34px;
+   cursor: pointer;
+}
+
+button.slick-arrow:active,button.slick-arrow:focus {
+    border: none;
+    outline: none;
+}
+ 
+.slick-track:before, .slick-track:after { 
+    display: none !important;
+} 
+
+.slick-prev {
+    background-image: url('../images/previous.png');
+    background-repeat: no-repeat;
+}
+
+.slick-next {
+    background-image: url('../images/next.png');
+    background-repeat: no-repeat;
+}
+
+
+
 /* Mobile Media Queries */
 @media only screen and (min-width: 360px) {
     .container {
