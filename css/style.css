@@ -135,7 +135,7 @@ nav {
   color: white;
   overflow: hidden;
   margin: 10% 0 0 0;
-  background-color: blue;
+  border: 1px solid black;
 }
 
 #drop {
@@ -749,6 +749,7 @@ nav {
 
   #drop {
     font-size: 9vw;
+    background-color: crimson;
   }
 
   #logo {
@@ -769,8 +770,13 @@ nav {
     font-size: 30px;
     line-height: 2em;
     text-align: center;
-    margin: 40px auto 0 auto;
+    margin: 10px auto 0 auto;
     width: 350px;
+    
+  }
+
+  #drop {
+    width: 250px;
   }
 
   #logo {
@@ -787,7 +793,7 @@ nav {
   }
 
   #trailer {
-    margin: 45% auto 0 auto;
+    margin: 25% auto 0 auto;
   }
 }
 
@@ -810,6 +816,7 @@ nav {
 
   #drop {
     font-size: 60px;
+    width: 350px;
   }
 
   
@@ -859,7 +866,7 @@ nav {
 
 @media screen and (min-width: 769px) {
   #sec1image {
-    background-size: auto 800px;
+    background-size: auto 600px;
     display: flex;
     
   }
@@ -867,19 +874,28 @@ nav {
   #dropdiv{
     margin-top: 2%;
     display: flex;
+    align-items: center;
+  }
+
+  
+
+  #learn-more {
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+  }
+
+  #learn {
+    font-size: 20px;
+    
   }
 
   #trailer {
     align-self: flex-end;
-    margin: 230px 30px 0 0;
+    margin: 100px 30px 0 0;
     
     width: 200px;
     
-  }
-
-  #learn-more {
-   align-self: flex-start;
-    font-size: 18px;
   }
 
   #watch {
@@ -887,6 +903,8 @@ nav {
     display: inline-block;
     font-size: 18px;
   }
+
+  
 
   #play-button {
     width: 40px;
@@ -896,22 +914,28 @@ nav {
   
 }
 
+@media screen and ( min-width: 860px) {
+  #sec1image {
+    background-size: 105%;
+}
+
 @media screen and ( min-width: 992px) {
 
   #sec1image {
     
     height: 900px;
-    
     background-size: auto 1000px;
+    
   }
 
   #dropdiv {
+    
     margin: 100px 0 120px 130px;
-    width: 34%;
+    width: 37%;
     height: auto;
     text-align: left;
     font-size: 4vw;
-    display: flex;
+    
   }
 
   #learn-more {
