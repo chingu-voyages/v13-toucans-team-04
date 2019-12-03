@@ -166,7 +166,7 @@ nav {
 #dropdiv {
   flex-direction: column;
   height: 45%;
-  width: 770%;
+  width: 77%;
   align-self: center;
   color: white;
   overflow: hidden;
@@ -181,7 +181,7 @@ nav {
 }
 
 #logo {
-  width: 40%;
+  width: 30%;
 }
 
 /* Skew Forward */
@@ -1326,6 +1326,8 @@ nav {
 }
 
 /* MS 1 media queries startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
+
+
 @media screen and (min-width: 350px) {
   #dropdiv {
     margin: 5% auto;
