@@ -166,18 +166,18 @@ nav {
 #dropdiv {
   flex-direction: column;
   height: 45%;
-  width: 70%;
+  width: 770%;
   align-self: center;
   color: white;
   overflow: hidden;
   margin: 10% 0 0 0;
-  
+ 
 }
 
 #drop {
   font-size: 9vw;
   margin: 0 auto;
-  text-shadow: 2px 2px 4px #414141;
+  text-shadow: 4px 4px 6px #000000;
 }
 
 #logo {
@@ -233,14 +233,15 @@ nav {
   width: 340px;
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 4px #414141;
+  
   margin: 10% 0 0 0;
 }
 
 #watch {
-  text-shadow: 2px 2px 4px #414141;
+  text-shadow: 4px 4px 6px #000000;
   font-size: 4.5vw;
   margin: auto 9px;
+
 }
 
 #play-button {
