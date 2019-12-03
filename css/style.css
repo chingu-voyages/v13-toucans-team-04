@@ -151,6 +151,12 @@ nav {
 
 /* MS 1 startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
 /*big background image*/
+#containerrr {
+  width: 100%;
+}
+
+
+
 #sec1image {
   height: 800px;
   background-size: 105%;
@@ -175,9 +181,11 @@ nav {
 }
 
 #drop {
+  line-height: 1.2;
   font-size: 9vw;
   margin: 0 auto;
   text-shadow: 4px 4px 6px #000000;
+  width: 70%;
 }
 
 #logo {
@@ -248,7 +256,19 @@ nav {
   height: 50px;
   
 }
-
+/*
+#sec1image2 {
+  height: 800px;
+  background-size: 105%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: url(../images/fortnite_home2.png)no-repeat center/cover;
+  background-position: center top;
+  overflow: hidden;
+  text-align: center;
+}
+*/
 /* MS 1 enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
 
 /* Main section 2 start */
@@ -1331,7 +1351,7 @@ nav {
 @media screen and (min-width: 350px) {
   #dropdiv {
     margin: 5% auto;
-    width: 65%;
+    width: 80%;
 
   }
 
@@ -1405,6 +1425,7 @@ nav {
   #drop {
     font-size: 60px;
     width: 350px;
+    line-height: 1;
   }
 
   
@@ -1591,6 +1612,10 @@ nav {
 }
 
 @media screen and ( min-width: 1199px) {
+  #containerrr {
+    width: 100%;
+  }
+
   #dropdiv {
     margin: 260px 0 120px 130px;
 
