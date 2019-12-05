@@ -9,6 +9,9 @@
   <!-- Main CSS: -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- hamburger menu CSS (to be merged) -->
+  <link rel="stylesheet" href="css/menu.css">
+
   <!-- Fortnite's Burbank font: -->
   <link href="//db.onlinewebfonts.com/c/8dd35a5ee9eab8c7c069365ac14fed9a?family=Burbank+Big+Regular" rel="stylesheet" type="text/css"/>
 
@@ -31,11 +34,29 @@
           <a href="https://www.epicgames.com" id="eg-logo"><img src="images/eg-logo.png" alt="epic games logo"></a>
           <a href="https://www.epicgames.com/fortnite/home" id="fn-logo"><img src="images/fn-logo.png" alt="fortnite logo"></a>
       </div>
-      <div id="veggie-burger" tabindex="0">
-        <div id="vp-1" class="veggie-patty"></div>
-        <div id="vp-2" class="veggie-patty"></div>
-        <div id="vp-3" class="veggie-patty"></div>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
       </div>
+      <!-- <div id="veggie-burger" tabindex="0">
+        <div class="veggie-patty"></div>
+        <div class="veggie-patty"></div>
+        <div class="veggie-patty"></div>
+      </div> -->
     </div>
     <ul id="nav-ul" class="no-med-screens" role="menu">
       <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/battle-pass">Battle Pass</a></li>
@@ -48,8 +69,9 @@
     </ul>
   </div>
   <div id="nav-right" class="no-small-screens">
-    <button id="search"><i class="fas fa-search fa-2x"></i></button>
-    <div id="language" class="dropdown">
+    <form id="searchForm"><input id="search-input" type="text" aria-label="search" placeholder="Search ..."></form>
+    <button id="search"><i id="searchIcon" class="fas fa-search fa-2x"></i></button>
+    <div id="language" class="dropdown" tabindex="0">
         <i class="fas fa-globe-africa fa-lg dropbtn"></i>
         <!-- add fa-spin class as part of hover/focus effect? -->
         <div class="dropdown-content">

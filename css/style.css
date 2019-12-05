@@ -105,15 +105,6 @@ nav {
     transform: rotate(135deg);
 }
 
-/* turn lines into X */
-#veggie-burger:hover #vp-3 {
-    transform: rotate(200deg);
-}
-
-#veggie-burger:hover #vp-2 {
-  display: none;
-}
-
   /* hover effects for vegburger menu: */
   #veggie-burger:hover {
     background-color: #1EB8F4;
@@ -127,8 +118,22 @@ nav {
     outline-offset: -5px;
   }
 
+#search-input {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  vertical-align: center;
+  width: 100%;
+  height: 3.7rem;
+  padding: 0 1.75rem;
+  font-size: 1.2em;
+  background-color: #CCCCCC;
+  border: none;
+  border-bottom: 5px solid #2a2a2a;
+  border-top: 5px solid #2a2a2a;
+}
+
 /* hiding things on small and medium screens: */
-.no-small-screens, .no-med-screens {
+.no-small-screens, .no-med-screens, #searchForm {
   display: none;
 }
 
