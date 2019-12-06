@@ -295,7 +295,7 @@ h6 {
 /* Slick slider styles */
 .slider {
     width: 100%;
-    margin: 100px auto;
+    margin: 100px auto 30px auto;
 }
 
 .slick-slide {
@@ -331,6 +331,7 @@ button.slick-arrow {
    width: 34px;
    height: 34px;
    cursor: pointer;
+   margin: 50px 50px 0px 50px;
 }
 
 button.slick-arrow:active,button.slick-arrow:focus {
@@ -355,7 +356,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 
 
 /* Mobile Media Queries */
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 320px) {
     .container {
         width: 100%;
     }
@@ -458,7 +459,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     }
 
     .card>.img {
-        height: 320px;
+        height: 200px;
     }
 
     .sub {
@@ -486,7 +487,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     }
 
     .cardImgOne>.img, .cardImgTwo>.img {
-        height: 450px;
+        height: 350px;
     }
 
 
@@ -510,6 +511,18 @@ button.slick-arrow:active,button.slick-arrow:focus {
     }
 }
 
+
+/*  ipad pro  */
+ @media only screen and (min-width: 1024px) {
+    .cardImgOne>.img, .cardImgTwo>.img {
+         height: 450px;
+    }
+
+    .cardImgOne>.img, .cardImgTwo>.img {
+        height: 350px;
+    }
+ }
+
 /*  Desktop */
  @media only screen and (min-width: 1200px) {
     .cardImgOne>.img, .cardImgTwo>.img {
@@ -523,4 +536,9 @@ button.slick-arrow:active,button.slick-arrow:focus {
     .contentBottomLeft p {
         color: white;
     }
+
+    .card>.img {
+        height: 300px;
+    }
 } 
+
