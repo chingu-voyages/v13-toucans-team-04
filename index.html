@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite clone</title>
+
+  <!-- Our CSS: -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Open Sans font: -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Animate.CSS ("just-add-water CSS animations") CDN: -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  <!-- FontAwesome CDN: -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  <!-- SLICK SLIDER -->
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+
+</head>
+<body>
+
+  <!-- Navigation Bar Start -->
+  <nav>
+    <div id="nav-left">
+      <div id="mobile-nav">
+        <div id="nav-logos">
+            <a href="https://www.epicgames.com" id="eg-logo"><img src="images/eg-logo.png" alt="epic games logo"></a>
+            <a href="https://www.epicgames.com/fortnite/home" id="fn-logo"><img src="images/fn-logo.png" alt="fortnite logo"></a>
+        </div>
+        <div id="veggie-burger" tabindex="0">
+          <div class="veggie-patty"></div>
+          <div class="veggie-patty"></div>
+          <div class="veggie-patty"></div>
+        </div>
+      </div>
+      <ul id="nav-ul" class="no-med-screens" role="menu">
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/battle-pass">Battle Pass</a></li>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/creative">Creative</a></li>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/save-the-world">Save the World</a></li>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/competitive/home">Competitive</a>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/news">News</a></li>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/help-center">Help</a></li>
+        <li role="menuitem" class="nav-text main-nav-links"><a href="https://www.epicgames.com/fortnite/retailrow">Merch</a></li>
+      </ul>
+    </div>
+    <div id="nav-right" class="no-small-screens">
+      <form id="searchForm"><input id="search-input" type="text" aria-label="search" placeholder="Search ..."></form>
+      <button id="search"><i id="searchIcon" class="fas fa-search fa-2x"></i></button>
+      <div id="language" class="dropdown" tabindex="0">
+          <i class="fas fa-globe-africa fa-lg dropbtn"></i>
+          <div class="dropdown-content">
+            <a class="nav-text" data-lang="ar" href="https://www.epicgames.com/fortnite/en-US/home?lang=ar"><span> 🇪🇬العربية</span></a>
+            <a class="nav-text" data-lang="de" href="https://www.epicgames.com/fortnite/en-US/home?lang=de"><span>Deutsch 🇩🇪</span></a>
+            <a class="nav-text" data-lang="es-ES" href="https://www.epicgames.com/fortnite/en-US/home?lang=es-ES"><span>Español (Spain) 🇪🇸</span></a>
+            <a class="nav-text" data-lang="es-MX" href="https://www.epicgames.com/fortnite/en-US/home?lang=es-MX"><span>Español (LA) 🇲🇽</span></a>
+            <a class="nav-text" data-lang="fr" href="https://www.epicgames.com/fortnite/en-US/home?lang=fr"><span>Français 🇫🇷</span></a>
+            <a class="nav-text" data-lang="it" href="https://www.epicgames.com/fortnite/en-US/home?lang=it"><span>Italiano 🇮🇹</span></a>
+            <a class="nav-text" data-lang="ja" href="https://www.epicgames.com/fortnite/en-US/home?lang=ja"><span>日本語 🇯🇵</span></a>
+            <a class="nav-text" data-lang="ko" href="https://www.epicgames.com/fortnite/en-US/home?lang=ko"><span>한국어 🇰🇷</span></a>
+            <a class="nav-text" data-lang="pl" href="https://www.epicgames.com/fortnite/en-US/home?lang=pl"><span>Polski 🇵🇱</span></a>
+            <a class="nav-text" data-lang="pt-BR" href="https://www.epicgames.com/fortnite/en-US/home?lang=pt-BR"><span>Português (Brasil) 🇧🇷</span></a>
+            <a class="nav-text" data-lang="ru" href="https://www.epicgames.com/fortnite/en-US/home?lang=ru"><span>Русский 🇷🇺</span></a>
+            <a class="nav-text" data-lang="tr" href="https://www.epicgames.com/fortnite/en-US/home?lang=tr"><span>Türkçe 🇹🇷</span></a>
+          </div>
+        </div> 
+  
+      <button id="user">
+          <i class="fas fa-user"></i>
+          <span class="sign-text nav-text">Sign In</span>
+      </button>
+      <button id="developers" class="nav-text">Developers</button>
+    </div>
+  
+  </nav>
+
+  <!-- sign-in popup (nav) -->
+  <div id="sign-in-popup">
+    <div id="pop-container">
+        <h3 id="pop-question">Do you already play Fortnite?</h3>
+        <p id="pop-para">If so, we can find your progress and purchases.</p>
+        <button class="pop-button">Yes</button>
+        <button class="pop-button">No</button>
+        <p id="pop-close">Close</p>
+    </div>
+  </div>
+
+  <!-- about us popup (nav) -->
+  <div id="devs-popup">
+    <div id="devs-container">
+      <h3 id="bio-title">Meet the team 🦜</h3>
+      <p id="chingu-shoutout">This Fortnite landing page clone was made for Chingu Collabs Voyage 13 by Toucans Team 4. <a href="https://github.com/chingu-voyages/v13-toucans-team-04">View our git repo here</a><span id="bio-close-top"> or close this tab</span>.</p>
+      <div id="bio-grid">
+        <div id="ahmed" class="toucan-card">
+          <img class="bio-img" src="images/ahmed.png" alt="ahmed icon" class="thirty">
+          <div class="bio-info">
+            <h4 class="toucan name">Ahmed</h4>
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident obcaecati accusamus magnam molestias dicta odio temporibus consectetur, ea officiis adipisci.</p>
+            <a href="https://github.com/ahmedserifoski">GitHub</a> | 
+            <a href="#">Portfolio</a> | 
+            <a href="https://twitter.com/AhmedSerifoski">Twitter</a>
+          </div>
+        </div>
+        <div id="shashi" class="toucan-card">
+            <img class="bio-img" src="images/shashi.jpeg" alt="shashi icon" class="thirty">
+            <div class="bio-info">
+              <h4 class="toucan name">Shashi</h4>
+              <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident obcaecati accusamus magnam molestias dicta odio temporibus consectetur, ea officiis adipisci.</p>
+              <a href="https://github.com/sasigit7">GitHub</a> | 
+              <a href="#">Portfolio</a> | 
+              <a href="https://twitter.com/ShashiWebDev">Twitter</a>
+            </div>
+        </div>
+        <div id="steph" class="toucan-card">
+            <img class="bio-img" src="images/steph.jpeg" alt="steph icon" class="thirty">
+            <div class="bio-info">
+              <h4 class="toucan name">Steph</h4>
+              <p class="bio">Steph is a self-taught front-end dev from Vancouver. She's interested in web accessibility and UX/UI. Her hobbies are learning languages and taking photos. She lives in Cheshire, England.</p>
+              <a href="https://github.com/stephairth">Github</a> | 
+              <a href="#">Portfolio</a> | 
+              <a href="https://twitter.com/stephairth">Twitter</a>
+            </div>
+        </div>
+        <div id="vlad" class="toucan-card">
+            <img class="bio-img" src="images/vlad.jpeg" alt="vlad icon" class="thirty">
+            <div class="bio-info">
+              <h4 class="toucan name">Vlad</h4>
+              <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident obcaecati accusamus magnam molestias dicta odio temporibus consectetur, ea officiis adipisci.</p>
+              <a href="https://github.com/VladimirtheGreatest">GitHub</a> | 
+              <a href="#">Portfolio</a>
+            </div>
+        </div>
+        <p id="bio-close-bottom">Close this tab 🦜</p>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation Bar End -->
+
+
+ <!-- MS 1 start-->
+ <div id="sec1image">
+
+  <div id="dropdiv">
+      <img id="logo" src="images/heading.png" alt="Chapter 2 Logo">
+      <h1 id="drop">DROP IN TO A NEW WORLD</h1>
+      <h5 id="learn-more"><a id="learn" href="#">LEARN MORE</a></h5>
+  </div>
+
+  <div id="trailer">
+    <h2 id="watch">WATCH TRAILER</h2>
+    <a href="#" ><img id="play-button" src="images/play-button.png" alt="Play Button"></a>
+  </div>
+
+</div>
+<!-- MS 1 end-->
+
+ <!-- MAIN SECTION 2 -->
+ <div class="container">
+    <div class="wrapper">
+        <!-- Two Big Fixed Images -->
+        <div class="bigImages">
+            <div class="cardImgOne imageLeft flex">
+                <div class="img hvr-grow"></div>
+                <div class="dividerOne"></div>
+                <div class="contentBottomLeft">
+                    <p>Nov 14, 2019</p>
+                    <h3>Fortnight Chapter 2</h3>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="cardImgTwo imageRight flex">
+                <div class="img hvr-grow"></div>
+                <div class="dividerOne"></div>
+                <div class="contentBottomLeft">
+                    <p>Nov 14, 2019</p>
+                    <h3>Community Spotlight - Axel Capek</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile slick slider effects section -->
+        <section class="lazy slider" data-sizes="50vw">
+            <div>
+                <img data-lazy="./images/1.jpg" data-srcset="" data-sizes="">
+            </div>
+            <div>
+                <img data-lazy="./images/2.jpg" data-srcset="" data-sizes="">
+            </div>
+            <div>
+                <img data-lazy="./images/3.jpg" data-srcset="" data-sizes="">
+            </div>
+            <div>
+                <img data-lazy="./images/4.jpg" data-srcset="" data-sizes="">
+            </div>
+            <div>
+                <img data-lazy="./images/1.jpg" data-srcset="" data-sizes="">
+            </div>
+            <div>
+                <!-- this slide should inherit the sizes attr from the parent slider -->
+                <img data-lazy="./images/2.jpg" data-srcset="" data-sizes="">
+            </div>
+        </section>
+        <!-- Four Small Fixed Images -->
+        <div class="dividerTwo"></div>
+        <div class="flex direction hideMobile">
+            <div class="sub">
+                <div class="card cardOne flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="content">
+                        <p>Nov 14, 2019</p>
+                        <h4>Save the world | Home </h4>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="card cardTwo flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="content">
+                        <p>Nov 15, 2019</p>
+                        <h4>Creative Ama Recap</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="sub">
+                <div class="card cardThree flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="content">
+                        <p>NOV 16, 2019</p>
+                        <h4>CREATIVE DEVELOPER </h4>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="card cardFour flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="content">
+                        <p>NOV 17, 2019</p>
+                        <h4>IMPERIAL ARMY ARRIVED</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Load More Desktop/Ipad Button -->
+        <div class="button buttonDesktop">
+            <button id="loadButton" class="load hvr-skew-forward">LOAD MORE </button>
+        </div>
+        <!-- Load More Mobile Button -->
+        <div class="button buttonMobile">
+            <button id="loadButton" class="load hvr-skew-forward">LOAD MORE </button>
+        </div>
+        <!-- Show Following images when above button is clicked -->
+        <!-- Two Big Hidden Fixed Images -->
+        <div id="hideShow">
+            <div class="bigImages">
+                <div class="cardImgThree imageLeft flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="contentBottomLeft">
+                        <p>NOV 14, 2019</p>
+                        <h3>FORTNIGHT CHAPTER 2</h3>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="cardImgFour imageRight flex">
+                    <div class="img hvr-grow"></div>
+                    <div class="dividerOne"></div>
+                    <div class="contentBottomLeft">
+                        <p>NOV 14, 2019</p>
+                        <h3>COMMUNITY SPOTLIGHT - AXEL CAPEK</h3>
+                    </div>
+                </div>
+            </div>
+            <!--  Four Small Hidden Fixed Images -->
+            <div class="dividerTwo"></div>
+            <div class="flex direction hideMobile">
+                <div class="sub">
+                    <div class="card cardFive flex">
+                        <div class="img hvr-grow"></div>
+                        <div class="dividerOne"></div>
+                        <div class="content">
+                            <p>NOV 14, 2019</p>
+                            <h4>SAVE THE WORLD | HOME </h4>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="card cardSix flex">
+                        <div class="img hvr-grow"></div>
+                        <div class="dividerOne"></div>
+                        <div class="content">
+                            <p>NOV 15, 2019</p>
+                            <h4>CREATIVE AMA RECAP</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="sub">
+                    <div class="card cardSeven flex">
+                        <div class="img hvr-grow"></div>
+                        <div class="dividerOne"></div>
+                        <div class="content">
+                            <p>NOV 16, 2019</p>
+                            <h4>CREATIVE DEVELOPER </h4>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="card cardEight flex">
+                        <div class="img hvr-grow"></div>
+                        <div class="dividerOne"></div>
+                        <div class="content">
+                            <p>NOV 17, 2019</p>
+                            <h4>IMPERIAL ARMY ARRIVED</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- All News Button -->
+            <div class="button">
+                <button class="load hvr-skew-forward">ALL NEWS </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <!-- Battlepass Start -->
+<div id="battlepass">
+  <div class="battlepass-content"><span><img width="150" height="137" src="./images/battlepasslogo.png" alt="badge"></span>
+    <div id="extra">
+      <h1><span class="battlepass-heading">Chapter 2 - Season 1</span><br><span class="extra">Battle</span><br class="break"><span class="battlepass-bigheading">Pass</span></h1>
+    </div>
+    <div class="battlepass-smallheading">
+      <h2>Available now for 950 V-Bucks</h2>
+    </div>
+    <div>
+      <div class="battlepass-button">Look Inside</div>
+    </div>
+  </div>
+</div>
+   <!-- Battlepass end -->
+
+
+ <!-- Footer Start -->
+ <div class="footer">
+   <footer id="footer">
+     <!--socials start-->
+     <div id="social" class="social">
+       <div>
+         <ul>
+           <li><a id="facebook" href="https://www.facebook.com/FortniteGame" target="_blank">
+             <div><i class="fab fa-facebook-square">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="twitter" href="https://twitter.com/FortniteGame" target="_blank">
+             <div><i class="fab fa-twitter-square">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="twitch" href="https://www.twitch.tv/fortnitegame" target="_blank">
+             <div><i class="fab fa-twitch">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="youtube" href="https://www.youtube.com/epicfortnite" target="_blank">
+             <div><i class="fab fa-youtube">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="instagram" href="https://www.instagram.com/fortnite/" target="_blank">
+             <div><i class="fab fa-instagram">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="snapchat"  href="https://snapchat.com/fortnite" target="_blank">
+             <div><i class="fab fa-snapchat-square">&nbsp;</i>
+             </div></a>
+           </li>
+           <li><a id="vk" href="https://vk.com/fortnite" target="_blank">
+             <div><i class="fab fa-vk">&nbsp;</i></div></a>
+           </li>
+         </ul>
+       </div>
+       <!--up button-->
+       <div class="upbutton"><div id="upbutton"><span><i class="fas fa-chevron-circle-up fa-2x"></i></span></div>
+       </div>
+       <!--up button end-->
+     </div>
+     <!--socials end-->
+
+     <!--links start-->
+     <div id="Links">
+       <div>
+         <div class="row">
+           <ul>
+             <li><a href="/fortnite/home" class="text-color accent-color-hover " rel="">Home</a></li>
+             <li><a href="/fortnite/battle-pass" class="text-color accent-color-hover " rel="">Battle
+                 Pass</a></li>
+             <li><a href="/fortnite/watch-fortnite" class="text-color accent-color-hover "
+                 rel="">Watch</a></li>
+             <li><a href="/fortnite/buy-now/battle-royale" class="text-color accent-color-hover "
+                 rel="">Get Fortnite</a></li>
+           </ul>
+           <ul>
+             <li><a href="/fortnite/news" class="text-color accent-color-hover " rel="">News</a></li>
+             <li><a href="/fortnite/faq" class="text-color accent-color-hover " rel="">FAQ</a></li>
+             <li><a href="/fortnite/forums" class="text-color accent-color-hover " rel="">Forums</a></li>
+             <li><a href="/fortnite/eula" class="text-color accent-color-hover " rel="">EULA</a></li>
+           </ul>
+           <ul>
+             <li><a href="/fortnite/competitive/home" class="text-color accent-color-hover "
+                 rel="">Competitive</a></li>
+             <li><a href="http://fortnitehelp.epicgames.com/" class="text-color accent-color-hover "
+                 rel="">Help</a></li>
+             <li><a href="/fortnite/safety-and-security" class="text-color accent-color-hover "
+                 rel="">Safety and Security</a></li>
+             <li><a href="https://www.epicgames.com/site/community-rules"
+                 class="text-color accent-color-hover " rel="">Community Rules</a></li>
+           </ul>
+         </div>
+       </div>
+       <div id="age">
+         <ul class="tags">
+           <li>
+             <p class="tag-title accent-color">Europe</p><img alt="legal" width="62" height="75"
+               src="https://cdn2.unrealengine.com/Footer+Legal+Tags%2FFooter%2BLegal%2BTags-eu_legal_tag-116x168-min-116x142-e87be4367ec679bcf710975567f973a7ba766a81.png">
+           </li>
+         </ul>
+       </div>
+     </div>
+     <!--links end-->
+     <hr class="border">
+     <!--Copyright-->
+
+
+     <div class="copyright-paragraph"><span class="text-color-nonactive">© 2019, Epic Games, Inc. Epic, Epic
+         Games, the Epic Games logo, Fortnite, the Fortnite logo, Unreal, Unreal Engine 4 and UE4 are
+         trademarks or registered trademarks<br> of Epic Games, Inc. in the United States of America and
+         elsewhere. All rights reserved.
+         <!-- -->&nbsp;&nbsp;</span></div>
+
+
+     <!--Copyright end-->
+     <!--terms of service + logos start-->
+     <div id="bottomFooter">
+       <div>
+         <ul>
+           <li><a class="accent-color-hover" target="_blank" href="http://epicgames.com/tos">Terms of Service</a></li>
+           <li><a class="accent-color-hover" target="_blank" href="http://epicgames.com/privacypolicy">Privacy
+               Policy</a></li>
+         </ul>
+       </div>
+       <div id="logos">
+         <ul class="logos">
+           <li><i class="fas fa-laptop"></i></li>
+           <li><i class="fab fa-apple"></i></li>
+           <li><i class="fab fa-xbox"></i></li>
+           <li><i class="fab fa-android"></i></li>
+         </ul>
+       </div>
+     </div>
+     <!--terms of service end-->
+   </footer>
+ </div>
+ <!-- Footer End -->
+
+   <!--JQUERY  -->
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+   <!--  -->
+   <script src="./slick/slick.js"></script>
+   <!-- MOBILE CAROUSAL EFFECT: LAZY LOADER -->
+   <script>
+       $(document).on('ready', function () {
+           $(".lazy").slick({
+               lazyLoad: 'ondemand', // ondemand progressive anticipated
+               slidesToShow: 1.3,
+               slidesToScroll: 1,
+               infinite: false
+           });
+       });
+   </script>
+   <!-- JQUERY CODE FOR LOAD MORE BUTTON -->
+   <script>
+       $(document).ready(function () {
+           $("#loadButton").click(function () {
+               $("#hideShow").toggleClass("show");
+           });
+       });
+   </script>
+
+<!-- Our JS: -->
+<script src="js/javascript.js"></script>
+</body>
+
+</html>
