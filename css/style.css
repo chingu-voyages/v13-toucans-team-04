@@ -186,6 +186,18 @@ nav {
   font-size: 1rem;
 }
 
+#pop-close {
+  margin-top: 2rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+#pop-close:hover,
+#pop-close:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 5px;
+}
+
 .pop-button {
   border: none;
   background-color: #ffff00;
@@ -196,6 +208,22 @@ nav {
   font-family: 'BurbankBigRegular-Black';
   text-transform: uppercase;
   width: 180px;
+  cursor: pointer;
+}
+
+.pop-button:hover {
+  animation: glow 3s linear infinite;
+}
+
+@keyframes glow {
+  0% { background-color: #ffff00; }
+  50% { background-color: #1EB8F4; }
+  100% { background-color: #ffff00; }
+}
+
+.pop-button:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 5px;
 }
 
 /* about us popup (nav) */
@@ -209,7 +237,7 @@ nav {
   background-color: rgba(21, 113, 162, 0.95);
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   color: #fff;
   display: none;
 }
@@ -226,30 +254,62 @@ nav {
   text-decoration: underline;
 }
 
+#devs-container a:hover {
+  cursor: pointer;
+}
+
+#devs-container a:focus, 
+#devs-container a:hover {
+  color: #ffff00;
+}
+
 #bio-title {
   font-size: 2rem;
   padding: 1rem 0;
+  display: block;
+  overflow: visible;
 }
 
 #chingu-shoutout {
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  overflow: visible;
+}
+
+#bio-grid {
+  display: block;
+  overflow: visible;
 }
 
 #bio-close-top, #bio-close-bottom {
-  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#bio-close-top:hover,
+#bio-close-top:focus,
+#bio-close-bottom:hover,
+#bio-close-bottom:focus {
+  color: #ffff00;
 }
 
 .bio-img {
   width: 50vw;
+  margin-top: 10px;
 }
 
 .toucan-card {
-  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.toucan-name {
+  font-size: 1.35rem;
+  letter-spacing: 3px;
 }
 
 .bio, #bio-close-bottom, .bio-info {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .bio-info a {
@@ -1297,20 +1357,25 @@ nav {
   }
 
   /* HOVER effect for righthand buttons: white font */
-  #nav-right button:hover .fas,
-  #nav-right button:hover span {
+  #search:hover .fas,
+  #search:hover, 
+  #language:hover .fas,
+  #user:hover .fas,
+  #user:hover .sign-text {
     color: #ffffff;
   }
 
   /* FOCUS effect for righthand buttons: yellow outline */
-  #nav-right button:focus {
+  #nav-right button:focus, 
+  #language:focus {
     outline: 3px solid #ffff00;
     outline-offset: -5px;
   }
 
   /* FOCUS effect for righthand buttons: white font */
     #nav-right button:focus .fas,
-    #nav-right button:focus span {
+    #nav-right button:focus span,
+    #language:focus .fas {
       color: #ffffff;
     }
 
@@ -1319,12 +1384,6 @@ nav {
     color: #000000;
     border: none;
     animation: glow 3s linear infinite;
-  }
-
-  @keyframes glow {
-    0% { background-color: #ffff00; }
-    50% { background-color: #1EB8F4; }
-    100% { background-color: #ffff00; }
   }
 
   /* FOCUS effect for developers button: blue outline */
