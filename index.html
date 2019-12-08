@@ -19,9 +19,44 @@
   
   <!-- SLICK SLIDER -->
   <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  
+      <!-- Animation on scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body>
+<body id="mobile-body" onresize="width()">
+  
+   <!--Mobile Navigation Bar Start -->
+ <div id="myNav" class="overlay">
+   <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+   <div class="overlay-content">
+     <ul id="links-mobile">
+       <li><a href="https://www.epicgames.com/fortnite/battle-pass">Battle Pass</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/creative">Creative</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/save-the-world">Save the World</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/competitive/home">Competitive</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/news">News</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/help-center">Help</a></li>
+       <li><a href="https://www.epicgames.com/fortnite/retailrow">Merch</a></li>
+     </ul>
+   </div>
+
+   <div id="bottom-mobile">
+     <div id="search-mobile">
+       <input type="search" name="keyword" id="query" aria-label="Search" placeholder="Search..."
+         class="search-input text-color" value="">
+     </div>
+     <div id="fifty">
+       <button id="user-mobile">
+         <i class="fas fa-user"></i>
+         <span>Sign In</span>
+       </button>
+       <button id="language-mobile"><i class="fas fa-globe-africa fa-2x"></i></button>
+     </div>
+     <button id="download-mobile">Download</button>
+   </div>
+ </div>
+ <!-- Mobile Navigation Bar End -->
 
   <!-- Navigation Bar Start -->
   <nav>
@@ -31,7 +66,7 @@
             <a href="https://www.epicgames.com" id="eg-logo"><img src="images/eg-logo.png" alt="epic games logo"></a>
             <a href="https://www.epicgames.com/fortnite/home" id="fn-logo"><img src="images/fn-logo.png" alt="fortnite logo"></a>
         </div>
-        <div id="veggie-burger" tabindex="0">
+        <div id="veggie-burger" onclick="openNav()" tabindex="0">
           <div id="vp-1" class="veggie-patty"></div>
           <div id="vp-2" class="veggie-patty"></div>
           <div id="vp-3" class="veggie-patty"></div>
@@ -461,6 +496,11 @@
 
 <!-- Our JS: -->
 <script src="js/javascript.js"></script>
+  <!-- animation on scroll: -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
