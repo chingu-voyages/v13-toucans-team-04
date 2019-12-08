@@ -1862,6 +1862,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
   #sec1image {
     background-size: 105%;
 }
+}
 
 @media screen and ( min-width: 992px) {
 
@@ -2199,5 +2200,5 @@ button.slick-arrow:active,button.slick-arrow:focus {
     font-size: 60px;
   }
 }
-}
+
 /* Mobile toggle navbar end */
