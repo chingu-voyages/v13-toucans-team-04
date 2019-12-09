@@ -149,8 +149,8 @@ nav {
   display: none;
 }
 
-/* MS 1 startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
-/*big background image */
+/* MS 1 start*/
+/*big background image/container*/
 #sec1image {
   height: 800px;
   background-size: 105%;
@@ -173,7 +173,7 @@ nav {
   margin: 10% 0 0 0;
  
 }
-
+/*the actual heading text*/
 #drop {
   font-size: 9vw;
   margin: 0 auto;
@@ -184,7 +184,7 @@ nav {
   width: 30%;
 } 
 
-/* Skew Forward */
+/* The learn more Skew Forward animation */
 #learn-more {
   display: inline-block;
   vertical-align: middle;
@@ -216,7 +216,7 @@ nav {
 #learn-more:hover {
   background-color: rgb(190, 190, 42);
 }
-
+/*actual learn more text*/
 #learn {
   color: black;
   align-self: center;
@@ -224,7 +224,7 @@ nav {
   overflow: hidden;
 }
 
-
+/*the watch trailer div*/
  #trailer {
  
   width: 340px;
@@ -234,6 +234,7 @@ nav {
   margin: 10% 0 0 0;
 }
 
+/*actual watch trailer text*/
 #watch {
   text-shadow: 4px 4px 6px #000000;
   font-size: 4.5vw;
@@ -246,40 +247,8 @@ nav {
   
 } 
 
-/* :::::::::::::::::::::::::SLIDE SHOW CODE START :::::::::::::::::::  */
 
-/* .slideshow-container{
-  overflow: hidden; 
-   margin: 0 auto;
-} */
-
-/* Fading animation */
-/* .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-      opacity: .3
-  }
-  to {
-      opacity: 1
-  }
-}
-@keyframes fade {
-  from {
-      opacity: .3
-  }
-  to {
-      opacity: 1
-  }
-} */
-
-/* :::::::::::::::::::::::::SLIDE SHOW CODE END :::::::::::::::::::  */
-
-/* MS 1 enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+/* MS 1 end*/
 
 /* Main section 2 Start */
 .container {
@@ -1576,8 +1545,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     }
 }
 
-/* MS 1 media queries startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
-
+/* MS 1 media queries start*/
 
 @media screen and (min-width: 350px) {
   #dropdiv {
@@ -1605,6 +1573,8 @@ button.slick-arrow:active,button.slick-arrow:focus {
 
 
 @media screen and (min-width: 365px) {
+
+  /*the drop into the new world heading with the logo and the button*/
   #dropdiv {
     font-size: 30px;
     line-height: 2em;
@@ -1614,6 +1584,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     
   }
 
+  /*the actual heading text*/
   #drop {
     width: 250px;
   }
@@ -1622,11 +1593,13 @@ button.slick-arrow:active,button.slick-arrow:focus {
     width: 20%;
   }
 
+  /*learn more heading*/
   #learn-more {
     text-align: center;
     overflow: hidden;
   }
 
+  /*actual learn more link*/
   #learn {
     font-size: 4vw;
   }
@@ -1637,7 +1610,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 }
 
 @media screen and (min-width: 450px) {
-
+  /*big background image/container*/
   #sec1image {
     
     background-size: 250% auto;
@@ -1645,6 +1618,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     
   }
 
+  /*the drop into the new world heading with the logo and the button*/
   #dropdiv {
     
     line-height: 2em;
@@ -1653,6 +1627,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     width: 350px;
   }
 
+  /*the actual heading text*/
   #drop {
     font-size: 60px;
     width: 350px;
@@ -1664,17 +1639,19 @@ button.slick-arrow:active,button.slick-arrow:focus {
     width: 15%;
   }
 
+  /*learn more heading*/
   #learn-more{    
     overflow: hidden;
     
   }
 
+  /*actual learn more link*/
   #learn {
     font-size: 14px;
   }
 
 
-
+  /*the watch trailer div*/
   #trailer {
     
     
@@ -1685,7 +1662,8 @@ button.slick-arrow:active,button.slick-arrow:focus {
     width: 35vw;
     font-size: 100%;
   }
-
+  
+  /*actual watch trailer text*/
   #watch {
     font-size: 4vw;
   }
@@ -1693,23 +1671,19 @@ button.slick-arrow:active,button.slick-arrow:focus {
   #play-button {
     width: 25%;
     height: auto;
-}
-/*
-
-  #play-button {
-    height: auto;
-    width: 30%;
   }
-*/
-}
 
+}
 @media screen and (min-width: 769px) {
+  
+  /*big background image/container*/
   #sec1image {
     background-size: auto 600px;
     display: flex;
     
   }
-  
+
+  /*the drop into the new world heading with the logo and the button*/
   #dropdiv{
     margin-top: 2%;
     display: flex;
@@ -1872,7 +1846,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 
 
 
-/* MS 1 media queries endddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+/* MS 1 media queries end*/
 
 /* MS2 Media queries start */
 @media only screen and (min-width: 360px) {
