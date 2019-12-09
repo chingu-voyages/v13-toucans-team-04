@@ -1,0 +1,2190 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  padding: 0px 10.5px;
+}
+
+@font-face {
+font-family: 'BurbankBigRegular-Black';
+src: url('BurbankBigRegular-Black.eot');
+src: url('BurbankBigRegular-Black.eot?#iefix') format('embedded-opentype'),
+     url('BurbankBigRegular-Black.svg#BurbankBigRegular-Black') format('svg'),
+     url('BurbankBigRegular-Black.ttf') format('truetype'),
+     url('BurbankBigRegular-Black.woff') format('woff'),
+     url('BurbankBigRegular-Black.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
+
+body {
+  font-family: 'BurbankBigRegular-Black','sans-serif';
+  font-size: 18px;
+  line-height: 1.6;
+  /* Using Flexbox throughout rather than CSS grid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BurbankBigRegular-Black','sans-serif';
+  text-transform: uppercase;
+}
+
+/*navbar toggle mobile start*/
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: url(../images/mobile.png)no-repeat center/cover;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: left;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color:#ffff00;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+#bottom-mobile{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#links-mobile{
+  margin-bottom: 157px;
+}
+
+#download-mobile{
+  background-color: #ffff00;
+  color: #2a2a2a;
+  height: 3.7rem;
+  border: none;
+  padding: 0 1.75rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#fifty{
+  display: flex;
+}
+
+#query{
+  font-family: Arial;
+  position: relative;
+  bottom: 2px;
+  vertical-align: middle;
+  width: 100%;
+  background: #393939;
+  font-size: 1.1em;
+  height: 2em;
+  border: none;
+  color: #e7e7e7;
+  line-height: normal;
+  text-align: center;
+}
+
+#user-mobile{
+  height: 3.7rem;
+  background-color: #2a2a2a;
+  padding: 0 1.75rem;
+  flex: 70%;
+  color: #e7e7e7;
+  text-transform: uppercase;
+  border: 1px solid #464646 ;
+}
+#language-mobile{
+  flex: 30%;
+  background-color: #2a2a2a;
+  color: #e7e7e7;
+  border: 1px solid #464646;
+}
+
+#search-mobile{
+  height: 3.7rem;
+  background-color: #2a2a2a;
+  border: none;
+  padding: 0.5rem 1.75rem;
+}
+/*navbar mobile end*/
+
+/* navbar */
+
+/* ********** */
+/* For mobile phones: */ 
+/* ********** */
+
+nav {
+  width: 100%;
+  background-color: #2a2a2a;
+}
+
+/* left logos: */
+#eg-logo {
+  margin-left: 1rem; 
+}
+
+  #eg-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: 5px;
+  }
+
+  #eg-logo img {
+    height: 2em;
+    display: block;
+  }
+
+#fn-logo {
+  margin: 0 0.5rem; 
+}
+
+  #fn-logo img {
+    height: 3.5rem;
+    display: block;
+    margin: 0 1rem;
+  }
+
+  #fn-logo:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+#mobile-nav, #nav-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+  #mobile-nav {
+    justify-content: space-between;
+  }
+
+  #nav-logos {
+    justify-content: right;
+  }
+
+/* vegburger menu: */
+#veggie-burger {
+  background-color: #ffff00;
+  height: 3.7rem;
+  width: 3.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+
+  #veggie-burger:hover #vp-1 {
+    transform: rotate(135deg);
+}
+
+/* turn lines into X */
+#veggie-burger:hover #vp-3 {
+    transform: rotate(200deg);
+}
+
+#veggie-burger:hover #vp-2 {
+  display: none;
+}
+
+  /* hover effects for vegburger menu: */
+  #veggie-burger:hover {
+    background-color: #1EB8F4;
+    transition: 0.3s;
+  }
+
+  /* focus effect for vegburger menu: */
+
+  #veggie-burger:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+  }
+
+/* hiding things on small and medium screens: */
+.no-small-screens, .no-med-screens {
+  display: none;
+}
+
+/* MS 1 start*/
+/*big background image/container*/
+#sec1image {
+  height: 800px;
+  background-size: 105%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: url(../images/fortnite_home.jpg)no-repeat center/cover;
+  background-position: center top;
+  overflow: hidden;
+  text-align: center;
+}
+/*the drop into the new world heading with the logo and the button*/
+ #dropdiv {
+  flex-direction: column;
+  height: 45%;
+  width: 77%;
+  align-self: center;
+  color: white;
+  overflow: hidden;
+  margin: 10% 0 0 0;
+ 
+}
+/*the actual heading text*/
+#drop {
+  font-size: 9vw;
+  margin: 0 auto;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+#logo {
+  width: 30%;
+} 
+
+/* The learn more Skew Forward animation */
+#learn-more {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+ 
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  
+  background-color: yellow;
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+#learn-more:hover, #learn-more:focus, #learn-more:active {
+  -webkit-transform: skew(-6deg);
+  transform: skew(-6deg);
+}
+
+#learn-more:hover {
+  background-color: rgb(190, 190, 42);
+}
+/*actual learn more text*/
+#learn {
+  color: black;
+  align-self: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/*the watch trailer div*/
+ #trailer {
+ 
+  width: 340px;
+  color: white;
+  text-align: center;
+  
+  margin: 10% 0 0 0;
+}
+
+/*actual watch trailer text*/
+#watch {
+  text-shadow: 4px 4px 6px #000000;
+  font-size: 4.5vw;
+  margin: auto 9px;
+
+}
+
+#play-button {
+  height: 50px;
+  
+} 
+
+
+/* MS 1 end*/
+
+/* Main section 2 Start */
+.container {
+  box-sizing: border-box;
+  width: 95%;
+  margin-top: -150px;
+}
+
+.wrapper {
+  padding: 16px 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.dividerOne {
+  height: 2px;
+  width: 100%;
+}
+
+.dividerTwo {
+  height: 24px;
+  width: 100%;
+}
+
+.card,
+.cardImgOne,
+.cardImgTwo,
+.cardImgThree,
+.cardImgFour {
+  box-shadow: 1px 1px 7px 0px #efe6e6;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Two Big Fixed Images */
+.bigImages {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.bigImages .flex:hover .contentBottomLeft {
+  bottom: 20px;
+}
+
+.cardImgOne,
+.cardImgTwo,
+.cardImgThree,
+.cardImgFour {
+  display: flex;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.cardImgOne>.img {
+  height: 650px;
+  background: url("../images/bigImgOne.jpg");
+  background-size: auto 650px;
+  background-position: center;
+}
+
+.cardImgTwo>.img {
+  height: 650px;
+  background: url("../images/bigImgTwo.jpg");
+  background-size: auto 650px;
+}
+
+/* Two Big Hidden Images */
+
+.cardImgThree>.img {
+  height: 450px;
+  background: url("../images/bigImgThree.jpg");
+  background-size: 100% 100%;
+}
+
+.cardImgFour>.img {
+  height: 450px;
+  background: url("../images/bigImgFour.jpg");
+  background-size: 100% 100%;
+}
+
+.contentBottomLeft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.contentBottomLeft h3 {
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.contentBottomLeft p {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.imageRight {
+  width: 75%;
+}
+
+/* Four Small Fixed Images */
+.sub {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  flex-direction: row;
+}
+
+.direction {
+  flex-direction: column;
+}
+
+
+.card>.content {
+  padding: 22px 16px;
+}
+
+.content p {
+  color: rgb(43, 43, 161);
+}
+
+.content h4 {
+  font-family: "Burbank Big Regular", sans-serif;
+}
+
+.sub>.cardOne>.img {
+  background-image: url("../images/1.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardTwo>.img {
+  background-image: url("../images/2.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardThree>.img {
+  background-image: url("../images/3.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardFour>.img {
+  background-image: url("../images/4.jpg");
+  background-size: 100% 100%;
+}
+
+/* Load More Button */
+#hideShow {
+  display: none;
+}
+
+#hideShow.show {
+  display: block;
+}
+
+/*  Four Small Hidden Images  */
+.sub>.cardFive>.img {
+  background-image: url("../images/5.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardSix>.img {
+  background-image: url("../images/6.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardSeven>.img {
+  background-image: url("../images/7.jpg");
+  background-size: 100% 100%;
+}
+
+.sub>.cardEight>.img {
+  background-image: url("../images/8.jpg");
+  background-size: 100% 100%;
+}
+
+/* Hover effects */
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Skew Forward */
+.hvr-skew-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.hvr-skew-forward:hover,
+.hvr-skew-forward:focus,
+.hvr-skew-forward:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+
+/* Load More Button */
+.button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.button .load {
+  display: inline-block;
+  padding: 0 20px;
+  /* width: 20%; */
+  height: 10%;
+  font-size: 1.5em;
+  border: 4px solid black;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 0;
+  line-height: 2;
+  z-index: 1;
+  letter-spacing: 0;
+  font-family: "Burbank Big Regular", sans-serif;
+  margin-bottom: 30px;
+}
+
+.button .load:hover {
+  background-color: black;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+/* Slick slider styles */
+.slider {
+  width: 100%;
+  margin: 100px auto 30px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: 1;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+button.slick-arrow {
+ text-indent: -2000px;
+ background-color: white;
+ border-radius: 50%;
+ width: 34px;
+ height: 34px;
+ cursor: pointer;
+ margin: 50px 50px 0px 50px;
+}
+
+button.slick-arrow:active,button.slick-arrow:focus {
+  border: none;
+  outline: none;
+}
+
+.slick-track:before, .slick-track:after { 
+  display: none !important;
+} 
+
+.slick-prev {
+  background-image: url('../images/previous.png');
+  background-repeat: no-repeat;
+}
+
+.slick-next {
+  background-image: url('../images/next.png');
+  background-repeat: no-repeat;
+}
+
+
+
+/* Mobile Media Queries */
+@media only screen and (min-width: 320px) {
+  .container {
+      width: 100%;
+  }
+
+  .wrapper {
+      padding: 0;
+  }
+
+  .cardImgOne>.img,
+  .cardImgTwo>.img {
+      height: 300px;
+      background-size: 100% 100%;
+  }
+
+  .contentBottomLeft {
+      position: relative;
+      bottom: 0;
+      padding: 15px 15px 15px 5px;
+  }
+
+  .bigImages .flex:hover .contentBottomLeft {
+      bottom: 0px;
+  }
+
+  .contentBottomLeft p {
+      font-size: 14px;
+      color: rgb(43, 43, 161);
+  }
+
+  .contentBottomLeft h3 {
+      color: black;
+      font-size: 20px;
+  }
+
+  .imageRight {
+      width: 100%;
+  }
+
+  .button {
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .button .load {
+      display: inline-block;
+      height: 2%;
+      font-size: 1em;
+      border: 4px solid black;
+      color: black;
+      background-color: white;
+      text-decoration: none;
+      border-radius: 0;
+      line-height: 2;
+      z-index: 1;
+      letter-spacing: 0;
+      font-family: "Burbank Big Regular", sans-serif;
+      margin-bottom: 30px;
+  }
+
+  .button .load:hover {
+      background-color: black;
+      color: white;
+      transition: all .3s ease-in-out;
+  }
+
+.flex.direction {
+  flex-direction: column;
+  }
+  
+  .hideMobile {
+      display: none;
+  }
+
+  .buttonMobile {
+      display: block;
+      text-align: center;
+  }
+
+  .buttonDesktop {
+      display: none;
+      text-align: center;
+  }
+
+  .buttonMobile #loadButton {
+    display: none;
+    margin-bottom: -40px;
+  }
+}
+
+/* Ipad Version */
+@media only screen and (min-width: 720px) {
+  .container {
+      width: 90%;
+  }
+
+
+  .bigImages {
+      flex-direction: row;
+  }
+
+  .spacer {
+      height: 2px;
+      width: 48px;
+  }
+
+  .card>.img {
+      height: 200px;
+  }
+
+  .sub {
+      width: 100%;
+  }
+.slider.slick-slider{display:none;}
+.flex.direction {
+  flex-direction: row;
+  }
+  
+  .buttonMobile {
+      display: none;
+  }
+  
+  .buttonDesktop {
+      display: block;
+  }
+
+  .hideMobile {
+      display: flex;
+  }
+
+  .imageRight {
+      width: 75%;
+  }
+
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 350px;
+  }
+
+
+  .contentBottomLeft {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+  }
+
+  .contentBottomLeft h3 {
+      font-size: 30px;
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+}
+
+
+/*  ipad pro  */
+@media only screen and (min-width: 1024px) {
+  .cardImgOne>.img, .cardImgTwo>.img {
+       height: 450px;
+  }
+
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 350px;
+  }
+}
+
+/*  Desktop */
+@media only screen and (min-width: 1200px) {
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 650px;
+  }
+
+  .contentBottomLeft h3 {
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      color: white;
+  }
+
+  .card>.img {
+      height: 300px;
+  }
+  
+  }
+  
+  /* Desktop  */
+  @media only screen and (min-width: 1400px) {
+    .container {
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: -240px;
+    }
+  }
+
+/* Main section 2 End */
+
+/*Footer start*/
+
+/*global footer*/
+.footer {
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  background-color: #2a2a2a;
+  z-index: 10;
+  color: #e7e7e7;
+  width: 100%;
+  height: 100%;
+  padding: 1.25em 4.5em 2.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#footer a:active,
+#footer a:focus,
+#footer a:hover,
+#footer a:visited,
+#footer i:focus,
+#footer i:visited {
+  outline-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+#footer .accent-color-hover:hover {
+  color: #ff0 !important;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+#footer .text-color,
+#footer a {
+  color: #e7e7e7;
+}
+
+#footer .footerLinks li {
+  list-style: none;
+}
+
+/*row*/
+.row {
+  display: flex;
+}
+
+/*footer global end*/
+
+/*socials section*/
+
+#social {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+#social ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+#social ul li {
+  padding: 0px;
+  display: inline-block;
+}
+
+.upbutton {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+#footer #upbutton span {
+  font-size: 1.5em;
+}
+
+/*socials section end*/
+
+/*links section*/
+
+#Links {
+  display: flex;
+}
+
+#Links li a {
+  font-size: .70em;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+#age {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+/*links section end*/
+
+/*icons, hover effects*/
+#footer .social i {
+  font-size: 1.6em;
+  opacity: .92;
+}
+
+#footer .logos i {
+  font-size: 1.4em;
+  opacity: .92;
+  vertical-align: middle;
+}
+
+#footer .logos i:hover {
+  color: #fff;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+#footer .social i:hover {
+  color: #ffff00;
+  cursor: pointer;
+  -webkit-transition: color .6s ease-in-out;
+  -o-transition: color .6s ease-in-out;
+  transition: color .6s ease-in-out;
+}
+
+.text-color-nonactive {
+  color: #ccc;
+}
+
+#footer .tags .tag-title {
+  font-size: .5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+#footer .accent-color {
+  color: #ff0;
+}
+
+/*icons end*/
+
+/*Copyright section */
+.copyright-paragraph {
+  text-align: left;
+  font-size: .68em;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+/*Copyright section end */
+
+/*border footer*/
+#footer hr {
+  margin: 1em 0;
+}
+
+#footer hr {
+  border-top: 1px solid #b3b3b3;
+  border-style: solid none none;
+}
+
+#footer .border {
+  border-color: #333 !important;
+}
+
+/*border end*/
+
+/*bottom footer*/
+#bottomFooter {
+  display: flex;
+  flex-direction: row;
+}
+
+#logos {
+  margin-left: auto;
+}
+
+#bottomFooter ul {
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+#bottomFooter ul li {
+  display: flex;
+  padding: 5px;
+}
+
+#bottomFooter li a {
+  font-size: .75em;
+}
+
+/*battlepass section start*/
+
+#battlepass{
+  padding: 4em 2em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background: url(../images/battlepass.png) no-repeat top/cover;
+}
+
+.battlepass-content{
+  max-width: 1200px;
+  padding: 3em 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.battlepass-bigheading{
+  color: #2be5fe;
+  font-size: 4em;
+}
+
+#extra{
+  line-height: 95px;
+}
+
+/*changing the default height of the break element*/
+.break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
+}
+
+.battlepass-heading{
+  color: #2be5fe;
+  font-size: 40px;
+}
+
+.extra{
+  font-size: 6em;
+  color: #2be5fe;
+}
+
+.battlepass-smallheading{
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.battlepass-button{
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #ff0;
+  border: none;
+  padding: 0 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  clip-path: circle(100%);
+  transition: all 0.7s;
+}
+
+.battlepass-button:hover{
+  clip-path: circle(50%);
+  opacity: 0.7;
+}
+
+/*battlepass section end*/
+
+/*bottom footer end*/
+
+/*media queries footer*/
+
+/*adjustment for small screen tablets etc*/
+@media only screen and (max-width: 991px) {
+  #footer {
+    padding: 1em 1.5em;
+  }
+}
+
+/*iphone 5,6,7 X, Samsung Galaxy etc*/
+@media (max-width: 580px) {
+  #bottomFooter, #Links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #logos, #age {
+    margin: 0 auto;
+  }
+
+  #bottomFooter ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #footer .social i {
+    font-size: 1.2em;
+  }
+
+  .upbutton {
+    padding-right: 0px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*media queries footer end*/
+
+/*Footer end*/
+
+/*media queries battlepass start*/
+@media only screen and (min-width: 1500px) {
+  #extra{
+    line-height: 125px;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+ /* adjusting font-size on big screens screens */
+@media (min-width: 991px) and (max-width: 1500px) {
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 200px;
+  }
+  .battlepass-bigheading{
+    font-size: 150px;
+  }
+  .battlepass-smallheading{
+    font-size: 26px;
+  }
+  .battlepass-heading{
+    font-size: 42px;
+  }
+  .battlepass-button{
+    font-size: 1.3em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
+}
+}
+
+@media only screen and (max-width: 991px) {
+  /* adjusting font-size on small screens */
+  #extra{
+    line-height: 65px;
+  }
+  .extra{
+    font-size: 90px;
+  }
+  .battlepass-bigheading{
+    font-size: 70px;
+  }
+  .battlepass-smallheading{
+    font-size: 13px;
+  }
+  .battlepass-heading{
+    font-size: 21px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .battlepass-content img{
+    width: 80px;
+    height: 75px;
+  }
+}
+
+/*tablets*/
+@media only screen and (max-width: 900px) {
+  /* mobile background */
+  #battlepass{
+    height: 100%;
+    background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 20em;
+  }
+}
+
+/*big laptop adjustment*/
+@media (min-width: 1340px) and (max-width: 1440px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -95px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*big laptop adjustment, background image adjustment*/
+@media (min-width: 1100px) and (max-width: 1340px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -145px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*small laptop adjustment*/
+@media (min-width: 900px) and (max-width: 1100px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -175px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*i-phone-6,7,8,X*/
+@media (max-width: 414px) and (max-height: 812px)  {
+  #battlepass{
+    padding: 0em 0em;
+    height: 120vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+
+/*i-phone-5*/
+@media(max-width: 320px) and (max-height: 568px){
+  #battlepass{
+    padding: 0em 0em;
+    width: 100%;
+    height: 140vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+/*media queries battlepass end*/
+
+/* Navbar queries start*/
+/* For tablets (screens bigger than 690px but smaller than 768px): */
+/* ********** */
+@media only screen and (min-width: 690px) {
+
+  /* show some things that were hidden on mobile, but not everything: */
+  .no-small-screens {
+    display: block;
+  }
+
+  /* organisation: */
+  nav, #nav-right {
+    display: flex;
+    flex-direction: row;
+  }
+    nav {
+      justify-content: space-between;
+    }
+
+    #nav-right {
+      justify-content: right;
+    }
+
+  #mobile-nav {
+    justify-content: left;
+  }
+
+  /* vegburger menu styling change */
+  #veggie-burger {
+    background-color: #2a2a2a;
+  }
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: #cccccc;
+    margin: 4px 0;
+  }  
+
+  /* HOVER effects for vegburger menu on med: */
+    #veggie-burger:hover {
+      background-color: #ffff00;
+      transition: 0.3s;
+    }
+
+    #veggie-burger:hover .veggie-patty {
+      background-color: #000000;
+      transition: 0.3s;
+    }
+  
+  /* FOCUS effects for vegburger menu on med: */
+    #veggie-burger:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+    }
+
+  /* righthand icons */
+  #search, #language, #user, #download {
+    height: 3.7rem;
+    background-color: #2a2a2a;
+    border: none;
+    padding: 0 1.75rem
+  }
+
+  /* find a better way to do this */
+  #language {
+    padding-top: 8px;
+  }
+
+  #user, #download {
+    font-size: 10px;
+  }
+
+  #download {
+    background-color: #ffff00;
+    color: #2a2a2a;
+  }
+
+  /* text in "sign up" button */
+  #user .sign-text {
+    padding: 0 8px; 
+  }
+
+  /* fontawesome icons */
+  #search .fas, #user .fas, #language .fas {
+    color: #CCCCCC;
+    line-height: 1.6;
+    display: inline;
+  }
+
+  /* all nav text incl buttons: */
+  .nav-text {
+    text-transform: uppercase;
+    color: #CCCCCC;
+    font-size: 10.5px; 
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  /* make the bottom border already exist so that it doesn't bump up the text */
+  #nav-right button { 
+    border-bottom: 5px solid #2a2a2a;
+    border-top: 5px solid #2a2a2a;
+  }
+  #nav-right #download { 
+    border-bottom: none;
+    border-top: none;
+  }
+
+  /* HOVER effect for righthand buttons: yellow line */
+  #nav-right button:hover {
+    border-bottom: 5px solid #ffff00;
+    transition: 0.3s;
+  }
+
+  /* HOVER effect for righthand buttons: white font */
+  #nav-right button:hover .fas,
+  #nav-right button:hover span {
+    color: #ffffff;
+  }
+
+  /* FOCUS effect for righthand buttons: yellow outline */
+  #nav-right button:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: -5px;
+  }
+
+  /* FOCUS effect for righthand buttons: white font */
+    #nav-right button:focus .fas,
+    #nav-right button:focus span {
+      color: #ffffff;
+    }
+
+  /* HOVER effect for download button: make it blue */
+  #nav-right #download:hover {
+    background-color: #1EB8F4;
+    color: #000000;
+    border: none;
+    transition: 0.3s;
+  }
+
+  /* FOCUS effect for download button: blue outline */
+  #nav-right #download:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: -5px;
+    color: #000000;
+  }
+
+  /* nav dropdown (competitive and language) */
+  .main-nav-links, .dropbtn {
+    display: inline-block;
+  }
+  
+  /* make it invisible til hover but set the styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    min-width: 160px;
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 210px;
+    padding: 0.7em 0;
+
+  }
+  
+  /* for the sites; need to make a different one for languages */
+  .dropdown-content a {
+    padding: .5em .8em; /* from original */
+    display: block;
+    text-align: center;
+  }
+  
+  /* make the dropdown appear on hover */
+  .dropdown:hover .dropdown-content { display: block;}
+  
+  /* Hover effects for dropdown items */
+  .dropdown-content a:hover { 
+    background-color: #1EB8F4;
+    color: black; 
+  }
+
+}
+
+
+/* ********** */
+/* For desktop (screens bigger than 1200px): */
+/* ********** */
+
+@media only screen and (min-width: 1250px) {
+
+  /* make everything visible: */
+  .no-med-screens {
+    display: block;
+  }
+
+  /* except the vegburger menu, get rid of that: */
+  #veggie-burger {
+    display: none;
+  }
+
+  /* organisation: */
+  #nav-left {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+  }
+  
+  #nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden; /* added from dropdown example, possible unnecessary */
+  }
+  
+  /* styling for site list and links */
+    #nav-ul li {
+      padding: 16px 10.5px; /* makes bottom border line up correctly */
+      display: inline-block;
+    }
+
+    #nav-ul a {
+      color: #cccccc;
+    }
+    
+    /* make it already have a bottom border: */
+    #nav-ul li { 
+      border-bottom: 5px solid #2a2a2a;
+      border-top: 5px solid #2a2a2a;
+    }
+
+    /* HOVER effect for nav links (NOT competetive dropdown): yellow line */
+    #nav-ul .main-nav-links:hover {
+      border-bottom: solid 5px #ffff00;
+      transition: 0.3s;
+    }
+
+    /* HOVER effect for nav site links: white text */
+    #nav-ul li:hover a {
+      color: #ffffff;
+      transition: 0.3s;
+    }
+
+    /* FOCUS effect for nav site non-links: yellow outline and white text */
+    /* for some reason this has changed size, need to fix */
+    #nav-ul li:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: -5px;
+      color: #ffffff;
+    }
+
+    /* FOCUS effect for nav site links: yellow outline and white text */
+    #nav-ul li a:focus {
+      outline: 3px solid #ffff00;
+      outline-offset: 5px;
+      color: #ffffff;
+    }
+}
+
+/* MS 1 media queries start*/
+
+@media screen and (min-width: 350px) {
+  #dropdiv {
+    margin: 5% auto;
+    width: 65%;
+
+  }
+
+  #drop {
+    font-size: 9vw;
+    
+  }
+
+  #logo {
+    width: 20%;
+  }
+
+  
+
+  #trailer {
+    margin: 25% auto 0 auto;
+  }
+}
+
+
+
+@media screen and (min-width: 365px) {
+
+  /*the drop into the new world heading with the logo and the button*/
+  #dropdiv {
+    font-size: 30px;
+    line-height: 2em;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 350px;
+    
+  }
+
+  /*the actual heading text*/
+  #drop {
+    width: 250px;
+  }
+
+  #logo {
+    width: 20%;
+  }
+
+  /*learn more heading*/
+  #learn-more {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /*actual learn more link*/
+  #learn {
+    font-size: 4vw;
+  }
+
+  #trailer {
+    margin: 25% auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  /*big background image/container*/
+  #sec1image {
+    
+    background-size: 250% auto;
+    flex-direction: column;
+    
+  }
+
+  /*the drop into the new world heading with the logo and the button*/
+  #dropdiv {
+    
+    line-height: 2em;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 350px;
+  }
+
+  /*the actual heading text*/
+  #drop {
+    font-size: 60px;
+    width: 350px;
+  }
+
+  
+
+  #logo {
+    width: 15%;
+  }
+
+  /*learn more heading*/
+  #learn-more{    
+    overflow: hidden;
+    
+  }
+
+  /*actual learn more link*/
+  #learn {
+    font-size: 14px;
+  }
+
+
+  /*the watch trailer div*/
+  #trailer {
+    
+    
+    display: block;
+    
+    margin: -0px auto 0 auto;
+    
+    width: 35vw;
+    font-size: 100%;
+  }
+  
+  /*actual watch trailer text*/
+  #watch {
+    font-size: 4vw;
+  }
+  
+  #play-button {
+    width: 25%;
+    height: auto;
+  }
+
+}
+@media screen and (min-width: 769px) {
+  
+  /*big background image/container*/
+  #sec1image {
+    background-size: auto 600px;
+    display: flex;
+    
+  }
+
+  /*the drop into the new world heading with the logo and the button*/
+  #dropdiv{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  #learn-more {
+    width: 130px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  #learn {
+    font-size: 20px;
+    
+  }
+
+  #trailer {
+    align-self: flex-end;
+    margin: 100px 30px 0 0;
+    
+    width: 200px;
+    
+  }
+
+  #watch {
+    
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  
+
+  #play-button {
+    width: 40px;
+    height: auto;
+}
+  
+  
+}
+
+@media screen and ( min-width: 860px) {
+  #sec1image {
+    background-size: 105%;
+}
+}
+
+@media screen and ( min-width: 992px) {
+
+  #sec1image {
+    
+    height: 900px;
+    background-size: auto 1000px;
+    
+  }
+  
+  
+
+  #dropdiv {
+    -webkit-animation: slide-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: slide-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    align-self: flex-start;
+    margin: 300px 0 120px 130px;
+    width: 32%;
+    height: auto;
+    text-align: left;
+    font-size: 7vw;
+    line-height: 1;
+  }
+/**/
+  #drop {
+    margin: 0;
+    font-size: inherit;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #learn-more {
+    align-self: flex-start;
+    width: 200px;
+    height: 60px;
+    align-items: center;
+    font-size: 28px;
+    margin: 20px 0 0 0;
+  }
+
+  #logo {
+    width: 25%;
+    align-self: flex-start;
+  }
+
+  
+
+  #learn {
+    font-size: 24px;
+  }
+
+
+  #trailer {
+    
+    justify-content: center;
+    margin: -120px 30px 0 0;
+    width: 300px;
+  }
+
+  #watch {
+    font-size: 24px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #play-button {
+    width: 70px;
+  }
+
+
+
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(100);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(-200px);
+  }
+}
+
+@media screen and ( min-width: 1199px) {
+  #dropdiv {
+    margin: 260px 0 120px 130px;
+
+  }
+
+  #trailer {
+    margin: -190px 30px 0 0;
+
+  }
+}
+
+
+@media screen and ( min-width: 1416px) {
+  #sec1image {
+    height: 70vw;
+    background-size: 105%;
+  }
+}
+
+@media screen and ( min-width: 1492px) {
+  #sec1image {
+    background-size: 105%;
+    
+  }
+  
+}
+
+
+
+
+/* MS 1 media queries end*/
+
+/* MS2 Media queries start */
+@media only screen and (min-width: 360px) {
+  .container {
+      width: 100%;
+  }
+
+  .wrapper {
+      padding: 0;
+  }
+
+  .cardImgOne>.img,
+  .cardImgTwo>.img {
+      height: 300px;
+      background-size: 100% 100%;
+  }
+
+  .contentBottomLeft {
+      position: relative;
+      bottom: 0;
+      padding: 15px 15px 15px 5px;
+  }
+
+  .bigImages .flex:hover .contentBottomLeft {
+      bottom: 0px;
+  }
+
+  .contentBottomLeft p {
+      font-size: 14px;
+      color: rgb(43, 43, 161);
+  }
+
+  .contentBottomLeft h3 {
+      color: black;
+      font-size: 20px;
+  }
+
+  .imageRight {
+      width: 100%;
+  }
+
+  .button {
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .button .load {
+      display: inline-block;
+      /* width: 25%; */
+      height: 2%;
+      font-size: 1em;
+      border: 4px solid black;
+      color: black;
+      background-color: white;
+      text-decoration: none;
+      border-radius: 0;
+      line-height: 2;
+      z-index: 1;
+      letter-spacing: 0;
+      font-family: "Burbank Big Regular", sans-serif;
+      margin-bottom: 30px;
+  }
+
+  .button .load:hover {
+      background-color: black;
+      color: white;
+      transition: all .3s ease-in-out;
+  }
+
+.flex.direction {
+  flex-direction: column;
+  }
+  
+  .hideMobile {
+      display: none;
+  }
+
+  .buttonMobile {
+      display: block;
+      text-align: center;
+  }
+
+  .buttonDesktop {
+      display: none;
+      text-align: center;
+  }
+}
+
+/* Ipad Version */
+@media only screen and (min-width: 720px) {
+  .container {
+      width: 90%;
+  }
+
+
+  .bigImages {
+      flex-direction: row;
+  }
+
+  .spacer {
+      height: 2px;
+      width: 48px;
+  }
+
+  .card>.img {
+      height: 320px;
+  }
+
+  .sub {
+      width: 100%;
+  }
+.slider.slick-slider{display:none;}
+.flex.direction {
+  flex-direction: row;
+  }
+  
+  .buttonMobile {
+      display: none;
+  }
+  
+  .buttonDesktop {
+      display: block;
+  }
+
+  .hideMobile {
+      display: flex;
+  }
+
+  .imageRight {
+      width: 75%;
+  }
+
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 450px;
+  }
+
+
+  .contentBottomLeft {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+  }
+
+  .contentBottomLeft h3 {
+      font-size: 30px;
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+  }
+}
+
+/*  Desktop */
+@media only screen and (min-width: 1200px) {
+  .cardImgOne>.img, .cardImgTwo>.img {
+      height: 650px;
+  }
+
+  .contentBottomLeft h3 {
+      color: white;
+  }
+
+  .contentBottomLeft p {
+      color: white;
+  }
+} 
+/* MS2 Media queries end */
+	
+/* Mobile toggle navbar */
+/*tablets*/
+
+@media only screen and (max-width: 800px) {
+  .overlay {
+    background: url(../images/mobile.png)no-repeat center/cover;
+    background-position: left -320px bottom;
+  }
+}
+
+
+/*i-phone-6,7,8*/
+@media (max-width: 414px) and (max-height: 812px)  {
+  .overlay a {
+    padding: 4px;
+    text-align: left;
+    font-size: 20px;
+  }
+  .overlay {
+    background: url(../images/mobile.png)no-repeat center/cover;
+    background-position: left -320px bottom;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+
+/*i-phone-5*/
+@media(max-width: 320px) and (max-height: 568px){
+  .overlay a {
+    padding: 4px;
+    text-align: left;
+    font-size: 20px;
+  }
+  .overlay {
+    background: url(../images/mobile.png)no-repeat center/cover;
+    background-position: left -275px bottom;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+
+/* Mobile toggle navbar end */
