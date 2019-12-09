@@ -49,8 +49,6 @@ function toggleLogoDisplay () {
     }
 }
 
-console.log("window.innerWidth is " + window.innerWidth); // this one!!
-
 function ifSmallScreen(){
     if(window.innerWidth < 1200){
         // make left logos dis/appear
@@ -86,11 +84,18 @@ searchButton.addEventListener("click", function(){
     ifBigScreen();
 });
 
-// add something so that if the window size is changed after loading
-// it will automatically update what should be in/visible **
+// listen for window size change and remove/add burger and links as necessary
+window.onresize = function(e){
+    if(window.innerWidth < 1200){
+        navLinks.style.display = "none";
+        this.burger.style.display = "flex";
+    } else if(window.innerWidth > 1200){
+        this.burger.style.display = "none";
+        this.navLinks.style.display = "flex";
+    }
+}
 
-// SIGN IN POPUP REVEAL
-
+// SIGN-IN POPUP REVEAL
 var signInPop = document.getElementById("sign-in-popup");
 var signInButton = document.getElementById("user");
 var close = document.getElementById("pop-close");
@@ -103,8 +108,7 @@ close.addEventListener("click", function(){
     signInPop.style.display = "none";
 });
 
-// about us popup reveal
-
+// DEVELOPERS POPUP REVEAL
 var devsPop = document.getElementById("devs-popup");
 var devsButton = document.getElementById("developers");
 var topClose = document.getElementById("bio-close-top");
@@ -122,5 +126,27 @@ bottomClose.addEventListener("click", function(){
     devsPop.style.display = "none";
 });
 
+
+// MAKE LANGUAGE DROPDOWN ACCESSIBLE AND NAVIGABLE FOR KEYBOARD USERS
+// var langButton = document.getElementById("language");
+// var langDrop = document.getElementById("langs-list");
+
+// // if the user is focusing on the langButton
+// langButton.addEventListener("focusin", function(){
+//     // and if they press enter (keycode 13)
+//     document.addEventListener("keypress", function(e){
+//         if(e.keyCode === 13){
+//             // make the dropdown appear
+//             langDrop.style.display = "block";
+//             // this also makes the list keyboard accessible
+//             // BUT the user must tab through all languages so not ideal
+//         }
+//     });
+// });
+
+// langDrop.addEventListener("focusout", function(){
+//     langDrop.style.display="none";
+//     // this works but it makes the list inaccessible ...
+// });
 
 // navbar js end

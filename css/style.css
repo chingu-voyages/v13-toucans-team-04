@@ -1420,7 +1420,7 @@ nav {
   }
   
   /* make the dropdown appear on hover */
-  .dropdown:hover .dropdown-content { display: block;}
+  .dropdown:hover .dropdown-content { display: block; }
   
   /* Hover effects for dropdown items */
   .dropdown-content a:hover { 
@@ -1598,8 +1598,20 @@ nav {
     font-size: 4vw;
   }
 
+  /* steph added focus effect */
+  #learn:focus {
+    outline: 3px solid #1EB8F4;
+    outline-offset: 5px;
+  }
+
   #trailer {
     margin: 25% auto 0 auto;
+  }
+
+  /* steph added focus effect */
+  #trailer a:focus {
+    outline: 3px solid #ffff00;
+    outline-offset: 5px;
   }
 }
 
