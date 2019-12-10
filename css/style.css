@@ -2355,7 +2355,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 /* Mobile toggle navbar */
 /*tablets*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 694px) {
   .overlay {
     background: url(../images/mobile.png)no-repeat center/cover;
     background-position: left -320px bottom;
