@@ -144,7 +144,7 @@ window.onresize = function(e){
         navLinks.style.display = "none";
     } else if(window.innerWidth > 1200){
         this.navLinks.style.display = "flex";
-        closeNav()
+        this.closeNav();
     }
 }
 
