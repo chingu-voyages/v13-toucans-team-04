@@ -17,4 +17,5 @@ This is a fully-functional clone of the Fortnite landing page with some fun extr
 ## Dependencies
 * [Font Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
+* [slick](https://kenwheeler.github.io/slick/)
 * More stuff to be added soon
