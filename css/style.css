@@ -224,10 +224,6 @@ nav {
     margin: 4px 0;
   }
 
-  #veggie-burger:hover #vp-1 {
-    transform: rotate(135deg);
-}
-
   /* hover effects for vegburger menu: */
   #veggie-burger:hover {
     background-color: #1EB8F4;
