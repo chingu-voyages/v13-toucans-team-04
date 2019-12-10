@@ -1635,7 +1635,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
     height: 3.7rem;
     background-color: #2a2a2a;
     border: none;
-    padding: 0 1.75rem
+    padding: 0 1.25rem
   }
 
   /* find a better way to do this */
@@ -1654,7 +1654,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 
   /* text in "sign up" button */
   #user .sign-text {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   /* fontawesome icons */
