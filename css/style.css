@@ -1,4 +1,7 @@
+
 /* Global Styles */
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +13,24 @@ a {
     text-decoration: none;
 }
 
+ul li {
+  padding: 0px 10.5px;
+}
+
+@font-face {
+font-family: 'BurbankBigRegular-Black';
+src: url('BurbankBigRegular-Black.eot');
+src: url('BurbankBigRegular-Black.eot?#iefix') format('embedded-opentype'),
+     url('BurbankBigRegular-Black.svg#BurbankBigRegular-Black') format('svg'),
+     url('BurbankBigRegular-Black.ttf') format('truetype'),
+     url('BurbankBigRegular-Black.woff') format('woff'),
+     url('BurbankBigRegular-Black.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
+
 body {
+
     font-family: "Burbank Big Regular", sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -47,10 +67,23 @@ h6 {
     display: flex;
 }
 
+  font-family: 'BurbankBigRegular-Black','sans-serif';
+  font-size: 18px;
+  line-height: 1.6;
+  /* Using Flexbox throughout rather than CSS grid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+
 .dividerOne {
     height: 2px;
     width: 100%;
 }
+
 
 .dividerTwo {
     height: 24px;
@@ -153,10 +186,7 @@ h6 {
     flex-direction: column;
 }
 
-/* .spacer {
-    height: 24px;
-    width: 24px;
-} */
+
 .card>.content {
     padding: 22px 16px;
 }
@@ -541,4 +571,913 @@ button.slick-arrow:active,button.slick-arrow:focus {
         height: 300px;
     }
 } 
+=======
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BurbankBigRegular-Black','sans-serif';
+  text-transform: uppercase;
+}
+
+/* nav */
+
+/* media queries have to go at the end or else they get overwritten like anything else: */
+/* For mobile phones: */
+/* (this is the default) */
+
+nav {
+  width: 100%;
+  background-color: #2a2a2a;
+  height: 3.7rem;
+  max-height: 3.7rem;
+  align-items: center;
+}
+
+#eg-logo img {
+  height: 2em;
+  display: block;
+  margin-left: 0.5em;
+}
+
+  #eg-logo {
+    margin-left: 7px;
+  }
+
+#fn-logo img {
+  height: 3.5rem;
+  display: block;
+  margin: 0 0.75em;
+}
+
+#fn-logo {
+  margin: 0 10px 0 5px;
+}
+
+#mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+#veggie-burger {
+  background-color: #ffff00;
+  height: 3.7rem;
+  width: 3.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.veggie-patty {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.no-small-screens, .no-med-screens {
+  display: none;
+}
+
+/*main section 1 start*/
+
+#main-image {
+  height: 1000px;
+  object-fit: cover;
+ 
+}
+
+#dropdiv {
+  height: 100%;
+  max-width: 28%;
+  font-size: 2vw;
+  position: absolute;
+  margin-left: -20%;
+  top: 200px;
+  
+  overflow-y: hidden;
+}
+
+.drop {
+  color: white;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-size: 5vw;
+  overflow-y: hidden;
+}
+/**/
+#dropdiv #logo {
+  width: 20%;
+}
+
+/* Skew Forward */
+#learn-more {
+  margin-top: 10%;
+  background-color: yellow;
+  padding: 3% 7%;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+#learn-more:hover, #learn-more:focus, #learn-more:active {
+  background-color: rgb(202, 202, 11);
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+}
+
+#learn {
+  color: black;
+}
+
+#learn:hover {
+}
+
+/* Forward */
+#learn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+#learn:hover, #learn:focus, #learn:active {
+  -webkit-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+
+#trailer {
+    position: absolute;
+    color: white;
+    right: 5%;
+    top: 650px;
+}
+
+#watch {
+    
+    position: relative;
+    display: inline;
+    bottom: 10px;
+}
+
+#play-button {
+    position: relative;
+    width: 60px;
+}
+
+
+
+
+/*Footer start*/
+
+/*global footer*/
+.footer {
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  background-color: #2a2a2a;
+  z-index: 10;
+  color: #e7e7e7;
+  width: 100%;
+  height: 100%;
+  padding: 1.25em 4.5em 2.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#footer a:active,
+#footer a:focus,
+#footer a:hover,
+#footer a:visited,
+#footer i:focus,
+#footer i:visited {
+  outline-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+#footer .accent-color-hover:hover {
+  color: #ff0 !important;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+#footer .text-color,
+#footer a {
+  color: #e7e7e7;
+}
+
+#footer .footerLinks li {
+  list-style: none;
+}
+
+/*row*/
+.row {
+  display: flex;
+}
+
+/*footer global end*/
+
+/*socials section*/
+
+#social {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+#social ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+#social ul li {
+  padding: 0px;
+  display: inline-block;
+}
+
+.upbutton {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+#footer #upbutton span {
+  font-size: 1.5em;
+}
+
+/*socials section end*/
+
+/*links section*/
+
+#Links {
+  display: flex;
+}
+
+#Links li a {
+  font-size: .70em;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+#age {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+/*links section end*/
+
+/*icons, hover effects*/
+#footer .social i {
+  font-size: 1.6em;
+  opacity: .92;
+}
+
+#footer .logos i {
+  font-size: 1.4em;
+  opacity: .92;
+  vertical-align: middle;
+}
+
+#footer .logos i:hover {
+  color: #fff;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+#footer .social i:hover {
+  color: #ffff00;
+  cursor: pointer;
+  -webkit-transition: color .6s ease-in-out;
+  -o-transition: color .6s ease-in-out;
+  transition: color .6s ease-in-out;
+}
+
+.text-color-nonactive {
+  color: #ccc;
+}
+
+#footer .tags .tag-title {
+  font-size: .5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+#footer .accent-color {
+  color: #ff0;
+}
+
+/*icons end*/
+
+/*Copyright section */
+.copyright-paragraph {
+  text-align: left;
+  font-size: .68em;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+/*Copyright section end */
+
+/*border footer*/
+#footer hr {
+  margin: 1em 0;
+}
+
+#footer hr {
+  border-top: 1px solid #b3b3b3;
+  border-style: solid none none;
+}
+
+#footer .border {
+  border-color: #333 !important;
+}
+
+/*border end*/
+
+/*bottom footer*/
+#bottomFooter {
+  display: flex;
+  flex-direction: row;
+}
+
+#logos {
+  margin-left: auto;
+}
+
+#bottomFooter ul {
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+#bottomFooter ul li {
+  display: flex;
+  padding: 5px;
+}
+
+#bottomFooter li a {
+  font-size: .75em;
+}
+
+/*battlepass section start*/
+
+#battlepass{
+  padding: 4em 2em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background: url(../images/battlepass.png) no-repeat top/cover;
+}
+
+.battlepass-content{
+  max-width: 1200px;
+  padding: 3em 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.battlepass-bigheading{
+  color: #2be5fe;
+  font-size: 4em;
+}
+
+#extra{
+  line-height: 95px;
+}
+
+/*changing the default height of the break element*/
+.break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
+}
+
+.battlepass-heading{
+  color: #2be5fe;
+  font-size: 40px;
+}
+
+.extra{
+  font-size: 6em;
+  color: #2be5fe;
+}
+
+.battlepass-smallheading{
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.battlepass-button{
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #ff0;
+  border: none;
+  padding: 0 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  clip-path: circle(100%);
+  transition: all 0.7s;
+}
+
+.battlepass-button:hover{
+  clip-path: circle(50%);
+  opacity: 0.7;
+}
+
+/*battlepass section end*/
+
+/*bottom footer end*/
+
+/*media queries footer*/
+
+/*adjustment for small screen tablets etc*/
+@media only screen and (max-width: 991px) {
+  #footer {
+    padding: 1em 1.5em;
+  }
+}
+
+/*iphone 5,6,7 X, Samsung Galaxy etc*/
+@media (max-width: 580px) {
+  #bottomFooter, #Links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #logos, #age {
+    margin: 0 auto;
+  }
+
+  #bottomFooter ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #footer .social i {
+    font-size: 1.2em;
+  }
+
+  .upbutton {
+    padding-right: 0px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*media queries footer end*/
+
+/*Footer end*/
+/*media queries navbar start*/
+
+@media only screen and (min-width: 600px) {
+  /* For tablets (screens bigger than 600px but smaller than 768px): */
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-right, #user-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .no-small-screens {
+    display: block;
+  }
+
+  #mobile-nav {
+    justify-content: left;
+  }
+
+  #veggie-burger {
+    background-color: #2a2a2a;
+  }
+
+  .veggie-patty {
+    width: 35px;
+    height: 3px;
+    background-color: #cccccc;
+    margin: 4px 0;
+  }
+
+  button {
+    height: 3.7rem;
+    background-color: #2a2a2a;
+    border: none;
+  }
+
+  #user, #language, #search {
+    padding: 0 14px;
+  }
+
+  #download, #download button {
+    padding: 0 7px;
+    background-color: #ffff00;
+    color: #000000;
+  }
+
+  #download button {
+    margin: 0 0.5rem;
+  }
+
+  .fas {
+    color: #CCCCCC;
+  }
+
+  .sign-text {
+    padding: 0 10px;
+  }
+
+  .nav-text {
+    text-transform: uppercase;
+    color: #CCCCCC;
+    font-size: 10.5px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
+  /* For desktop (screens bigger than 1100px): */
+  /* made breakpoint a bit larger than usual so that the nav isn't crowded */
+
+  #veggie-burger {
+    display: none;
+  }
+
+  .no-med-screens {
+    display: block;
+  }
+
+  a {
+    display: block;
+  }
+
+  #nav-sites, #nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-left {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+  }
+}
+
+/*media queries battlepass start*/
+@media only screen and (min-width: 1500px) {
+  #extra{
+    line-height: 125px;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+ /* adjusting font-size on big screens screens */
+@media (min-width: 991px) and (max-width: 1500px) {
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 200px;
+  }
+  .battlepass-bigheading{
+    font-size: 150px;
+  }
+  .battlepass-smallheading{
+    font-size: 26px;
+  }
+  .battlepass-heading{
+    font-size: 42px;
+  }
+  .battlepass-button{
+    font-size: 1.3em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -10px; /* change this to whatever height you want it */
+}
+}
+
+@media only screen and (max-width: 991px) {
+  /* adjusting font-size on small screens */
+  #extra{
+    line-height: 65px;
+  }
+  .extra{
+    font-size: 90px;
+  }
+  .battlepass-bigheading{
+    font-size: 70px;
+  }
+  .battlepass-smallheading{
+    font-size: 13px;
+  }
+  .battlepass-heading{
+    font-size: 21px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .battlepass-content img{
+    width: 80px;
+    height: 75px;
+  }
+}
+
+/*tablets*/
+@media only screen and (max-width: 900px) {
+  /* mobile background */
+  #battlepass{
+    height: 100%;
+    background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 20em;
+  }
+}
+
+/*big laptop adjustment*/
+@media (min-width: 1340px) and (max-width: 1440px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -95px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*big laptop adjustment, background image adjustment*/
+@media (min-width: 1100px) and (max-width: 1340px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -145px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*small laptop adjustment*/
+@media (min-width: 900px) and (max-width: 1100px)  {
+  #battlepass{
+    background: url(../images/battlepass.png) no-repeat cover;
+    background-position: left -175px bottom;
+  }
+  #extra{
+    line-height: 105px;
+  }
+  .extra{
+    font-size: 12vw;
+  }
+  .battlepass-bigheading{
+    font-size: 8vw;
+  }
+  .battlepass-smallheading{
+    font-size: 18px;
+  }
+  .battlepass-heading{
+    font-size: 36px;
+  }
+  .battlepass-button{
+    font-size: 1.2em;
+  }
+  .break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -40px; /* change this to whatever height you want it */
+}
+}
+
+/*i-phone-6,7,8,X*/
+@media (max-width: 414px) and (max-height: 812px)  {
+  #battlepass{
+    padding: 0em 0em;
+    height: 120vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+
+/*i-phone-5*/
+@media(max-width: 320px) and (max-height: 568px){
+  #battlepass{
+    padding: 0em 0em;
+    height: 140vh;
+   background: url(../images/battlepass-mobile.png) no-repeat top/cover;
+  }
+  .battlepass-content{
+    padding-top: 18em;
+  }
+}
+
+/*media queries battlepass end*/
+
+/*media queries main section 1*/
+
+@media screen and (min-width: 1480px) {
+  #main-image {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  #main-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .drop {
+    font-size: 48px;
+    width: 337px;
+  }
+
+  #dropdiv {
+    top: 65px;
+    margin-left: 1%;
+    
+    max-width: 400px;
+  }
+
+  #dropdiv #logo {
+    width: 15%;
+    margin-left: 42%;
+    
+  }
+
+  #learn-more {
+    margin-left: 28%;
+    font-size: 16px;
+    padding: 2% 5%;
+  }
+
+  #learn-more:hover {
+    padding-left: 6%;
+    
+  }
+
+  #play-button {
+    position: relative;
+    width: 40px;
+}
+
+#trailer {
+  top: 50vw;
+}
+
+#watch {
+  
+  position: relative;
+  display: inline;
+  bottom: 11px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+
+  #main-image {
+    height: 180vw;
+  }
+
+  #dropdiv {
+    
+    width: 95%;
+    top: 65px;
+    width: auto;
+  }
+
+  #trailer { 
+    
+    margin-top: 60%;
+    height: 150px;
+    width: 300px;
+    left: 50%;
+    margin-left: -110px;;
+
+  }
+
+  #watch {
+    top: 3px;
+    font-size: 25px;
+    
+  }
+
+  #play-button {
+    position: absolute;
+    width: 50px;
+    top: 40px;
+    left: 50%;
+    margin-left: -65px;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  .drop {
+    text-align: center;
+    font-size: 40px;;
+  }
+}
+
 
