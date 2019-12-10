@@ -91,18 +91,15 @@ function toggleSearchInput(){
 // select stuff on the left
 var egLogo = document.getElementById("eg-logo");
 var fnLogo = document.getElementById("fn-logo");
-var burger = document.getElementById("veggie-burger");
 
 // if the screen is less than 1200px ...
 function toggleLogoDisplay () {
     if(searchIcon.classList.contains("fa-times")) {
         egLogo.style.display = "none";
         fnLogo.style.display = "none";
-        burger.style.display = "none";
     } else {
         egLogo.style.display = "flex";
         fnLogo.style.display = "flex";
-        burger.style.display = "flex";
     }
 }
 
@@ -141,13 +138,11 @@ searchButton.addEventListener("click", function(){
     ifBigScreen();
 });
 
-// listen for window size change and remove/add burger and links as necessary
+// listen for window size change and remove/add links as necessary
 window.onresize = function(e){
     if(window.innerWidth < 1200){
         navLinks.style.display = "none";
-        this.burger.style.display = "flex";
     } else if(window.innerWidth > 1200){
-        this.burger.style.display = "none";
         this.navLinks.style.display = "flex";
     }
 }
