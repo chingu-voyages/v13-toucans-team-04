@@ -184,21 +184,5 @@ bottomClose.addEventListener("click", function(){
     devsPop.style.display = "none";
 });
 
-// MAKE LANGUAGE DROPDOWN ACCESSIBLE AND NAVIGABLE FOR KEYBOARD USERS
-var langButton = document.getElementById("language");
-var langDrop = document.getElementById("langs-list");
-var lastLang = document.getElementById("last-lang");
-
-langButton.addEventListener("focusin", function(){
-    document.addEventListener("keypress", function(e){
-        if(e.keyCode === 13){
-            langDrop.style.display = "block";
-        }
-    });
-});
-
-lastLang.addEventListener("focusout", function(){
-    langDrop.style.display="none";
-});
 
 // navbar js end
