@@ -28,7 +28,7 @@
 
    <!--Mobile Navigation Bar Start -->
  <div id="myNav" class="overlay">
-   <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+   <a href="javascript:void(0)" id="closebtn" class="closebtn" name="close" onclick="closeNav()"><i class="fas fa-times"></i></a>
    <div class="overlay-content">
      <ul id="links-mobile">
        <li><a href="https://www.epicgames.com/fortnite/battle-pass">Battle Pass</a></li>
@@ -51,7 +51,7 @@
          <i class="fas fa-user"></i>
          <span>Sign In</span>
        </button>
-       <button id="language-mobile"><i class="fas fa-globe-africa fa-2x"></i></button>
+       <button id="language-mobile" aria-label="language"><i class="fas fa-globe-africa fa-2x"></i></button>
      </div>
      <button id="download-mobile">Download</button>
    </div>
@@ -84,7 +84,7 @@
     </div>
     <div id="nav-right" class="no-small-screens">
       <form id="searchForm"><input id="search-input" type="text" aria-label="search" placeholder="Search ..."></form>
-      <button id="search"><i id="searchIcon" class="fas fa-search fa-2x"></i></button>
+      <button id="search" aria-label="search"><i id="searchIcon" class="fas fa-search fa-2x"></i></button>
       <div id="language" class="dropdown" tabindex="0" role="menu">
           <i class="fas fa-globe-africa fa-lg dropbtn"></i>
           <div id="langs-list" class="dropdown-content">
@@ -401,31 +401,31 @@
      <div id="social" class="social">
        <div>
          <ul>
-           <li><a id="facebook" href="https://www.facebook.com/FortniteGame" target="_blank">
+           <li><a id="facebook" name="facebook" href="https://www.facebook.com/FortniteGame" target="_blank">
              <div><i class="fab fa-facebook-square">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="twitter" href="https://twitter.com/FortniteGame" target="_blank">
+           <li><a id="twitter" name="twitter" href="https://twitter.com/FortniteGame" target="_blank">
              <div><i class="fab fa-twitter-square">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="twitch" href="https://www.twitch.tv/fortnitegame" target="_blank">
+           <li><a id="twitch" name="twitch" href="https://www.twitch.tv/fortnitegame" target="_blank">
              <div><i class="fab fa-twitch">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="youtube" href="https://www.youtube.com/epicfortnite" target="_blank">
+           <li><a id="youtube" name="youtube" href="https://www.youtube.com/epicfortnite" target="_blank">
              <div><i class="fab fa-youtube">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="instagram" href="https://www.instagram.com/fortnite/" target="_blank">
+           <li><a id="instagram" name="instagram" href="https://www.instagram.com/fortnite/" target="_blank">
              <div><i class="fab fa-instagram">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="snapchat"  href="https://snapchat.com/fortnite" target="_blank">
+           <li><a id="snapchat" name="snapchat"  href="https://snapchat.com/fortnite" target="_blank">
              <div><i class="fab fa-snapchat-square">&nbsp;</i>
              </div></a>
            </li>
-           <li><a id="vk" href="https://vk.com/fortnite" target="_blank">
+           <li><a id="vk" name="vk" href="https://vk.com/fortnite" target="_blank">
              <div><i class="fab fa-vk">&nbsp;</i></div></a>
            </li>
          </ul>
