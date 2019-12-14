@@ -30,5 +30,5 @@ https://fortniteclone.netlify.com/
 ## Contributers
 * Ahmed: [GitHub](https://github.com/ahmedserifoski) | Portfolio (coming soon)
 * Shashi: [GitHub](https://github.com/sasigit7) | Portfolio (coming soon)
-* Steph: [GitHub](https://github.com/stephairth) | Portfolio (coming soon)
+* Steph: [GitHub](https://github.com/stephairth) | [Portfolio](https://stephairth.github.io/dev-portfolio/)
 * Vlad: [GitHub](https://github.com/VladimirtheGreatest) | [Portfolio](https://vladimirportfolio.netlify.com/) 
