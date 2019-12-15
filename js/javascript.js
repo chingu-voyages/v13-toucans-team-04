@@ -1,21 +1,25 @@
-// let slideIndex = 0;
 
-// const showSlides = () => {
-//   let i;
-//   let slides = document.getElementsByClassName("sliders");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   slideIndex++;
+//  MOBILE CAROUSAL EFFECT: LAZY LOADER 
 
-//   if (slideIndex > slides.length) {
-//       slideIndex = 1
-//     }    
-//   slides[slideIndex-1].style.display = "block";  
-//   setTimeout(showSlides, 5000); // Change image every 3 seconds
-// }
+$(document).on('ready', function () {
+    $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        slidesToShow: 1.3,
+        slidesToScroll: 1,
+        infinite: false
+    });
+});
 
-// showSlides();
+// JQUERY CODE FOR LOAD MORE BUTTON 
+
+$(document).ready(function () {
+    $("#loadButton").click(function () {
+        $("#hideShow").toggleClass("show");
+    });
+});
+
+
+
 
 
 //Mobile navbar start/////////////
