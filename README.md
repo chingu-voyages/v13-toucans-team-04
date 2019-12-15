@@ -13,6 +13,7 @@ This Fortnite landing page clone was made by **Toucans Team 4** for **Chingu Col
 * Dis/appearing search bar
 * "Sign in" and "Developers" buttons lead to pop-up tabs with more information
 * "Load More" button reveals and hides additional blog posts
+* Animations and jQuery carousel with images
 
 ## Running the Project
 **Live version:** 
