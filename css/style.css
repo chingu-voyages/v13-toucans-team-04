@@ -724,6 +724,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
 
   .button .load {
       display: inline-block;
+
       height: 2%;
       font-size: 1em;
       border: 4px solid black;
@@ -762,10 +763,12 @@ button.slick-arrow:active,button.slick-arrow:focus {
       text-align: center;
   }
 
+
   .buttonMobile #loadButton {
     display: none;
     margin-bottom: -40px;
   }
+
 }
 
 /* Ipad Version */
@@ -866,6 +869,7 @@ button.slick-arrow:active,button.slick-arrow:focus {
   .card>.img {
       height: 300px;
   }
+
   
   }
   
@@ -877,6 +881,9 @@ button.slick-arrow:active,button.slick-arrow:focus {
       margin-top: -240px;
     }
   }
+
+} 
+
 
 /* Main section 2 End */
 

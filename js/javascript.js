@@ -1,3 +1,4 @@
+
 //  MOBILE CAROUSAL EFFECT: LAZY LOADER 
 
 $(document).on('ready', function () {
@@ -16,6 +17,8 @@ $(document).ready(function () {
         $("#hideShow").toggleClass("show");
     });
 });
+
+
 
 
 
