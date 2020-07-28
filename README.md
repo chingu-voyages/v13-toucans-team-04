@@ -29,7 +29,7 @@ https://fortniteclone.netlify.com/
 * [slick](https://kenwheeler.github.io/slick/)
 
 ## Contributers
-* Ahmed: [GitHub](https://github.com/ahmedserifoski) | Portfolio (coming soon)
+* Ahmed: [GitHub](https://github.com/ahmedserifoski) | [Portfolio](https://ahmed-serifoski.netlify.app/#right)
 * Shashi: [GitHub](https://github.com/sasigit7) | [Portfolio](https://sasiwebdev.netlify.com/)
 * Steph: [GitHub](https://github.com/stephairth) | [Portfolio](https://stephairth.github.io/dev-portfolio/)
 * Vladimir: [GitHub](https://github.com/VladimirtheGreatest) | [Portfolio](https://vladimirportfolio.netlify.com/) 
